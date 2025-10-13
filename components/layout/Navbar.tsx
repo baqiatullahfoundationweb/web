@@ -46,7 +46,7 @@ const Navbar = () => {
               <span className="text-sm sm:text-base md:text-lg font-urdu-bold text-[#03a1ac] leading-tight mb-1 sm:mb-2">
                 بقیتہ اللہ فاؤنڈیشن پاکستان
               </span>
-              <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-brand-bold text-[#03a1ac]">
+              <span className="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-brand-bold text-[#03a1ac]">
                 Baqiatullah Foundation Pakistan
               </span>
             </div>
