@@ -23,7 +23,7 @@ const Footer = () => {
                 className="h-14 w-auto"
               />
                       <div className="flex flex-col">
-                        <span className="text-lg font-urdu-bold text-[#03a1ac] leading-tight">
+                        <span className="text-lg font-urdu-bold text-[#03a1ac] leading-tight mb-2">
                           بقیتہ اللہ فاؤنڈیشن پاکستان
                         </span>
                         <span className="text-xl font-brand-bold text-[#03a1ac]">
@@ -57,7 +57,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-2">
                 <MapPin className="h-5 w-5 text-[#03a1ac] mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-sm">House No.123/A-Block, Nawab Block A Town, Lahore, Pakistan</span>
+                <span className="text-gray-700 text-sm">House No.123/A Block, Nawab Town, Lahore, Pakistan</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 text-[#03a1ac] flex-shrink-0" />
@@ -109,6 +109,17 @@ const Footer = () => {
               >
                 <Youtube className="h-5 w-5" />
               </a>
+              <a
+                href="https://www.tiktok.com/@baqiatullahfoundation?_t=ZS-90VxtwoCsgz&_r=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800/20 p-3 rounded-full hover:bg-[#03a1ac] hover:text-white transition-colors"
+                title="Follow us on TikTok"
+              >
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -116,7 +127,15 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-700 text-sm">
             &copy; {new Date().getFullYear()} Baqiatullah Foundation. All rights reserved. Made with{' '}
-            <Heart className="h-4 w-4 inline text-red-500 fill-red-500" /> for children.
+            <Heart className="h-4 w-4 inline text-red-500 fill-red-500" /> for children by{' '}
+            <a 
+              href="https://portfolio-seven-flame-s35fi4x2xg.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#03a1ac] hover:bg-[#03a1ac] hover:text-white hover:px-2 hover:py-1 hover:rounded transition-all font-semibold"
+            >
+              Ali Zain
+            </a>
           </p>
         </div>
       </div>

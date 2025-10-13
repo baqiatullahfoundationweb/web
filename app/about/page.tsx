@@ -87,7 +87,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
             >
               <img
-                src="/gallery/37.jpg"
+                src="/gallery/89.jpg"
                 alt="Our story"
                 className="rounded-2xl shadow-xl w-full h-auto object-cover"
                 style={{ maxHeight: '400px' }}
@@ -227,7 +227,7 @@ export default function AboutPage() {
                     {/* Avatar with enhanced styling */}
                     <div className="relative">
                       <Avatar className="w-32 h-32 mx-auto border-4 border-[#FFBF00] shadow-2xl group-hover:border-[#03a1ac] transition-all duration-300 group-hover:scale-110">
-                        <AvatarImage src={member.image} alt={member.name} className="object-cover object-top" />
+                        <AvatarImage src={member.image} alt={member.name} className="object-cover object-top" style={{objectPosition: 'center 20%'}} />
                         <AvatarFallback className="bg-gradient-to-br from-[#FFBF00] to-[#03a1ac] text-white text-3xl font-bold group-hover:from-[#03a1ac] group-hover:to-[#FFBF00] transition-all duration-300">
                           {member.initials}
                         </AvatarFallback>

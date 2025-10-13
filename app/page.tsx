@@ -114,7 +114,7 @@ export default function HomePage() {
                   alt="Baqiatullah Foundation Logo" 
                   width={24}
                   height={24}
-                  className="h-6 w-auto"
+                  className="h-6 w-6 object-contain"
                 />
                 <span className="text-sm font-medium text-white">Baqiatullah Foundation</span>
               </div>

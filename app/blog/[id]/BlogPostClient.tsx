@@ -84,7 +84,12 @@ This campaign demonstrates Baqiatullah Foundation's commitment to humanitarian s
             </div>
 
             <div className="relative h-96 rounded-2xl overflow-hidden">
-              <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+              <img 
+                src={post.image} 
+                alt={post.title} 
+                className="w-full h-full object-cover object-center" 
+                style={{ objectPosition: 'center center' }}
+              />
             </div>
 
             <div className="prose prose-lg max-w-none">

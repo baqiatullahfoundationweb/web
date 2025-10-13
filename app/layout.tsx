@@ -55,6 +55,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&display=swap" 
           rel="stylesheet" 
         />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" 
+          rel="stylesheet" 
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -70,7 +74,7 @@ export default function RootLayout({
               "foundingDate": "2016",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "House No.123/A-Block, Nawab Block A Town",
+                "streetAddress": "House No.123/A Block, Nawab Town",
                 "addressLocality": "Lahore",
                 "addressCountry": "Pakistan"
               },

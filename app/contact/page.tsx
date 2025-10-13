@@ -10,8 +10,8 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: 'Visit Us',
-      content: 'House No.123/A-Block, Nawab Block A Town, Lahore, Pakistan',
-      link: 'https://maps.google.com',
+      content: 'House No.123/A Block, Nawab Town, Lahore, Pakistan',
+      link: 'https://maps.app.goo.gl/u7u5iRnzp5VwSoJ18?g_st=iwb',
     },
     {
       icon: Phone,
@@ -75,16 +75,18 @@ export default function ContactPage() {
               >
                 <a href={info.link} target="_blank" rel="noopener noreferrer">
                   <Card className="h-full hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-[#FFBF00] text-center group cursor-pointer">
-                    <CardContent className="p-8 space-y-4">
-                      <div className="bg-[#FFBF00] w-12 h-12 rounded-xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                        <info.icon className="h-6 w-6 text-[#03a1ac]" />
+                    <CardContent className="p-8 space-y-4 h-full flex flex-col justify-between">
+                      <div className="flex-1 flex flex-col justify-center space-y-4">
+                        <div className="bg-[#FFBF00] w-12 h-12 rounded-xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                          <info.icon className="h-6 w-6 text-[#03a1ac]" />
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#03a1ac] transition-colors">
+                          {info.title}
+                        </h3>
+                        <p className="text-gray-600 group-hover:text-gray-800 transition-colors leading-relaxed">
+                          {info.content}
+                        </p>
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#03a1ac] transition-colors">
-                        {info.title}
-                      </h3>
-                      <p className="text-gray-600 group-hover:text-gray-800 transition-colors leading-relaxed">
-                        {info.content}
-                      </p>
                       <div className="pt-2">
                         <span className="inline-flex items-center text-[#03a1ac] font-semibold group-hover:gap-2 transition-all">
                           Click to {info.title === 'Visit Us' ? 'View Location' : info.title === 'Call Us' ? 'Call Now' : 'Send Email'}
