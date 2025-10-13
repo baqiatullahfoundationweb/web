@@ -43,7 +43,7 @@ const Navbar = () => {
               />
             </div>
             <div className="flex flex-col min-w-0 flex-1">
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg font-urdu-bold text-[#03a1ac] leading-tight mb-0.5 sm:mb-1 md:mb-2 truncate">
+              <span className="text-xs sm:text-sm md:text-base lg:text-lg font-urdu-bold text-[#03a1ac] leading-loose -mb-1 truncate py-2">
                 بقیتہ اللہ فاؤنڈیشن پاکستان
               </span>
               <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-brand-bold text-[#03a1ac] truncate">
