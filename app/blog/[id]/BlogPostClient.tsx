@@ -93,11 +93,45 @@ This campaign demonstrates Baqiatullah Foundation's commitment to humanitarian s
             </div>
 
             <div className="prose prose-lg max-w-none">
-              {post.content.split('\n\n').map((paragraph, index) => (
-                <p key={index} className="text-gray-700 leading-relaxed mb-6">
-                  {paragraph}
-                </p>
-              ))}
+              {post.content.split('\n\n').map((paragraph, index) => {
+                // Check if paragraph contains bullet points
+                if (paragraph.includes('•')) {
+                  return (
+                    <div key={index} className="mb-6">
+                      {paragraph.split('\n').map((line, lineIndex) => {
+                        if (line.trim().startsWith('•')) {
+                          return (
+                            <div key={lineIndex} className="flex items-start mb-2">
+                              <span className="text-[#03a1ac] mr-3 mt-1">•</span>
+                              <span className="text-gray-700 leading-relaxed">{line.replace('•', '').trim()}</span>
+                            </div>
+                          );
+                        } else if (line.trim().startsWith('-')) {
+                          return (
+                            <div key={lineIndex} className="flex items-start mb-2">
+                              <span className="text-[#03a1ac] mr-3 mt-1">-</span>
+                              <span className="text-gray-700 leading-relaxed">{line.replace('-', '').trim()}</span>
+                            </div>
+                          );
+                        } else if (line.trim()) {
+                          return (
+                            <p key={lineIndex} className="text-gray-700 leading-relaxed mb-4">
+                              {line.trim()}
+                            </p>
+                          );
+                        }
+                        return null;
+                      })}
+                    </div>
+                  );
+                } else {
+                  return (
+                    <p key={index} className="text-gray-700 leading-relaxed mb-6">
+                      {paragraph}
+                    </p>
+                  );
+                }
+              })}
             </div>
           </motion.div>
         </div>
