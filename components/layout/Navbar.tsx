@@ -39,14 +39,14 @@ const Navbar = () => {
               <img 
                 src="/logo/logo-01.png" 
                 alt="Baqiatullah Foundation Logo" 
-                className="h-12 sm:h-14 md:h-16 w-auto object-contain"
+                className="h-20 w-auto"
               />
             </div>
             <div className="flex flex-col">
               <span className="text-lg font-urdu-bold text-[#03a1ac] leading-tight mb-2">
                 بقیتہ اللہ فاؤنڈیشن پاکستان
               </span>
-              <span className="text-2xl font-brand-bold text-[#03a1ac]">
+              <span className="text-lg sm:text-xl md:text-2xl font-brand-bold text-[#03a1ac]">
                 Baqiatullah Foundation Pakistan
               </span>
             </div>
