@@ -13,20 +13,20 @@ const Footer = () => {
 
   return (
             <footer className="bg-[#FFBF00] text-gray-900">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
+      <div className="w-full px-2 sm:px-4 py-8 sm:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8">
+          <div className="space-y-3 sm:space-y-4">
+            <div className="flex items-center space-x-2 sm:space-x-3">
               <img 
                 src="/logo/logo-01.png" 
                 alt="Baqiatullah Foundation Logo" 
-                className="h-18 w-auto"
+                className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto flex-shrink-0"
               />
-                      <div className="flex flex-col">
-                        <span className="text-lg font-urdu-bold text-[#03a1ac] leading-tight mb-2">
+                      <div className="flex flex-col min-w-0 flex-1">
+                        <span className="text-sm sm:text-base md:text-lg font-urdu-bold text-[#03a1ac] leading-tight mb-1 sm:mb-2 truncate">
                           بقیتہ اللہ فاؤنڈیشن پاکستان
                         </span>
-                        <span className="text-lg sm:text-xl font-brand-bold text-[#03a1ac]">
+                        <span className="text-sm sm:text-base md:text-lg lg:text-xl font-brand-bold text-[#03a1ac] truncate">
                           Baqiatullah Foundation Pakistan
                         </span>
                       </div>
