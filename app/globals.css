@@ -110,10 +110,12 @@
   .font-urdu {
     font-family: 'Unwan', 'Noto Nastaliq Urdu', 'Noto Sans Arabic', 'Unwan Unicode', 'Arial Unicode MS', sans-serif;
     font-weight: 600;
+    font-display: swap;
   }
 
   .font-urdu-bold {
     font-family: 'Unwan', 'Noto Nastaliq Urdu', 'Noto Sans Arabic', 'Unwan Unicode', 'Arial Unicode MS', sans-serif;
     font-weight: 700;
+    font-display: swap;
   }
 }
