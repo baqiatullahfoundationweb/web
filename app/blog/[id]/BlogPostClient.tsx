@@ -94,8 +94,8 @@ This campaign demonstrates Baqiatullah Foundation's commitment to humanitarian s
 
             <div className="prose prose-lg max-w-none">
               {post.content.split('\n\n').map((paragraph, index) => {
-                // Check if paragraph contains bullet points
-                if (paragraph.includes('•')) {
+                // Check if paragraph contains bullet points or dash points
+                if (paragraph.includes('•') || paragraph.includes('-')) {
                   return (
                     <div key={index} className="mb-6">
                       {paragraph.split('\n').map((line, lineIndex) => {
