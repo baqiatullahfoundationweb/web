@@ -280,7 +280,7 @@ export default function HomePage() {
                       alt="Flood Relief Campaign Jhang"
                       width={400}
                       height={300}
-                      className="w-full h-48 md:h-full object-cover"
+                      className="w-full h-48 md:h-full object-contain"
                     />
                   </div>
                   <div className="md:w-2/3 p-8">

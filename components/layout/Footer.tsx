@@ -12,9 +12,9 @@ const Footer = () => {
   ];
 
   return (
-            <footer className="bg-[#FFBF00] text-gray-900">
+    <footer className="bg-[#FFBF00] text-gray-900">
       <div className="w-full px-2 sm:px-4 py-8 sm:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <div className="space-y-3 sm:space-y-4">
             <div className="flex items-center space-x-2 sm:space-x-3">
               <img 
@@ -22,15 +22,14 @@ const Footer = () => {
                 alt="Baqiatullah Foundation Logo" 
                 className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto flex-shrink-0"
               />
-                      <div className="flex flex-col min-w-0 flex-1">
-                        <span className="text-sm sm:text-base md:text-lg font-urdu-bold text-[#03a1ac] leading-loose -mb-1 truncate py-2">
-                          بقیتہ اللہ فاؤنڈیشن پاکستان
-                        </span>
-                        <div className="text-xl font-brand-bold text-[#03a1ac]">
-                          <div>Baqiatullah Foundation</div>
-                          <div>Pakistan</div>
-                        </div>
-                      </div>
+              <div className="flex flex-col min-w-0 flex-1">
+                <span className="text-sm sm:text-base md:text-lg font-urdu-bold text-[#03a1ac] leading-loose mb-0 truncate py-2">
+                  بقیتہ اللہ فاؤنڈیشن پاکستان
+                </span>
+                <div className="text-lg font-brand-bold text-[#03a1ac]">
+                  BAQIATULLAH FOUNDATION PAKISTAN
+                </div>
+              </div>
             </div>
             <p className="text-gray-700 text-sm leading-relaxed">
               Building brighter futures for children through compassionate care, quality education, and unwavering community support.
@@ -70,10 +69,11 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+        </div>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#03a1ac]">Follow Us</h3>
-            <div className="flex space-x-4">
+        <div className="mt-8 text-center">
+          <h3 className="text-lg font-semibold mb-4 text-[#03a1ac]">Follow Us</h3>
+          <div className="flex space-x-4 justify-center">
               <a
                 href="https://www.facebook.com/baqiatullahfoundationofficial"
                 target="_blank"
@@ -121,13 +121,12 @@ const Footer = () => {
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                 </svg>
               </a>
-            </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-700 text-sm">
-            &copy; {new Date().getFullYear()} Baqiatullah Foundation. All rights reserved. Developed with{' '}
+            &copy; 2025 Baqiatullah Foundation. All rights reserved. Developed with{' '}
             <Heart className="h-4 w-4 inline text-red-500 fill-red-500" /> for Children by{' '}
             <a 
               href="https://portfolio-seven-flame-s35fi4x2xg.vercel.app/" 
