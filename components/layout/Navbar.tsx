@@ -34,19 +34,19 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group">
+          <Link href="/" className="flex items-center space-x-1 sm:space-x-2 md:space-x-3 group flex-shrink-0">
             <div className="group-hover:scale-110 transition-transform">
               <img 
                 src="/logo/logo-01.png" 
                 alt="Baqiatullah Foundation Logo" 
-                className="h-12 sm:h-16 md:h-20 w-auto"
+                className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto"
               />
             </div>
-            <div className="flex flex-col">
-              <span className="text-sm sm:text-base md:text-lg font-urdu-bold text-[#03a1ac] leading-tight mb-1 sm:mb-2">
+            <div className="flex flex-col min-w-0">
+              <span className="text-xs sm:text-sm md:text-base lg:text-lg font-urdu-bold text-[#03a1ac] leading-tight mb-0.5 sm:mb-1 md:mb-2 truncate">
                 بقیتہ اللہ فاؤنڈیشن پاکستان
               </span>
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-brand-bold text-[#03a1ac]">
+              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-brand-bold text-[#03a1ac] truncate">
                 Baqiatullah Foundation Pakistan
               </span>
             </div>
