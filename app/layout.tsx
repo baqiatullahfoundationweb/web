@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Poppins, Amiri } from 'next/font/google';
+import { Inter, Poppins } from 'next/font/google';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import ErrorBoundary from '@/components/ErrorBoundary';
@@ -13,11 +13,6 @@ const poppins = Poppins({
   variable: '--font-poppins'
 });
 
-const amiri = Amiri({ 
-  subsets: ['arabic'],
-  weight: ['400', '700'],
-  variable: '--font-amiri'
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://baqiatullahfoundation.org'),
@@ -63,6 +58,10 @@ export default function RootLayout({
         />
         <link 
           href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" 
+          rel="stylesheet" 
+        />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Unwan:wght@400;700&display=swap" 
           rel="stylesheet" 
         />
         <script
@@ -133,7 +132,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} ${poppins.variable} ${amiri.variable}`}>
+      <body className={`${inter.className} ${poppins.variable}`}>
         <ErrorBoundary>
           <Navbar />
           <main className="min-h-screen">{children}</main>
