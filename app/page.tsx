@@ -83,7 +83,7 @@ export default function HomePage() {
   ];
 
   const stats = [
-    { label: 'Children Helped', value: '250+' },
+    { label: 'Children Supported', value: '250+' },
     { label: 'Volunteers', value: '85+' },
     { label: 'Annual Meals', value: '100k+' },
     { label: 'Scholarships', value: '50+' },

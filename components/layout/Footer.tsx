@@ -127,8 +127,8 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-700 text-sm">
-            &copy; {new Date().getFullYear()} Baqiatullah Foundation. All rights reserved. Made with{' '}
-            <Heart className="h-4 w-4 inline text-red-500 fill-red-500" /> for children by{' '}
+            &copy; {new Date().getFullYear()} Baqiatullah Foundation. All rights reserved. Developed with{' '}
+            <Heart className="h-4 w-4 inline text-red-500 fill-red-500" /> for Children by{' '}
             <a 
               href="https://portfolio-seven-flame-s35fi4x2xg.vercel.app/" 
               target="_blank" 
