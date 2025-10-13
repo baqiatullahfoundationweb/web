@@ -23,7 +23,7 @@ const Footer = () => {
                 className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto flex-shrink-0"
               />
               <div className="flex flex-col min-w-0 flex-1">
-                <span className="text-sm sm:text-base md:text-lg font-urdu-bold text-[#03a1ac] leading-loose mb-0 truncate py-2">
+                <span className="text-base sm:text-lg md:text-xl font-urdu-bold text-[#03a1ac] leading-tight mb-0 truncate" style={{ marginBottom: '-2px' }}>
                   بقیتہ اللہ فاؤنڈیشن پاکستان
                 </span>
                 <div className="text-lg font-brand-bold text-[#03a1ac]">

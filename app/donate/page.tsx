@@ -115,49 +115,64 @@ export default function DonatePage() {
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border border-blue-200 hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold text-gray-700">Account Name:</span>
+                        <span className="font-semibold text-blue-800 flex items-center gap-2">
+                          <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 6a2 2 0 114 0 2 2 0 01-4 0zm8 0a2 2 0 114 0 2 2 0 01-4 0z" clipRule="evenodd" />
+                          </svg>
+                          Account Name:
+                        </span>
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={() => copyToClipboard(bankDetails.accountName, 'bankAccountName')}
-                          className="h-8 w-8 p-0"
+                          className="h-8 w-8 p-0 hover:bg-blue-100 transition-colors"
                         >
-                          {copiedField === 'bankAccountName' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
+                          {copiedField === 'bankAccountName' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4 text-blue-600" />}
                         </Button>
                       </div>
-                      <p className="text-lg font-mono text-gray-900">{bankDetails.accountName}</p>
+                      <p className="text-lg font-mono text-blue-900 font-semibold">{bankDetails.accountName}</p>
                     </div>
 
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-lg border border-green-200 hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold text-gray-700">Account Number:</span>
+                        <span className="font-semibold text-green-800 flex items-center gap-2">
+                          <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 6a2 2 0 114 0 2 2 0 01-4 0zm8 0a2 2 0 114 0 2 2 0 01-4 0z" clipRule="evenodd" />
+                          </svg>
+                          Account Number:
+                        </span>
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={() => copyToClipboard(bankDetails.accountNumber, 'bankAccountNumber')}
-                          className="h-8 w-8 p-0"
+                          className="h-8 w-8 p-0 hover:bg-green-100 transition-colors"
                         >
-                          {copiedField === 'bankAccountNumber' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
+                          {copiedField === 'bankAccountNumber' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4 text-green-600" />}
                         </Button>
                       </div>
-                      <p className="text-lg font-mono text-gray-900">{bankDetails.accountNumber}</p>
+                      <p className="text-lg font-mono text-green-900 font-semibold">{bankDetails.accountNumber}</p>
                     </div>
 
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="bg-gradient-to-r from-purple-50 to-violet-50 p-4 rounded-lg border border-purple-200 hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold text-gray-700">Bank Name:</span>
+                        <span className="font-semibold text-purple-800 flex items-center gap-2">
+                          <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 6a2 2 0 114 0 2 2 0 01-4 0zm8 0a2 2 0 114 0 2 2 0 01-4 0z" clipRule="evenodd" />
+                          </svg>
+                          Bank Name:
+                        </span>
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={() => copyToClipboard(bankDetails.bankName, 'bankName')}
-                          className="h-8 w-8 p-0"
+                          className="h-8 w-8 p-0 hover:bg-purple-100 transition-colors"
                         >
-                          {copiedField === 'bankName' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
+                          {copiedField === 'bankName' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4 text-purple-600" />}
                         </Button>
                       </div>
-                      <p className="text-lg font-mono text-gray-900">{bankDetails.bankName}</p>
+                      <p className="text-lg font-mono text-purple-900 font-semibold">{bankDetails.bankName}</p>
                     </div>
 
                     <div className="bg-[#03a1ac]/10 p-4 rounded-lg border border-[#03a1ac]/20">
@@ -189,49 +204,64 @@ export default function DonatePage() {
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-4 rounded-lg border border-orange-200 hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold text-gray-700">Account Name:</span>
+                        <span className="font-semibold text-orange-800 flex items-center gap-2">
+                          <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 6a2 2 0 114 0 2 2 0 01-4 0zm8 0a2 2 0 114 0 2 2 0 01-4 0z" clipRule="evenodd" />
+                          </svg>
+                          Account Name:
+                        </span>
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={() => copyToClipboard(jazzCashDetails.accountName, 'jazzAccountName')}
-                          className="h-8 w-8 p-0"
+                          className="h-8 w-8 p-0 hover:bg-orange-100 transition-colors"
                         >
-                          {copiedField === 'jazzAccountName' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
+                          {copiedField === 'jazzAccountName' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4 text-orange-600" />}
                         </Button>
                       </div>
-                      <p className="text-lg font-mono text-gray-900">{jazzCashDetails.accountName}</p>
+                      <p className="text-lg font-mono text-orange-900 font-semibold">{jazzCashDetails.accountName}</p>
                     </div>
 
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-4 rounded-lg border border-yellow-200 hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold text-gray-700">Account Number:</span>
+                        <span className="font-semibold text-yellow-800 flex items-center gap-2">
+                          <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 6a2 2 0 114 0 2 2 0 01-4 0zm8 0a2 2 0 114 0 2 2 0 01-4 0z" clipRule="evenodd" />
+                          </svg>
+                          Account Number:
+                        </span>
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={() => copyToClipboard(jazzCashDetails.accountNumber, 'jazzAccountNumber')}
-                          className="h-8 w-8 p-0"
+                          className="h-8 w-8 p-0 hover:bg-yellow-100 transition-colors"
                         >
-                          {copiedField === 'jazzAccountNumber' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
+                          {copiedField === 'jazzAccountNumber' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4 text-yellow-600" />}
                         </Button>
                       </div>
-                      <p className="text-lg font-mono text-gray-900">{jazzCashDetails.accountNumber}</p>
+                      <p className="text-lg font-mono text-yellow-900 font-semibold">{jazzCashDetails.accountNumber}</p>
                     </div>
 
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="bg-gradient-to-r from-pink-50 to-rose-50 p-4 rounded-lg border border-pink-200 hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold text-gray-700">Service:</span>
+                        <span className="font-semibold text-pink-800 flex items-center gap-2">
+                          <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 6a2 2 0 114 0 2 2 0 01-4 0zm8 0a2 2 0 114 0 2 2 0 01-4 0z" clipRule="evenodd" />
+                          </svg>
+                          Service:
+                        </span>
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={() => copyToClipboard(jazzCashDetails.service, 'jazzService')}
-                          className="h-8 w-8 p-0"
+                          className="h-8 w-8 p-0 hover:bg-pink-100 transition-colors"
                         >
-                          {copiedField === 'jazzService' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
+                          {copiedField === 'jazzService' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4 text-pink-600" />}
                         </Button>
                       </div>
-                      <p className="text-lg font-mono text-gray-900">{jazzCashDetails.service}</p>
+                      <p className="text-lg font-mono text-pink-900 font-semibold">{jazzCashDetails.service}</p>
                     </div>
 
                     <div className="bg-[#FFBF00]/10 p-4 rounded-lg border border-[#FFBF00]/20">
@@ -263,49 +293,64 @@ export default function DonatePage() {
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="bg-gradient-to-r from-teal-50 to-cyan-50 p-4 rounded-lg border border-teal-200 hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold text-gray-700">Account Name:</span>
+                        <span className="font-semibold text-teal-800 flex items-center gap-2">
+                          <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 6a2 2 0 114 0 2 2 0 01-4 0zm8 0a2 2 0 114 0 2 2 0 01-4 0z" clipRule="evenodd" />
+                          </svg>
+                          Account Name:
+                        </span>
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={() => copyToClipboard(easypaisaDetails.accountName, 'easypaisaAccountName')}
-                          className="h-8 w-8 p-0"
+                          className="h-8 w-8 p-0 hover:bg-teal-100 transition-colors"
                         >
-                          {copiedField === 'easypaisaAccountName' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
+                          {copiedField === 'easypaisaAccountName' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4 text-teal-600" />}
                         </Button>
                       </div>
-                      <p className="text-lg font-mono text-gray-900">{easypaisaDetails.accountName}</p>
+                      <p className="text-lg font-mono text-teal-900 font-semibold">{easypaisaDetails.accountName}</p>
                     </div>
 
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-4 rounded-lg border border-indigo-200 hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold text-gray-700">Account Number:</span>
+                        <span className="font-semibold text-indigo-800 flex items-center gap-2">
+                          <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 6a2 2 0 114 0 2 2 0 01-4 0zm8 0a2 2 0 114 0 2 2 0 01-4 0z" clipRule="evenodd" />
+                          </svg>
+                          Account Number:
+                        </span>
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={() => copyToClipboard(easypaisaDetails.accountNumber, 'easypaisaAccountNumber')}
-                          className="h-8 w-8 p-0"
+                          className="h-8 w-8 p-0 hover:bg-indigo-100 transition-colors"
                         >
-                          {copiedField === 'easypaisaAccountNumber' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
+                          {copiedField === 'easypaisaAccountNumber' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4 text-indigo-600" />}
                         </Button>
                       </div>
-                      <p className="text-lg font-mono text-gray-900">{easypaisaDetails.accountNumber}</p>
+                      <p className="text-lg font-mono text-indigo-900 font-semibold">{easypaisaDetails.accountNumber}</p>
                     </div>
 
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="bg-gradient-to-r from-red-50 to-pink-50 p-4 rounded-lg border border-red-200 hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold text-gray-700">Service:</span>
+                        <span className="font-semibold text-red-800 flex items-center gap-2">
+                          <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 6a2 2 0 114 0 2 2 0 01-4 0zm8 0a2 2 0 114 0 2 2 0 01-4 0z" clipRule="evenodd" />
+                          </svg>
+                          Service:
+                        </span>
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={() => copyToClipboard(easypaisaDetails.service, 'easypaisaService')}
-                          className="h-8 w-8 p-0"
+                          className="h-8 w-8 p-0 hover:bg-red-100 transition-colors"
                         >
-                          {copiedField === 'easypaisaService' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
+                          {copiedField === 'easypaisaService' ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4 text-red-600" />}
                         </Button>
                       </div>
-                      <p className="text-lg font-mono text-gray-900">{easypaisaDetails.service}</p>
+                      <p className="text-lg font-mono text-red-900 font-semibold">{easypaisaDetails.service}</p>
                     </div>
 
                     <div className="bg-[#03a1ac]/10 p-4 rounded-lg border border-[#03a1ac]/20">
