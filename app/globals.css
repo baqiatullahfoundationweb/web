@@ -106,14 +106,14 @@
     font-weight: 900;
   }
 
-  /* Urdu font for Arabic/Urdu text - Noto Nastaliq Urdu for authentic Nastaleeq style */
+  /* Urdu font for Arabic/Urdu text - Using Amiri from Google Fonts */
   .font-urdu {
-    font-family: 'Noto Nastaliq Urdu', 'Noto Sans Arabic', 'Unwan Unicode', 'Arial Unicode MS', sans-serif;
+    font-family: var(--font-amiri), 'Amiri', 'Noto Nastaliq Urdu', 'Noto Sans Arabic', 'Unwan Unicode', 'Arial Unicode MS', sans-serif;
     font-weight: 600;
   }
 
   .font-urdu-bold {
-    font-family: 'Noto Nastaliq Urdu', 'Noto Sans Arabic', 'Unwan Unicode', 'Arial Unicode MS', sans-serif;
+    font-family: var(--font-amiri), 'Amiri', 'Noto Nastaliq Urdu', 'Noto Sans Arabic', 'Unwan Unicode', 'Arial Unicode MS', sans-serif;
     font-weight: 700;
   }
 }

@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
+import { Inter, Poppins, Amiri } from 'next/font/google';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import ErrorBoundary from '@/components/ErrorBoundary';
@@ -11,6 +11,12 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--font-poppins'
+});
+
+const amiri = Amiri({ 
+  subsets: ['arabic'],
+  weight: ['400', '700'],
+  variable: '--font-amiri'
 });
 
 export const metadata: Metadata = {
@@ -127,7 +133,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} ${poppins.variable}`}>
+      <body className={`${inter.className} ${poppins.variable} ${amiri.variable}`}>
         <ErrorBoundary>
           <Navbar />
           <main className="min-h-screen">{children}</main>
