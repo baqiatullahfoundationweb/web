@@ -20,7 +20,7 @@ const Footer = () => {
               <img 
                 src="/logo/logo-01.png" 
                 alt="Baqiatullah Foundation Logo" 
-                className="h-14 w-auto"
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain"
               />
                       <div className="flex flex-col">
                         <span className="text-lg font-urdu-bold text-[#03a1ac] leading-tight mb-2">

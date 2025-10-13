@@ -39,7 +39,7 @@ const Navbar = () => {
               <img 
                 src="/logo/logo-01.png" 
                 alt="Baqiatullah Foundation Logo" 
-                className="h-16 w-auto"
+                className="h-12 sm:h-14 md:h-16 w-auto object-contain"
               />
             </div>
             <div className="flex flex-col">
