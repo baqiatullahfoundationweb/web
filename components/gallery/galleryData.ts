@@ -14,13 +14,15 @@ export const DEFAULT_CATEGORIES: GalleryCategories = {
   relief: "Emergency Relief",
 };
 
-// Seamless 7-item tiling: 0(2x2) + 1(1x2) + 2(1x1) + 3(1x1) = 2 rows x 4 cols; 4(2x1) + 5(1x1) + 6(1x1) = 1 row x 4 cols
+// Wide-aspect bento distribution: No narrow vertical cards, all expansive and wide
 export const getBentoClasses = (idx: number) => {
-  const mod = idx % 7;
-  if (mod === 0) return "sm:col-span-2 sm:row-span-2 h-[340px] sm:h-[460px]";
-  if (mod === 1) return "sm:col-span-1 sm:row-span-2 h-[300px] sm:h-[460px]";
-  if (mod === 4) return "sm:col-span-2 h-[220px]";
-  return "sm:col-span-1 h-[220px]";
+  const mod = idx % 6;
+  if (mod === 0) return "md:col-span-2 h-[340px] sm:h-[440px]";
+  if (mod === 1) return "md:col-span-1 h-[340px] sm:h-[440px]";
+  if (mod === 2) return "md:col-span-1 h-[300px] sm:h-[380px]";
+  if (mod === 3) return "md:col-span-2 h-[300px] sm:h-[380px]";
+  if (mod === 4) return "md:col-span-2 h-[300px] sm:h-[380px]";
+  return "md:col-span-1 h-[300px] sm:h-[380px]";
 };
 
 export const generateGalleryImages = () => {

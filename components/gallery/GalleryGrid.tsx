@@ -73,8 +73,8 @@ export default function GalleryGrid({
         ))}
       </div>
 
-      {/* Asymmetric Bento Showcase Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 auto-rows-fr">
+      {/* Wide Asymmetric Bento Showcase Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {visibleImages.map((img, idx) => (
           <div
             key={img.id}
@@ -89,7 +89,7 @@ export default function GalleryGrid({
               fill
               loading="lazy"
               className="object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
 
