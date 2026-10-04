@@ -133,7 +133,7 @@ export default function FeaturedCauses({
                     href={donateHref}
                     variant="glass"
                     size="sm"
-                    className="bg-white/10 hover:bg-white/25 text-white border-white/25 shadow-sm"
+                    className="bg-white text-gray-950 hover:bg-gray-100 font-extrabold shadow-md border border-gray-200"
                   >
                     <span>{detailsBtnText}</span>
                     <ArrowRight className="w-3.5 h-3.5 ml-1" />

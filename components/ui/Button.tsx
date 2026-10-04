@@ -32,9 +32,9 @@ export default function Button({
       "bg-accent-red hover:bg-accent-red-dark text-white shadow-md hover:shadow-xl hover:shadow-red-950/40 focus:ring-accent-red/40 font-bold tracking-wide",
     gold: "bg-amber hover:bg-amber-dark text-gray-950 shadow-md focus:ring-amber/40 font-bold",
     outline:
-      "border-2 border-primary hover:bg-primary hover:text-white bg-white/80 text-primary shadow-xs font-semibold focus:ring-primary/30",
+      "border-2 border-primary hover:bg-primary hover:text-white bg-white text-primary shadow-xs font-bold focus:ring-primary/30",
     glass:
-      "bg-white/90 hover:bg-white text-gray-950 border border-primary/25 shadow-sm hover:shadow-md hover:border-primary/50 focus:ring-primary/30 font-semibold",
+      "bg-white hover:bg-gray-100 text-gray-950 border border-gray-200 shadow-md hover:shadow-lg focus:ring-primary/30 font-extrabold",
   };
 
   const combinedClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;

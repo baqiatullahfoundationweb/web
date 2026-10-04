@@ -50,9 +50,9 @@ export default function CtaBanner({
             </Button>
             <Button
               href={secondaryButtonHref}
-              variant="glass"
+              variant="gold"
               size="lg"
-              className="bg-white/10 hover:bg-white/25 text-white border-white/25 shadow-xl"
+              className="shadow-2xl hover:scale-105 transition-all text-gray-950 font-black"
             >
               <Mail className="w-4 h-4 mr-2" />
               <span>{secondaryButtonText}</span>

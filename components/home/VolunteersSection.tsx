@@ -114,14 +114,14 @@ export default function VolunteersSection({
         <div className="absolute inset-0 bg-gradient-to-r from-[#020B0D]/95 via-[#020B0D]/80 to-primary/60" />
 
         <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
-          <div className="text-left space-y-2">
-            <h4 className="text-2xl sm:text-3xl font-bold text-white">{calloutTitle}</h4>
-            <p className="text-sm text-slate-300 max-w-xl">
+          <div className="space-y-2">
+            <h4 className="text-2xl sm:text-3xl font-extrabold text-white">{calloutTitle}</h4>
+            <p className="text-sm text-slate-200 max-w-xl">
               {calloutDesc}
             </p>
           </div>
-          <Button href={contactHref} variant="glass" size="lg" className="shrink-0 bg-white/15 hover:bg-white/30 text-white border-white/30 shadow-xl">
-            <HeartHandshake className="w-4 h-4 mr-2" />
+          <Button href={contactHref} variant="gold" size="lg" className="shrink-0 shadow-2xl hover:scale-105 transition-all text-gray-950 font-black">
+            <HeartHandshake className="w-5 h-5 mr-2 stroke-[2.5]" />
             <span>{calloutBtnText}</span>
           </Button>
         </div>

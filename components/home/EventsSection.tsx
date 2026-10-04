@@ -108,7 +108,7 @@ export default function EventsSection({
                 href={contactHref}
                 variant="glass"
                 size="sm"
-                className="w-full justify-center bg-white/10 hover:bg-white/25 text-white border-white/25 shadow-sm"
+                className="w-full justify-center bg-white text-gray-950 hover:bg-gray-100 font-extrabold shadow-md border border-gray-200"
               >
                 <span>{attendBtnText}</span>
                 <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
