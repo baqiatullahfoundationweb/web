@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight, Eye, Sparkles } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
+import PlayfulShapeCard from "./PlayfulShapeCard";
 import {
   GalleryCategories,
   DEFAULT_CATEGORIES,
@@ -28,6 +30,8 @@ export default function GalleryGrid({
   loadMoreBtnText = "Load More Photos",
   remainingText = "remaining",
 }: GalleryGridProps) {
+  const pathname = usePathname();
+  const isUrdu = pathname.startsWith("/ur");
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
   const [activeCat, setActiveCat] = useState<keyof GalleryCategories>("all");
   const [visibleCount, setVisibleCount] = useState(21);
@@ -76,38 +80,48 @@ export default function GalleryGrid({
       {/* Wide Asymmetric Bento Showcase Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {visibleImages.map((img, idx) => (
-          <div
-            key={img.id}
-            onClick={() => setSelectedIdx(idx)}
-            className={`group relative rounded-3xl overflow-hidden cursor-pointer border-2 border-white ring-1 ring-primary/20 shadow-xl hover:shadow-2xl transition-all duration-300 ${getBentoClasses(
-              idx
-            )}`}
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              loading="lazy"
-              className="object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
+          <div key={img.id} className="contents">
+            <div
+              onClick={() => setSelectedIdx(idx)}
+              className={`group relative rounded-3xl overflow-hidden cursor-pointer border-2 border-white ring-1 ring-primary/20 shadow-xl hover:shadow-2xl transition-all duration-300 ${getBentoClasses(
+                idx
+              )}`}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                loading="lazy"
+                className="object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
 
-            {idx % 7 === 0 && (
-              <div className="absolute top-4 left-4 z-10">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold bg-[#FFBF00] text-gray-950 shadow-md">
-                  <Sparkles className="w-3 h-3 fill-current" />
-                  <span>Featured Moment</span>
+              {idx % 7 === 0 && (
+                <div className="absolute top-4 left-4 z-10">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold bg-[#FFBF00] text-gray-950 shadow-md">
+                    <Sparkles className="w-3 h-3 fill-current" />
+                    <span>Featured Moment</span>
+                  </span>
+                </div>
+              )}
+
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="p-3.5 rounded-full bg-white text-gray-950 font-extrabold shadow-2xl scale-90 group-hover:scale-100 transition-transform flex items-center gap-1.5 text-xs">
+                  <Eye className="w-4 h-4 text-primary stroke-[2.5]" />
+                  <span>View</span>
                 </span>
               </div>
-            )}
-
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="p-3.5 rounded-full bg-white text-gray-950 font-extrabold shadow-2xl scale-90 group-hover:scale-100 transition-transform flex items-center gap-1.5 text-xs">
-                <Eye className="w-4 h-4 text-primary stroke-[2.5]" />
-                <span>View</span>
-              </span>
             </div>
+
+            {/* Cute Playful SVG Character Shapes with Eyes filling the extra rectangle spaces */}
+            {(idx === 1 || idx === 6 || idx === 11 || idx === 16) && (
+              <PlayfulShapeCard
+                variantIndex={Math.floor(idx / 5)}
+                isUrdu={isUrdu}
+                className="md:col-span-1 min-h-[220px] aspect-[16/10]"
+              />
+            )}
           </div>
         ))}
       </div>
