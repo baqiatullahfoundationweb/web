@@ -15,6 +15,11 @@ export interface VolunteersSectionProps {
   title?: string;
   highlight?: string;
   subtitle?: string;
+  badgeText?: string;
+  calloutTitle?: string;
+  calloutDesc?: string;
+  calloutBtnText?: string;
+  contactHref?: string;
   className?: string;
 }
 
@@ -44,6 +49,11 @@ export default function VolunteersSection({
   title = "Showcasing Our Dedicated",
   highlight = "Volunteers",
   subtitle = "Recognizing the extraordinary doctors, teachers, and compassionate citizens who give their time and love to mentor our children.",
+  badgeText = "Verified Foundation Volunteer",
+  calloutTitle = "Want to Make a Direct Difference?",
+  calloutDesc = "Join our 85+ active volunteers in Lahore for weekend tutoring, computer literacy, sports mentoring, or medical health camps.",
+  calloutBtnText = "Join as a Volunteer",
+  contactHref = "/contact",
   className = "",
 }: VolunteersSectionProps) {
   return (
@@ -60,7 +70,6 @@ export default function VolunteersSection({
             key={idx}
             className="group relative h-[440px] rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between p-6 sm:p-7 border border-white/15 hover:border-primary/50"
           >
-            {/* Full-bleed real photograph */}
             <Image
               src={v.image}
               alt={v.name}
@@ -70,7 +79,6 @@ export default function VolunteersSection({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#020B0D] via-[#020B0D]/65 to-transparent" />
 
-            {/* Top Role Indicator */}
             <div className="relative z-10 flex items-center justify-between">
               <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/15 backdrop-blur-md text-amber border border-white/20">
                 {v.role}
@@ -80,7 +88,6 @@ export default function VolunteersSection({
               </div>
             </div>
 
-            {/* Bottom Content */}
             <div className="relative z-10 text-white">
               <h4 className="text-2xl font-extrabold text-white mb-2 leading-tight drop-shadow-xs">
                 {v.name}
@@ -89,14 +96,13 @@ export default function VolunteersSection({
                 &ldquo;{v.quote}&rdquo;
               </p>
               <div className="pt-2 border-t border-white/15 flex items-center gap-1.5 text-xs font-bold text-amber">
-                <span>Verified Foundation Volunteer</span>
+                <span>{badgeText}</span>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Volunteer Action Callout */}
       <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/15 p-8 sm:p-12 text-white">
         <Image
           src="/gallery/75.jpg"
@@ -109,14 +115,14 @@ export default function VolunteersSection({
 
         <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
           <div className="text-left space-y-2">
-            <h4 className="text-2xl sm:text-3xl font-bold text-white">Want to Make a Direct Difference?</h4>
+            <h4 className="text-2xl sm:text-3xl font-bold text-white">{calloutTitle}</h4>
             <p className="text-sm text-slate-300 max-w-xl">
-              Join our 85+ active volunteers in Lahore for weekend tutoring, computer literacy, sports mentoring, or medical health camps.
+              {calloutDesc}
             </p>
           </div>
-          <Button href="/contact" variant="glass" size="lg" className="shrink-0 bg-white/15 hover:bg-white/30 text-white border-white/30 shadow-xl">
+          <Button href={contactHref} variant="glass" size="lg" className="shrink-0 bg-white/15 hover:bg-white/30 text-white border-white/30 shadow-xl">
             <HeartHandshake className="w-4 h-4 mr-2" />
-            <span>Join as a Volunteer</span>
+            <span>{calloutBtnText}</span>
           </Button>
         </div>
       </div>

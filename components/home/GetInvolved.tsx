@@ -4,7 +4,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
 
 export interface PathwayItem {
-  icon: LucideIcon;
+  icon?: LucideIcon;
   title: string;
   description: string;
   image: string;
@@ -60,6 +60,8 @@ const DEFAULT_PATHWAYS: PathwayItem[] = [
   },
 ];
 
+const FALLBACK_ICONS = [Heart, BookOpen, Utensils, Building2];
+
 export default function GetInvolved({
   pathways = DEFAULT_PATHWAYS,
   title = "Ways You Can Make a",
@@ -78,7 +80,7 @@ export default function GetInvolved({
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {pathways.map((p, idx) => {
-            const Icon = p.icon;
+            const Icon = p.icon || FALLBACK_ICONS[idx % FALLBACK_ICONS.length];
             return (
               <div
                 key={idx}

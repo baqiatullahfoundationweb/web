@@ -18,6 +18,12 @@ export interface FeaturedCausesProps {
   title?: string;
   highlight?: string;
   subtitle?: string;
+  raisedLabel?: string;
+  goalLabel?: string;
+  fundedLabel?: string;
+  donateBtnText?: string;
+  detailsBtnText?: string;
+  donateHref?: string;
   className?: string;
 }
 
@@ -56,6 +62,12 @@ export default function FeaturedCauses({
   title = "Featured Causes Needing",
   highlight = "Your Generous Hand",
   subtitle = "Directly support targeted campaigns where urgent funding provides immediate shelter, food, and classroom seats.",
+  raisedLabel = "Raised:",
+  goalLabel = "Goal:",
+  fundedLabel = "Funded",
+  donateBtnText = "Donate Now",
+  detailsBtnText = "Details",
+  donateHref = "/donate",
   className = "",
 }: FeaturedCausesProps) {
   return (
@@ -73,7 +85,6 @@ export default function FeaturedCauses({
               key={idx}
               className="group relative h-[500px] rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between p-6 sm:p-7 border border-white/15 hover:border-primary/50"
             >
-              {/* Full-bleed real photograph */}
               <Image
                 src={cause.image}
                 alt={cause.title}
@@ -83,17 +94,15 @@ export default function FeaturedCauses({
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#020B0D] via-[#020B0D]/65 to-transparent" />
 
-              {/* Top Tag & Percent */}
               <div className="relative z-10 flex items-center justify-between">
                 <span className="px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber text-gray-950 shadow-md">
                   {cause.category}
                 </span>
                 <span className="px-3 py-1.5 rounded-full text-xs font-mono font-bold bg-white/10 backdrop-blur-md text-white border border-white/20">
-                  {cause.percent}% Funded
+                  {cause.percent}% {fundedLabel}
                 </span>
               </div>
 
-              {/* Bottom Content & Action */}
               <div className="relative z-10 text-white">
                 <h3 className="text-xl font-bold text-white mb-2 leading-snug drop-shadow-sm group-hover:text-primary-light transition-colors">
                   {cause.title}
@@ -102,7 +111,6 @@ export default function FeaturedCauses({
                   {cause.description}
                 </p>
 
-                {/* Progress Line */}
                 <div className="space-y-1.5 mb-5">
                   <div className="w-full h-2 rounded-full bg-white/15 overflow-hidden">
                     <div
@@ -111,23 +119,23 @@ export default function FeaturedCauses({
                     />
                   </div>
                   <div className="flex justify-between text-[11px] text-slate-300 font-mono">
-                    <span>Raised: <strong className="text-white">{cause.raised}</strong></span>
-                    <span>Goal: {cause.goal}</span>
+                    <span>{raisedLabel} <strong className="text-white">{cause.raised}</strong></span>
+                    <span>{goalLabel} {cause.goal}</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Button href="/donate" variant="donate" size="sm" className="flex-1 justify-center shadow-lg shadow-red-950/40">
+                  <Button href={donateHref} variant="donate" size="sm" className="flex-1 justify-center shadow-lg shadow-red-950/40">
                     <Heart className="w-3.5 h-3.5 fill-current mr-1.5" />
-                    <span>Donate Now</span>
+                    <span>{donateBtnText}</span>
                   </Button>
                   <Button
-                    href="/donate"
+                    href={donateHref}
                     variant="glass"
                     size="sm"
                     className="bg-white/10 hover:bg-white/25 text-white border-white/25 shadow-sm"
                   >
-                    <span>Details</span>
+                    <span>{detailsBtnText}</span>
                     <ArrowRight className="w-3.5 h-3.5 ml-1" />
                   </Button>
                 </div>

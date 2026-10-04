@@ -17,6 +17,8 @@ export interface EventsSectionProps {
   title?: string;
   highlight?: string;
   subtitle?: string;
+  attendBtnText?: string;
+  contactHref?: string;
   className?: string;
 }
 
@@ -52,6 +54,8 @@ export default function EventsSection({
   title = "Upcoming Foundation Events &",
   highlight = "Activities",
   subtitle = "Engage with our children, observe educational milestones, and participate in community enrichment days in Lahore.",
+  attendBtnText = "Attend / Inquire",
+  contactHref = "/contact",
   className = "",
 }: EventsSectionProps) {
   return (
@@ -68,7 +72,6 @@ export default function EventsSection({
             key={idx}
             className="group relative h-[440px] rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between p-6 sm:p-7 border border-white/15 hover:border-primary/50"
           >
-            {/* Full-bleed real event photo */}
             <Image
               src={event.image}
               alt={event.title}
@@ -78,14 +81,12 @@ export default function EventsSection({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#020B0D] via-[#020B0D]/65 to-transparent" />
 
-            {/* Top Date Badge */}
             <div className="relative z-10 flex items-center justify-between">
               <span className="px-3.5 py-1.5 rounded-full text-xs font-bold bg-white/15 backdrop-blur-md text-amber border border-white/20 shadow-md">
                 {event.date}
               </span>
             </div>
 
-            {/* Bottom Event Details */}
             <div className="relative z-10 text-white">
               <div className="flex items-center gap-2 text-xs text-slate-300 mb-2">
                 <Calendar className="w-3.5 h-3.5 text-amber" />
@@ -104,12 +105,12 @@ export default function EventsSection({
               </p>
 
               <Button
-                href="/contact"
+                href={contactHref}
                 variant="glass"
                 size="sm"
                 className="w-full justify-center bg-white/10 hover:bg-white/25 text-white border-white/25 shadow-sm"
               >
-                <span>Attend / Inquire</span>
+                <span>{attendBtnText}</span>
                 <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
               </Button>
             </div>
