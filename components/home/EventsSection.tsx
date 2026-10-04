@@ -58,9 +58,6 @@ export default function EventsSection({
 }: EventsSectionProps) {
   return (
     <section className={`relative py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
-      {/* Ambient background glow */}
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-primary/8 rounded-full blur-3xl pointer-events-none -z-10" />
-
       <SectionHeader
         eyebrow={eyebrow}
         title={title}
@@ -72,47 +69,54 @@ export default function EventsSection({
         {events.map((event, idx) => (
           <div
             key={idx}
-            className="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group border border-white/80 shadow-lg hover:shadow-2xl"
+            className="group relative h-[440px] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between p-6 border border-white/30"
           >
-            <div>
-              <div className="relative h-56 w-full overflow-hidden">
-                <Image
-                  src={event.image}
-                  alt={event.title}
-                  fill
-                  className="object-cover group-hover:scale-106 transition-transform duration-600"
-                />
-                <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-bold bg-white/90 backdrop-blur-md text-gray-900 border border-white/60 shadow-xs">
-                  Event
-                </div>
-              </div>
+            {/* Full-bleed real event photo */}
+            <Image
+              src={event.image}
+              alt={event.title}
+              fill
+              className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/30" />
 
-              <div className="p-6">
-                <div className="flex flex-col gap-1.5 text-xs text-gray-500 mb-3">
-                  <div className="flex items-center gap-1.5 text-primary font-semibold">
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span>{event.date} • {event.time}</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 text-gray-500">
-                    <MapPin className="w-3.5 h-3.5" />
-                    <span className="truncate">{event.location}</span>
-                  </div>
-                </div>
-
-                <h3 className="text-lg font-bold text-gray-900 leading-snug mb-2 group-hover:text-primary transition-colors">
-                  {event.title}
-                </h3>
-
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                  {event.description}
-                </p>
-              </div>
+            {/* Top Date Badge */}
+            <div className="relative z-10 flex items-center justify-between">
+              <span className="px-3.5 py-1.5 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md text-amber border border-white/30 shadow-md">
+                {event.date}
+              </span>
+              <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-primary text-white shadow-xs">
+                Community
+              </span>
             </div>
 
-            <div className="p-6 pt-0">
-              <Button href="/contact" variant="outline" size="sm" className="w-full justify-center">
+            {/* Bottom Event Details */}
+            <div className="relative z-10 text-white">
+              <div className="flex items-center gap-2 text-xs text-white/80 mb-2">
+                <Calendar className="w-3.5 h-3.5 text-amber" />
+                <span>{event.time}</span>
+                <span>•</span>
+                <MapPin className="w-3.5 h-3.5 text-amber" />
+                <span className="truncate">{event.location}</span>
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-2 leading-snug drop-shadow-xs group-hover:text-amber transition-colors">
+                {event.title}
+              </h3>
+
+              <p className="text-xs text-white/85 leading-relaxed mb-4 line-clamp-2">
+                {event.description}
+              </p>
+
+              <Button
+                href="/contact"
+                variant="glass"
+                size="sm"
+                className="w-full justify-center bg-white/20 hover:bg-white text-white hover:text-gray-900 border-white/40 shadow-sm"
+              >
                 <span>Attend / Inquire</span>
-                <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
               </Button>
             </div>
           </div>

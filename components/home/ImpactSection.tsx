@@ -59,9 +59,6 @@ export default function ImpactSection({
 }: ImpactSectionProps) {
   return (
     <section className={`relative py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
-      {/* Ambient glowing orb for futuristic depth */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none -z-10" />
-
       <SectionHeader
         eyebrow={eyebrow}
         title={title}
@@ -73,8 +70,9 @@ export default function ImpactSection({
         {metrics.map((item, idx) => (
           <div
             key={idx}
-            className="group relative h-96 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-end border border-white/60"
+            className="group relative h-[440px] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between p-6 border border-white/30"
           >
+            {/* Full-bleed real photograph */}
             <Image
               src={item.image}
               alt={item.label}
@@ -82,22 +80,26 @@ export default function ImpactSection({
               className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/92 via-black/45 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-black/20" />
 
-            <div className="relative z-10 p-6 text-white">
-              <span className="inline-block px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-white/20 backdrop-blur-md text-amber border border-white/25 mb-3">
+            {/* Top Badge */}
+            <div className="relative z-10">
+              <span className="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-white/20 backdrop-blur-md text-amber border border-white/25">
                 {item.badge}
               </span>
+            </div>
 
-              <div className="text-4xl font-extrabold font-mono tracking-tight text-white mb-1.5 drop-shadow-xs">
+            {/* Bottom Metrics Content */}
+            <div className="relative z-10 text-white">
+              <div className="text-4xl sm:text-5xl font-extrabold font-mono tracking-tight text-white mb-2 drop-shadow-md">
                 {item.value}
               </div>
 
-              <h3 className="text-lg font-bold text-white mb-2 leading-snug">
+              <h3 className="text-lg font-bold text-white mb-2 leading-snug group-hover:text-amber transition-colors">
                 {item.label}
               </h3>
 
-              <p className="text-xs text-white/80 leading-relaxed">
+              <p className="text-xs text-white/85 leading-relaxed">
                 {item.description}
               </p>
             </div>

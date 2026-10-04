@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Heart } from "lucide-react";
+import { Heart, ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
 
@@ -62,9 +62,6 @@ export default function FeaturedCauses({
 }: FeaturedCausesProps) {
   return (
     <section className={`relative py-20 sm:py-28 overflow-hidden ${className}`}>
-      {/* Ambient background glow */}
-      <div className="absolute top-1/2 -right-32 -translate-y-1/2 w-96 h-96 bg-amber/12 rounded-full blur-3xl pointer-events-none -z-10" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow={eyebrow}
@@ -77,55 +74,66 @@ export default function FeaturedCauses({
           {causes.map((cause, idx) => (
             <div
               key={idx}
-              className="glass-card rounded-3xl overflow-hidden border border-white/80 shadow-lg hover:shadow-2xl flex flex-col justify-between group"
+              className="group relative h-[500px] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between p-6 sm:p-7 border border-white/30"
             >
-              <div>
-                <div className="relative h-60 w-full overflow-hidden">
-                  <Image
-                    src={cause.image}
-                    alt={cause.title}
-                    fill
-                    className="object-cover group-hover:scale-106 transition-transform duration-600"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-bold bg-amber text-gray-950 shadow-md">
-                    {cause.category}
-                  </div>
-                </div>
+              {/* Full-bleed real photograph */}
+              <Image
+                src={cause.image}
+                alt={cause.title}
+                fill
+                className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/30" />
 
-                <div className="p-6 sm:p-7">
-                  <h3 className="text-xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-primary transition-colors">
-                    {cause.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                    {cause.description}
-                  </p>
-
-                  <div className="space-y-2 mb-2">
-                    <div className="flex justify-between text-xs font-semibold">
-                      <span className="text-gray-600">
-                        Raised: <strong className="text-gray-900 font-mono">{cause.raised}</strong>
-                      </span>
-                      <span className="text-primary font-mono font-bold">{cause.percent}%</span>
-                    </div>
-                    <div className="w-full h-2.5 rounded-full bg-primary/10 overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-primary via-primary-light to-amber rounded-full"
-                        style={{ width: `${cause.percent}%` }}
-                      />
-                    </div>
-                    <div className="text-[11px] text-gray-500 text-right">
-                      Goal: {cause.goal}
-                    </div>
-                  </div>
-                </div>
+              {/* Top Badge */}
+              <div className="relative z-10 flex items-center justify-between">
+                <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-amber text-gray-950 shadow-md">
+                  {cause.category}
+                </span>
+                <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-white/20 backdrop-blur-md text-white border border-white/30">
+                  {cause.percent}% Funded
+                </span>
               </div>
 
-              <div className="p-6 pt-0">
-                <Button href="/donate" variant="donate" size="md" className="w-full justify-center shadow-md">
-                  <Heart className="w-4 h-4 fill-current mr-2" />
-                  <span>Donate to This Cause</span>
-                </Button>
+              {/* Bottom Content & Action */}
+              <div className="relative z-10 text-white">
+                <h3 className="text-xl font-bold text-white mb-2 leading-snug drop-shadow-sm group-hover:text-amber transition-colors">
+                  {cause.title}
+                </h3>
+                <p className="text-xs text-white/85 leading-relaxed mb-4 line-clamp-2">
+                  {cause.description}
+                </p>
+
+                {/* Progress Line */}
+                <div className="space-y-1.5 mb-5">
+                  <div className="w-full h-2 rounded-full bg-white/20 overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-primary to-amber rounded-full"
+                      style={{ width: `${cause.percent}%` }}
+                    />
+                  </div>
+                  <div className="flex justify-between text-[11px] text-white/80 font-mono">
+                    <span>Raised: <strong className="text-white">{cause.raised}</strong></span>
+                    <span>Goal: {cause.goal}</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Button href="/donate" variant="donate" size="sm" className="flex-1 justify-center shadow-lg">
+                    <Heart className="w-3.5 h-3.5 fill-current mr-1.5" />
+                    <span>Donate Now</span>
+                  </Button>
+                  <Button
+                    href="/donate"
+                    variant="glass"
+                    size="sm"
+                    className="bg-white/20 hover:bg-white text-white hover:text-gray-900 border-white/40 shadow-sm"
+                  >
+                    <span>Details</span>
+                    <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                  </Button>
+                </div>
               </div>
             </div>
           ))}

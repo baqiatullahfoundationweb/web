@@ -50,9 +50,6 @@ export default function VolunteersSection({
 }: VolunteersSectionProps) {
   return (
     <section className={`relative py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
-      {/* Radiant ambient bloom */}
-      <div className="absolute top-1/3 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none -z-10" />
-
       <SectionHeader
         eyebrow={eyebrow}
         title={title}
@@ -64,49 +61,67 @@ export default function VolunteersSection({
         {volunteers.map((v, idx) => (
           <div
             key={idx}
-            className="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group border border-white/80 shadow-lg hover:shadow-2xl"
+            className="group relative h-[440px] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between p-6 border border-white/30"
           >
-            <div>
-              <div className="relative h-64 w-full overflow-hidden">
-                <Image
-                  src={v.image}
-                  alt={v.name}
-                  fill
-                  className="object-cover group-hover:scale-106 transition-transform duration-600"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h4 className="text-xl font-bold leading-tight drop-shadow-xs">{v.name}</h4>
-                  <p className="text-xs font-semibold text-amber">{v.role}</p>
-                </div>
-              </div>
+            {/* Full-bleed real photograph */}
+            <Image
+              src={v.image}
+              alt={v.name}
+              fill
+              className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/92 via-black/45 to-black/20" />
 
-              <div className="p-6">
-                <p className="text-sm text-gray-600 italic leading-relaxed">
-                  &ldquo;{v.quote}&rdquo;
-                </p>
+            {/* Top Badge */}
+            <div className="relative z-10 flex items-center justify-between">
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/20 backdrop-blur-md text-amber border border-white/25">
+                {v.role}
+              </span>
+              <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white">
+                <UserCheck className="w-4 h-4" />
               </div>
             </div>
 
-            <div className="p-6 pt-0 flex items-center gap-1.5 text-xs font-bold text-primary">
-              <UserCheck className="w-4 h-4" />
-              <span>Certified Baqiatullah Volunteer</span>
+            {/* Bottom Content */}
+            <div className="relative z-10 text-white">
+              <h4 className="text-2xl font-extrabold text-white mb-2 leading-tight drop-shadow-xs">
+                {v.name}
+              </h4>
+              <p className="text-xs sm:text-sm text-white/85 italic leading-relaxed mb-4">
+                &ldquo;{v.quote}&rdquo;
+              </p>
+              <div className="pt-2 border-t border-white/20 flex items-center gap-1.5 text-xs font-bold text-amber">
+                <span>Verified Foundation Volunteer</span>
+              </div>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="glass-panel p-8 sm:p-10 rounded-3xl border border-primary/20 text-center max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
-        <div className="text-left">
-          <h4 className="text-xl font-bold text-gray-900">Want to Make a Direct Difference?</h4>
-          <p className="text-sm text-gray-600 mt-1">
-            Join our 85+ volunteers in Lahore for teaching, mentoring, or medical support.
-          </p>
+      {/* Volunteer Action Callout with real photo backdrop */}
+      <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/30 p-8 sm:p-12 text-white">
+        <Image
+          src="/gallery/75.jpg"
+          alt="Volunteers with community"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/75 to-primary/80" />
+
+        <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
+          <div className="text-left space-y-2">
+            <h4 className="text-2xl sm:text-3xl font-bold text-white">Want to Make a Direct Difference?</h4>
+            <p className="text-sm text-white/85 max-w-xl">
+              Join our 85+ active volunteers in Lahore for weekend tutoring, computer literacy, sports mentoring, or medical health camps.
+            </p>
+          </div>
+          <Button href="/contact" variant="glass" size="lg" className="shrink-0 bg-white/20 hover:bg-white text-white hover:text-gray-900 border-white/40 shadow-lg">
+            <HeartHandshake className="w-4 h-4 mr-2" />
+            <span>Join as a Volunteer</span>
+          </Button>
         </div>
-        <Button href="/contact" variant="teal" size="md" className="shrink-0 shadow-md">
-          <HeartHandshake className="w-4 h-4 mr-2" />
-          <span>Join as a Volunteer</span>
-        </Button>
       </div>
     </section>
   );
