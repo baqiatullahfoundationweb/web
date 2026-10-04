@@ -14,15 +14,11 @@ export const DEFAULT_CATEGORIES: GalleryCategories = {
   relief: "Emergency Relief",
 };
 
-// Wide-aspect bento distribution: No narrow vertical cards, all expansive and wide
+// Wide widescreen aspect ratios: width is always 1.6x - 1.77x height
 export const getBentoClasses = (idx: number) => {
   const mod = idx % 6;
-  if (mod === 0) return "md:col-span-2 h-[340px] sm:h-[440px]";
-  if (mod === 1) return "md:col-span-1 h-[340px] sm:h-[440px]";
-  if (mod === 2) return "md:col-span-1 h-[300px] sm:h-[380px]";
-  if (mod === 3) return "md:col-span-2 h-[300px] sm:h-[380px]";
-  if (mod === 4) return "md:col-span-2 h-[300px] sm:h-[380px]";
-  return "md:col-span-1 h-[300px] sm:h-[380px]";
+  if (mod === 0 || mod === 3) return "md:col-span-2 aspect-[16/9] min-h-[260px]";
+  return "md:col-span-1 aspect-[16/10] min-h-[220px]";
 };
 
 export const generateGalleryImages = () => {
