@@ -30,7 +30,6 @@ export interface Dictionary {
     }>;
   };
   impact: {
-    eyebrow: string;
     title: string;
     highlight: string;
     subtitle: string;
@@ -39,11 +38,9 @@ export interface Dictionary {
       label: string;
       description: string;
       image: string;
-      badge: string;
     }>;
   };
   about: {
-    eyebrow: string;
     title: string;
     description: string;
     establishedYear: string;
@@ -55,10 +52,14 @@ export interface Dictionary {
     visitBtn: string;
   };
   causes: {
-    eyebrow: string;
     title: string;
     highlight: string;
     subtitle: string;
+    raisedLabel: string;
+    goalLabel: string;
+    fundedLabel: string;
+    donateBtn: string;
+    detailsBtn: string;
     items: Array<{
       title: string;
       category: string;
@@ -68,11 +69,8 @@ export interface Dictionary {
       percent: number;
       description: string;
     }>;
-    donateBtn: string;
-    detailsBtn: string;
   };
   volunteers: {
-    eyebrow: string;
     title: string;
     highlight: string;
     subtitle: string;
@@ -80,22 +78,41 @@ export interface Dictionary {
     calloutTitle: string;
     calloutDesc: string;
     calloutBtn: string;
+    items: Array<{
+      name: string;
+      role: string;
+      image: string;
+      quote: string;
+    }>;
   };
   events: {
-    eyebrow: string;
     title: string;
     highlight: string;
     subtitle: string;
     attendBtn: string;
+    items: Array<{
+      title: string;
+      date: string;
+      time: string;
+      location: string;
+      image: string;
+      description: string;
+    }>;
   };
   getInvolved: {
-    eyebrow: string;
     title: string;
     highlight: string;
     subtitle: string;
+    pathways: Array<{
+      title: string;
+      description: string;
+      image: string;
+      actionText: string;
+      href: string;
+      badge: string;
+    }>;
   };
   spotlight: {
-    badge: string;
     title: string;
     description: string;
     stat1Val: string;
@@ -108,7 +125,6 @@ export interface Dictionary {
     supportBtn: string;
   };
   cta: {
-    badge: string;
     title: string;
     description: string;
     donateBtn: string;
@@ -118,6 +134,10 @@ export interface Dictionary {
     desc: string;
     navTitle: string;
     contactTitle: string;
+    address: string;
+    phone: string;
+    email: string;
     copyright: string;
+    motto: string;
   };
 }
