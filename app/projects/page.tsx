@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pt-24 sm:pt-28">
       <OngoingProjects />
       <CompletedProjects />
       <CtaBanner />

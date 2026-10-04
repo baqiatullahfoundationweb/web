@@ -27,14 +27,14 @@ export default function Button({
   };
 
   const variantStyles = {
-    teal: "bg-[#008B8B] hover:bg-[#007373] text-white shadow-sm hover:shadow-md focus:ring-[#008B8B]/40",
+    teal: "bg-primary hover:bg-primary-dark text-white shadow-sm hover:shadow-md focus:ring-primary/40",
     donate:
-      "bg-[#AF0000] hover:bg-[#930000] text-white shadow-sm hover:shadow-lg hover:shadow-red-950/10 focus:ring-[#AF0000]/40 font-semibold tracking-wide",
-    gold: "bg-[#FFBF00] hover:bg-[#E5AC00] text-gray-950 shadow-sm focus:ring-[#FFBF00]/40 font-semibold",
+      "bg-accent-red hover:bg-accent-red-dark text-white shadow-sm hover:shadow-lg hover:shadow-red-950/15 focus:ring-accent-red/40 font-semibold tracking-wide",
+    gold: "bg-amber hover:bg-amber-dark text-gray-950 shadow-sm focus:ring-amber/40 font-semibold",
     outline:
-      "border border-gray-200 hover:border-[#008B8B] bg-white hover:bg-gray-50 text-gray-800 hover:text-[#008B8B] focus:ring-[#008B8B]/20",
+      "border border-primary/20 hover:border-primary bg-white/80 hover:bg-white text-gray-800 hover:text-primary focus:ring-primary/20",
     glass:
-      "glass-panel hover:bg-white text-gray-800 border-white/80 hover:border-[#008B8B]/30 focus:ring-[#008B8B]/20",
+      "glass-panel hover:bg-white text-gray-800 border-white/80 hover:border-primary/30 focus:ring-primary/20",
   };
 
   const combinedClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;

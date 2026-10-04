@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pt-24 sm:pt-28">
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 w-full">
         <SectionHeader
           eyebrow="Field Reports"
@@ -28,7 +28,7 @@ export default function BlogPage() {
             <Link
               key={post.id}
               href={`/blog/${post.id}`}
-              className="glass-card rounded-3xl overflow-hidden group flex flex-col justify-between"
+              className="glass-card rounded-3xl overflow-hidden group flex flex-col justify-between border border-white/80 shadow-lg hover:shadow-2xl"
             >
               <div>
                 <div className="relative h-56 w-full overflow-hidden">
@@ -36,9 +36,9 @@ export default function BlogPage() {
                     src={post.image}
                     alt={post.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-106 transition-transform duration-600"
                   />
-                  <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#FFBF00] text-gray-950 shadow-sm">
+                  <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-bold bg-amber text-gray-950 shadow-sm">
                     {post.category}
                   </div>
                 </div>
@@ -46,16 +46,16 @@ export default function BlogPage() {
                 <div className="p-6">
                   <div className="flex items-center gap-4 text-xs text-gray-500 mb-3">
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-3.5 h-3.5 text-[#008B8B]" />
+                      <Calendar className="w-3.5 h-3.5 text-primary" />
                       {post.date}
                     </span>
                     <span className="flex items-center gap-1">
-                      <User className="w-3.5 h-3.5 text-[#008B8B]" />
+                      <User className="w-3.5 h-3.5 text-primary" />
                       {post.author}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#008B8B] transition-colors leading-snug mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors leading-snug mb-3">
                     {post.title}
                   </h3>
 
@@ -65,7 +65,7 @@ export default function BlogPage() {
                 </div>
               </div>
 
-              <div className="p-6 pt-0 flex items-center text-xs font-semibold text-[#008B8B]">
+              <div className="p-6 pt-0 flex items-center text-xs font-semibold text-primary">
                 <span>Read Full Report</span>
                 <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
               </div>

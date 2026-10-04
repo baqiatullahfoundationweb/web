@@ -1,6 +1,6 @@
 import React from "react";
 
-interface SectionHeaderProps {
+export interface SectionHeaderProps {
   eyebrow?: string;
   title: string;
   highlight?: string;
@@ -22,13 +22,13 @@ export default function SectionHeader({
   return (
     <div className={`mb-12 md:mb-16 ${isCenter ? "text-center max-w-3xl mx-auto" : "max-w-2xl"} ${className}`}>
       {eyebrow && (
-        <span className="inline-block px-3 py-1 mb-3 text-xs font-semibold tracking-wider uppercase text-[#008B8B] bg-[#008B8B]/10 rounded-full">
+        <span className="inline-block px-3.5 py-1 mb-3 text-xs font-semibold tracking-wider uppercase text-primary bg-primary/10 border border-primary/20 rounded-full shadow-2xs">
           {eyebrow}
         </span>
       )}
-      <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 leading-[1.15] mb-4">
+      <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 leading-[1.15] mb-4">
         {title}{" "}
-        {highlight && <span className="text-[#008B8B]">{highlight}</span>}
+        {highlight && <span className="text-primary">{highlight}</span>}
       </h2>
       {subtitle && (
         <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-[65ch] mx-auto">

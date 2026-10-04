@@ -22,13 +22,13 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#FBFBFA] border-t border-[#EAEAEA] text-gray-800 pt-16 pb-12 mt-24">
+    <footer className="relative bg-white/70 backdrop-blur-xl border-t border-primary/15 text-gray-800 pt-16 pb-12 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-gray-200">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-gray-200/80">
           {/* Brand Column */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-sm shrink-0">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-[#FFBF00] shadow-sm shrink-0 bg-[#FFBF00]">
                 <Image
                   src="/logo/emblem.png"
                   alt="Baqiatullah Foundation Emblem"
@@ -36,7 +36,7 @@ export default function Footer() {
                   className="object-cover"
                 />
               </div>
-              <div className="relative h-11 w-52 shrink-0">
+              <div className="relative h-11 w-56 shrink-0">
                 <Image
                   src="/logo/brand-text.png"
                   alt="Baqiatullah Foundation Pakistan"
@@ -55,7 +55,7 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-white border border-gray-200 hover:border-[#008B8B] hover:text-[#008B8B] flex items-center justify-center text-xs font-bold text-gray-600 transition-colors shadow-2xs"
+                  className="w-8 h-8 rounded-lg bg-white/80 border border-gray-200 hover:border-primary hover:text-primary flex items-center justify-center text-xs font-bold text-gray-600 transition-colors shadow-2xs"
                   aria-label={s.name}
                 >
                   {s.icon}
@@ -74,7 +74,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-600 hover:text-[#008B8B] transition-colors"
+                    className="text-sm text-gray-600 hover:text-primary transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -90,18 +90,18 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3.5 text-sm text-gray-600">
               <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#008B8B] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                 <span>House No.123/A Block, Nawab Town, Lahore, Pakistan</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#008B8B] shrink-0" />
-                <a href="tel:+923146500512" className="hover:text-[#008B8B] transition-colors">
+                <Phone className="w-4 h-4 text-primary shrink-0" />
+                <a href="tel:+923146500512" className="hover:text-primary transition-colors">
                   +92 314 6500512
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#008B8B] shrink-0" />
-                <a href="mailto:baqiatullahpak@gmail.com" className="hover:text-[#008B8B] transition-colors">
+                <Mail className="w-4 h-4 text-primary shrink-0" />
+                <a href="mailto:baqiatullahpak@gmail.com" className="hover:text-primary transition-colors">
                   baqiatullahpak@gmail.com
                 </a>
               </li>

@@ -57,8 +57,8 @@ export default function GalleryGrid() {
             }}
             className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 cursor-pointer interactive-tap ${
               activeCategory === cat
-                ? "bg-[#008B8B] text-white shadow-sm"
-                : "bg-white hover:bg-gray-100 text-gray-700 border border-gray-200"
+                ? "bg-primary text-white shadow-sm"
+                : "bg-white/80 hover:bg-white text-gray-700 border border-primary/20"
             }`}
           >
             {cat}
@@ -72,7 +72,7 @@ export default function GalleryGrid() {
           <div
             key={img.id}
             onClick={() => setSelectedIdx(idx)}
-            className="group relative aspect-square rounded-2xl overflow-hidden glass-card cursor-pointer"
+            className="group relative aspect-square rounded-2xl overflow-hidden glass-card cursor-pointer border border-primary/10"
           >
             <Image
               src={img.src}
@@ -96,7 +96,7 @@ export default function GalleryGrid() {
         <div className="text-center mt-12">
           <button
             onClick={() => setVisibleCount((prev) => prev + 24)}
-            className="px-6 py-3 rounded-xl bg-white hover:bg-gray-50 border border-gray-200 text-gray-800 text-sm font-semibold shadow-2xs hover:border-[#008B8B] transition-all cursor-pointer interactive-tap"
+            className="px-6 py-3 rounded-xl bg-white hover:bg-gray-50 border border-primary/20 text-gray-800 text-sm font-semibold shadow-2xs hover:border-primary transition-all cursor-pointer interactive-tap"
           >
             Load More Photos ({filtered.length - visibleCount} remaining)
           </button>

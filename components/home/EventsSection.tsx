@@ -3,7 +3,25 @@ import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
 
-const EVENTS = [
+export interface EventItem {
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  image: string;
+  description: string;
+}
+
+export interface EventsSectionProps {
+  events?: EventItem[];
+  eyebrow?: string;
+  title?: string;
+  highlight?: string;
+  subtitle?: string;
+  className?: string;
+}
+
+const DEFAULT_EVENTS: EventItem[] = [
   {
     title: "Annual Sports & Outdoor Joy Festival",
     date: "November 15, 2026",
@@ -30,40 +48,48 @@ const EVENTS = [
   },
 ];
 
-export default function EventsSection() {
+export default function EventsSection({
+  events = DEFAULT_EVENTS,
+  eyebrow = "Community & Action",
+  title = "Upcoming Foundation Events &",
+  highlight = "Activities",
+  subtitle = "Engage with our children, observe educational milestones, and participate in community enrichment days in Lahore.",
+  className = "",
+}: EventsSectionProps) {
   return (
-    <section className="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className={`relative py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
+      {/* Ambient background glow */}
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-primary/8 rounded-full blur-3xl pointer-events-none -z-10" />
+
       <SectionHeader
-        eyebrow="Community & Action"
-        title="Upcoming Foundation Events &"
-        highlight="Activities"
-        subtitle="Engage with our children, observe educational milestones, and participate in community enrichment days in Lahore."
+        eyebrow={eyebrow}
+        title={title}
+        highlight={highlight}
+        subtitle={subtitle}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        {EVENTS.map((event, idx) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {events.map((event, idx) => (
           <div
             key={idx}
-            className="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group"
+            className="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group border border-white/80 shadow-lg hover:shadow-2xl"
           >
             <div>
-              {/* Event Photo */}
-              <div className="relative h-52 w-full overflow-hidden">
+              <div className="relative h-56 w-full overflow-hidden">
                 <Image
                   src={event.image}
                   alt={event.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-106 transition-transform duration-600"
                 />
-                <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-md text-gray-900 border border-white/60 shadow-xs">
+                <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-bold bg-white/90 backdrop-blur-md text-gray-900 border border-white/60 shadow-xs">
                   Event
                 </div>
               </div>
 
-              {/* Event Info */}
               <div className="p-6">
                 <div className="flex flex-col gap-1.5 text-xs text-gray-500 mb-3">
-                  <div className="flex items-center gap-1.5 text-[#008B8B] font-semibold">
+                  <div className="flex items-center gap-1.5 text-primary font-semibold">
                     <Calendar className="w-3.5 h-3.5" />
                     <span>{event.date} • {event.time}</span>
                   </div>
@@ -73,7 +99,7 @@ export default function EventsSection() {
                   </div>
                 </div>
 
-                <h3 className="text-lg font-bold text-gray-900 leading-snug mb-2 group-hover:text-[#008B8B] transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 leading-snug mb-2 group-hover:text-primary transition-colors">
                   {event.title}
                 </h3>
 

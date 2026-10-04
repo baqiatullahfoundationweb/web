@@ -42,10 +42,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth`}>
-      <body className="min-h-full flex flex-col bg-white text-gray-900 antialiased font-sans">
+      <body className="min-h-full flex flex-col text-gray-900 antialiased font-sans relative selection:bg-[#008B8B] selection:text-white">
+        {/* Futuristic Radiant Ambient Canvas */}
+        <div className="futuristic-ambient-bg">
+          <div className="futuristic-grid" />
+        </div>
+
         <SmoothScroll>
           <Navbar />
-          <main className="flex-1 pt-24 sm:pt-28">{children}</main>
+          <main className="flex-1">{children}</main>
           <Footer />
         </SmoothScroll>
       </body>
