@@ -14,14 +14,32 @@ export const DEFAULT_CATEGORIES: GalleryCategories = {
   relief: "Emergency Relief",
 };
 
-// Wide widescreen aspect ratios: width is always 1.6x - 1.77x height
-export const getBentoClasses = (idx: number) => {
-  const mod = idx % 6;
-  if (mod === 0 || mod === 3) return "md:col-span-2 aspect-[16/9] min-h-[260px]";
-  return "md:col-span-1 aspect-[16/10] min-h-[220px]";
-};
+export interface RawGalleryImage {
+  id: number;
+  src: string;
+  alt: string;
+  categoryKey: keyof GalleryCategories;
+}
 
-export const generateGalleryImages = () => {
+export type GalleryGridItem =
+  | {
+      type: "image";
+      id: number;
+      src: string;
+      alt: string;
+      categoryKey: keyof GalleryCategories;
+      spanClass: string;
+      isFeatured?: boolean;
+      originalIdx: number;
+    }
+  | {
+      type: "playful";
+      id: string;
+      variantIndex: number;
+      spanClass: string;
+    };
+
+export const generateGalleryImages = (): RawGalleryImage[] => {
   return Array.from({ length: 87 }, (_, i) => {
     const id = i + 1;
     let catKey: keyof GalleryCategories = "classes";
@@ -36,4 +54,71 @@ export const generateGalleryImages = () => {
       categoryKey: catKey,
     };
   });
+};
+
+// Mathematically gapless bento tiling: 7 photos + 2 playful cards = exactly 5 full rows x 3 columns
+export const buildGaplessGalleryItems = (images: RawGalleryImage[]): GalleryGridItem[] => {
+  const result: GalleryGridItem[] = [];
+  let playfulCount = 0;
+
+  for (let i = 0; i < images.length; i++) {
+    const cycle = i % 7;
+    const img = images[i];
+
+    if (cycle === 0) {
+      result.push({
+        type: "image",
+        ...img,
+        spanClass: "col-span-1 md:col-span-2 md:row-span-2 min-h-[300px] md:min-h-full",
+        isFeatured: true,
+        originalIdx: i,
+      });
+    } else if (cycle === 1) {
+      result.push({
+        type: "image",
+        ...img,
+        spanClass: "col-span-1 md:col-span-1 md:row-span-1 min-h-[220px] md:min-h-full",
+        originalIdx: i,
+      });
+      // Slot playful card directly underneath item 1 to fill row 2 of column 3!
+      result.push({
+        type: "playful",
+        id: `playful-${i}`,
+        variantIndex: playfulCount++,
+        spanClass: "col-span-1 md:col-span-1 md:row-span-1 min-h-[220px] md:min-h-full",
+      });
+    } else if (cycle === 5) {
+      result.push({
+        type: "image",
+        ...img,
+        spanClass: "col-span-1 md:col-span-1 md:row-span-1 min-h-[220px] md:min-h-full",
+        originalIdx: i,
+      });
+      // Slot playful card directly underneath item 5 to fill row 5 of column 1!
+      result.push({
+        type: "playful",
+        id: `playful-${i}`,
+        variantIndex: playfulCount++,
+        spanClass: "col-span-1 md:col-span-1 md:row-span-1 min-h-[220px] md:min-h-full",
+      });
+    } else if (cycle === 6) {
+      result.push({
+        type: "image",
+        ...img,
+        spanClass: "col-span-1 md:col-span-2 md:row-span-2 min-h-[300px] md:min-h-full",
+        isFeatured: true,
+        originalIdx: i,
+      });
+    } else {
+      // cycles 2, 3, 4 (the clean 3-across row)
+      result.push({
+        type: "image",
+        ...img,
+        spanClass: "col-span-1 md:col-span-1 md:row-span-1 min-h-[220px] md:min-h-full",
+        originalIdx: i,
+      });
+    }
+  }
+
+  return result;
 };

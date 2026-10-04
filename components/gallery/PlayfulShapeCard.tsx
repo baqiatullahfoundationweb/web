@@ -50,7 +50,7 @@ export default function PlayfulShapeCard({
 
   return (
     <div
-      className={`relative rounded-3xl p-6 flex flex-col items-center justify-between overflow-hidden shadow-xl border-2 border-white/80 ring-1 ring-black/5 select-none transition-transform duration-500 hover:scale-102 ${p.bg} ${p.text} ${className}`}
+      className={`relative w-full h-full min-h-[220px] rounded-3xl p-6 flex flex-col items-center justify-between overflow-hidden shadow-xl border-2 border-white/80 ring-1 ring-black/5 select-none transition-transform duration-500 hover:scale-102 ${p.bg} ${p.text} ${className}`}
     >
       {/* Background Decorative Polka Dapples */}
       <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#fff_3px,transparent_3px)] [background-size:16px_16px]" />

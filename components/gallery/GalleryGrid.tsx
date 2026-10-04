@@ -9,8 +9,8 @@ import PlayfulShapeCard from "./PlayfulShapeCard";
 import {
   GalleryCategories,
   DEFAULT_CATEGORIES,
-  getBentoClasses,
   generateGalleryImages,
+  buildGaplessGalleryItems,
 } from "./galleryData";
 
 export interface GalleryGridProps {
@@ -53,6 +53,12 @@ export default function GalleryGrid({
 
   const visibleImages = filtered.slice(0, visibleCount);
 
+  // Generate mathematically gapless items (photos + playful character cards)
+  const gridItems = useMemo(
+    () => buildGaplessGalleryItems(visibleImages),
+    [visibleImages]
+  );
+
   return (
     <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6">
       <SectionHeader title={title} highlight={highlight} subtitle={subtitle} />
@@ -77,27 +83,37 @@ export default function GalleryGrid({
         ))}
       </div>
 
-      {/* Wide Asymmetric Bento Showcase Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        {visibleImages.map((img, idx) => (
-          <div key={img.id} className="contents">
+      {/* 100% Mathematically Gapless Bento Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[230px]">
+        {gridItems.map((item) => {
+          if (item.type === "playful") {
+            return (
+              <PlayfulShapeCard
+                key={item.id}
+                variantIndex={item.variantIndex}
+                isUrdu={isUrdu}
+                className={item.spanClass}
+              />
+            );
+          }
+
+          return (
             <div
-              onClick={() => setSelectedIdx(idx)}
-              className={`group relative rounded-3xl overflow-hidden cursor-pointer border-2 border-white ring-1 ring-primary/20 shadow-xl hover:shadow-2xl transition-all duration-300 ${getBentoClasses(
-                idx
-              )}`}
+              key={item.id}
+              onClick={() => setSelectedIdx(item.originalIdx)}
+              className={`group relative rounded-3xl overflow-hidden cursor-pointer border-2 border-white ring-1 ring-primary/20 shadow-xl hover:shadow-2xl transition-all duration-300 ${item.spanClass}`}
             >
               <Image
-                src={img.src}
-                alt={img.alt}
+                src={item.src}
+                alt={item.alt}
                 fill
                 loading="lazy"
                 className="object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 50vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
 
-              {idx % 7 === 0 && (
+              {item.isFeatured && (
                 <div className="absolute top-4 left-4 z-10">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold bg-[#FFBF00] text-gray-950 shadow-md">
                     <Sparkles className="w-3 h-3 fill-current" />
@@ -113,17 +129,8 @@ export default function GalleryGrid({
                 </span>
               </div>
             </div>
-
-            {/* Cute Playful SVG Character Shapes with Eyes filling the extra rectangle spaces */}
-            {(idx === 1 || idx === 6 || idx === 11 || idx === 16) && (
-              <PlayfulShapeCard
-                variantIndex={Math.floor(idx / 5)}
-                isUrdu={isUrdu}
-                className="md:col-span-1 min-h-[220px] aspect-[16/10]"
-              />
-            )}
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Load More */}
