@@ -9,10 +9,10 @@ import Button from "@/components/ui/Button";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
+  { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/blog", label: "News" },
+  { href: "/blog", label: "News & Events" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -30,13 +30,15 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-6 py-2.5 transition-all duration-300">
       <div
-        className={`mx-auto max-w-7xl rounded-2xl transition-all duration-300 px-4 sm:px-6 py-2.5 flex items-center justify-between ${
-          scrolled ? "glass-panel shadow-md border-white/80" : "glass-panel shadow-sm"
+        className={`mx-auto max-w-7xl rounded-2xl transition-all duration-300 px-4 sm:px-6 py-2 flex items-center justify-between ${
+          scrolled
+            ? "bg-white/90 backdrop-blur-md shadow-md border border-gray-200/80"
+            : "bg-white/80 backdrop-blur-sm shadow-xs border border-white/90"
         }`}
       >
-        {/* Brand Lockup: Logo Image 2 + Text Image 3 */}
+        {/* Brand Lockup: Emblem (Image 2) + Cropped Text (Image 3) */}
         <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
-          <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden shadow-sm group-hover:scale-105 transition-transform duration-300 shrink-0">
+          <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border-2 border-[#FFBF00] shadow-xs group-hover:scale-105 transition-transform duration-300 shrink-0 bg-[#FFBF00]">
             <Image
               src="/logo/emblem.png"
               alt="Baqiatullah Foundation Emblem"
@@ -45,7 +47,7 @@ export default function Navbar() {
               priority
             />
           </div>
-          <div className="relative h-9 sm:h-11 w-36 sm:w-56 shrink-0">
+          <div className="relative h-8 sm:h-10 w-44 sm:w-60 shrink-0">
             <Image
               src="/logo/brand-text.png"
               alt="بقیتہ اللہ فاؤنڈیشن پاکستان - BAQIATULLAH FOUNDATION PAKISTAN"
@@ -57,15 +59,15 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           {NAV_LINKS.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors duration-200 relative py-1 ${
-                  active ? "text-[#008B8B] font-semibold" : "text-gray-700 hover:text-[#008B8B]"
+                className={`text-sm font-semibold transition-colors duration-200 relative py-1 ${
+                  active ? "text-[#008B8B]" : "text-gray-700 hover:text-[#008B8B]"
                 }`}
               >
                 {link.label}
@@ -86,7 +88,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 rounded-xl text-gray-700 hover:text-gray-900 hover:bg-gray-100/80 transition-colors"
+            className="lg:hidden p-2 rounded-xl text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors"
             aria-label="Toggle navigation menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -96,7 +98,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileOpen && (
-        <div className="lg:hidden mx-auto max-w-7xl mt-2 px-4 py-4 rounded-2xl glass-panel shadow-lg border border-white/80 animate-in fade-in duration-200">
+        <div className="lg:hidden mx-auto max-w-7xl mt-2 px-4 py-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-xl border border-gray-200 animate-in fade-in duration-200">
           <nav className="flex flex-col gap-2">
             {NAV_LINKS.map((link) => {
               const active = pathname === link.href;
@@ -105,8 +107,8 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`px-3 py-2 rounded-xl text-sm font-medium transition-colors ${
-                    active ? "bg-[#008B8B]/10 text-[#008B8B] font-semibold" : "text-gray-700 hover:bg-gray-100"
+                  className={`px-3 py-2 rounded-xl text-sm font-semibold transition-colors ${
+                    active ? "bg-[#008B8B]/10 text-[#008B8B]" : "text-gray-700 hover:bg-gray-100"
                   }`}
                 >
                   {link.label}
