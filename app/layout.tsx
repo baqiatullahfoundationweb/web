@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/motion/SmoothScroll";
+import AmbientSvgBackground from "@/components/motion/AmbientSvgBackground";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -39,10 +40,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${poppins.variable} h-full scroll-smooth`}>
-      <body className="min-h-full flex flex-col text-gray-900 antialiased font-sans relative selection:bg-[#008B8B] selection:text-white">
-        <div className="futuristic-ambient-bg">
-          <div className="futuristic-grid" />
-        </div>
+      <body className="min-h-full flex flex-col text-slate-900 antialiased font-sans relative selection:bg-[#008B8B] selection:text-white bg-[#EDF6F6]">
+        <AmbientSvgBackground />
 
         <SmoothScroll>
           <Navbar />

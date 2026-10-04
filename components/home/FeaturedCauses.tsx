@@ -15,7 +15,6 @@ export interface CauseItem {
 
 export interface FeaturedCausesProps {
   causes?: CauseItem[];
-  eyebrow?: string;
   title?: string;
   highlight?: string;
   subtitle?: string;
@@ -54,7 +53,6 @@ const DEFAULT_CAUSES: CauseItem[] = [
 
 export default function FeaturedCauses({
   causes = DEFAULT_CAUSES,
-  eyebrow = "Urgent Priorities",
   title = "Featured Causes Needing",
   highlight = "Your Generous Hand",
   subtitle = "Directly support targeted campaigns where urgent funding provides immediate shelter, food, and classroom seats.",
@@ -64,7 +62,6 @@ export default function FeaturedCauses({
     <section className={`relative py-20 sm:py-28 overflow-hidden ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow={eyebrow}
           title={title}
           highlight={highlight}
           subtitle={subtitle}
@@ -74,7 +71,7 @@ export default function FeaturedCauses({
           {causes.map((cause, idx) => (
             <div
               key={idx}
-              className="group relative h-[500px] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between p-6 sm:p-7 border border-white/30"
+              className="group relative h-[500px] rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between p-6 sm:p-7 border border-white/15 hover:border-primary/50"
             >
               {/* Full-bleed real photograph */}
               <Image
@@ -84,43 +81,43 @@ export default function FeaturedCauses({
                 className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#020B0D] via-[#020B0D]/65 to-transparent" />
 
-              {/* Top Badge */}
+              {/* Top Tag & Percent */}
               <div className="relative z-10 flex items-center justify-between">
-                <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-amber text-gray-950 shadow-md">
+                <span className="px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber text-gray-950 shadow-md">
                   {cause.category}
                 </span>
-                <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-white/20 backdrop-blur-md text-white border border-white/30">
+                <span className="px-3 py-1.5 rounded-full text-xs font-mono font-bold bg-white/10 backdrop-blur-md text-white border border-white/20">
                   {cause.percent}% Funded
                 </span>
               </div>
 
               {/* Bottom Content & Action */}
               <div className="relative z-10 text-white">
-                <h3 className="text-xl font-bold text-white mb-2 leading-snug drop-shadow-sm group-hover:text-amber transition-colors">
+                <h3 className="text-xl font-bold text-white mb-2 leading-snug drop-shadow-sm group-hover:text-primary-light transition-colors">
                   {cause.title}
                 </h3>
-                <p className="text-xs text-white/85 leading-relaxed mb-4 line-clamp-2">
+                <p className="text-xs text-slate-300 leading-relaxed mb-4 line-clamp-2">
                   {cause.description}
                 </p>
 
                 {/* Progress Line */}
                 <div className="space-y-1.5 mb-5">
-                  <div className="w-full h-2 rounded-full bg-white/20 overflow-hidden">
+                  <div className="w-full h-2 rounded-full bg-white/15 overflow-hidden">
                     <div
                       className="h-full bg-gradient-to-r from-primary to-amber rounded-full"
                       style={{ width: `${cause.percent}%` }}
                     />
                   </div>
-                  <div className="flex justify-between text-[11px] text-white/80 font-mono">
+                  <div className="flex justify-between text-[11px] text-slate-300 font-mono">
                     <span>Raised: <strong className="text-white">{cause.raised}</strong></span>
                     <span>Goal: {cause.goal}</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Button href="/donate" variant="donate" size="sm" className="flex-1 justify-center shadow-lg">
+                  <Button href="/donate" variant="donate" size="sm" className="flex-1 justify-center shadow-lg shadow-red-950/40">
                     <Heart className="w-3.5 h-3.5 fill-current mr-1.5" />
                     <span>Donate Now</span>
                   </Button>
@@ -128,7 +125,7 @@ export default function FeaturedCauses({
                     href="/donate"
                     variant="glass"
                     size="sm"
-                    className="bg-white/20 hover:bg-white text-white hover:text-gray-900 border-white/40 shadow-sm"
+                    className="bg-white/10 hover:bg-white/25 text-white border-white/25 shadow-sm"
                   >
                     <span>Details</span>
                     <ArrowRight className="w-3.5 h-3.5 ml-1" />

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Heart, ArrowRight, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight, Heart, ArrowRight } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { type HeroSlide, DEFAULT_SLIDES } from "./heroSlides";
 
@@ -16,18 +16,21 @@ export interface HeroSliderProps {
 
 export default function HeroSlider({
   slides = DEFAULT_SLIDES,
-  autoPlayInterval = 6500,
+  autoPlayInterval = 7000,
   className = "",
 }: HeroSliderProps) {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [key, setKey] = useState(0);
 
   const nextSlide = useCallback(() => {
     setCurrent((prev) => (prev + 1) % slides.length);
+    setKey((prev) => prev + 1);
   }, [slides.length]);
 
   const prevSlide = () => {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+    setKey((prev) => prev + 1);
   };
 
   useEffect(() => {
@@ -40,95 +43,106 @@ export default function HeroSlider({
 
   return (
     <section
-      className={`relative w-full h-[620px] sm:h-[700px] lg:h-[780px] overflow-hidden ${className}`}
+      className={`relative w-full h-[620px] sm:h-[720px] lg:h-[800px] overflow-hidden bg-[#041a1c] ${className}`}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      aria-roledescription="carousel"
+      aria-label="Foundation Highlights"
     >
-      {slides.map((slide, idx) => (
-        <div
-          key={idx}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            idx === current ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
-          }`}
-        >
-          <Image
-            src={slide.image}
-            alt={slide.title}
-            fill
-            priority={idx === 0}
-            className="object-cover object-center scale-102 transition-transform duration-7000 ease-out"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent" />
-        </div>
-      ))}
-
-      <div className="relative z-20 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-end pb-16 sm:pb-22">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs font-semibold mb-4 sm:mb-6 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-amber" />
-            <span>{activeSlide.badge}</span>
+      {/* Background Slides with Ken Burns Zoom */}
+      {slides.map((slide, idx) => {
+        const isActive = idx === current;
+        return (
+          <div
+            key={idx}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-out ${
+              isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+            }`}
+          >
+            <div className={`relative w-full h-full transition-transform duration-[7500ms] ease-out ${isActive ? "scale-108 translate-x-1" : "scale-100 translate-x-0"}`}>
+              <Image src={slide.image} alt={slide.title} fill priority={idx === 0} className="object-cover object-center" sizes="100vw" />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
           </div>
+        );
+      })}
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12] mb-4 sm:mb-6 drop-shadow-md">
+      {/* Kinetic SVG Light Filament Overlay */}
+      <svg className="absolute bottom-0 left-0 right-0 w-full h-24 z-15 pointer-events-none opacity-40" viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0 80 Q 360 20, 720 70 T 1440 40" fill="none" stroke="url(#heroLineGlow)" strokeWidth="2" />
+        <defs>
+          <linearGradient id="heroLineGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#008B8B" stopOpacity="0" />
+            <stop offset="30%" stopColor="#008B8B" stopOpacity="0.8" />
+            <stop offset="70%" stopColor="#FFBF00" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#AF0000" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      {/* Hero Content Container */}
+      <div className="relative z-20 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-end pb-16 sm:pb-20">
+        <div key={key} className="max-w-5xl">
+          {/* Strict 2-Line Wide Headline with Staggered Kinetic Entrance */}
+          <h1 className="text-3xl sm:text-5xl lg:text-[3.75rem] font-extrabold tracking-tight text-white leading-[1.12] mb-5 drop-shadow-md animate-in fade-in slide-in-from-bottom-5 duration-700">
             {activeSlide.title}
           </h1>
 
-          <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl mb-8 drop-shadow-xs">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-200/90 leading-relaxed max-w-3xl mb-8 drop-shadow-xs animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
             {activeSlide.subtitle}
           </p>
 
-          <div className="flex flex-wrap items-center gap-4">
-            <Button href={activeSlide.ctaPrimaryHref} variant="donate" size="lg" className="shadow-lg">
+          {/* Elevated Call-to-Actions (Taller Height, Compact Width) */}
+          <div className="flex flex-wrap items-center gap-3.5 animate-in fade-in slide-in-from-bottom-3 duration-700 delay-300">
+            <Button href={activeSlide.ctaPrimaryHref} variant="donate" size="lg" className="shadow-xl shadow-red-950/40">
               <Heart className="w-4 h-4 fill-current mr-2" />
               <span>{activeSlide.ctaPrimary}</span>
             </Button>
-            <Button
-              href={activeSlide.ctaSecondaryHref}
-              variant="glass"
-              size="lg"
-              className="bg-white/15 hover:bg-white text-white hover:text-gray-900 border-white/40 shadow-sm"
-            >
+            <Button href={activeSlide.ctaSecondaryHref} variant="glass" size="lg" className="bg-white/10 hover:bg-white/25 text-white border-white/25 shadow-md">
               <span>{activeSlide.ctaSecondary}</span>
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
         </div>
 
-        <div className="flex items-center justify-between pt-8 mt-6 border-t border-white/20">
-          <div className="flex items-center gap-3">
-            <span className="font-mono text-xs font-bold text-amber">
-              0{current + 1}
-            </span>
+        {/* Carousel Timeline & Kinetic Progress Tracker */}
+        <div className="flex items-center justify-between pt-7 mt-8 border-t border-white/15">
+          <div className="flex items-center gap-3 sm:gap-4">
+            <span className="font-mono text-xs font-bold text-amber tracking-wider">0{current + 1}</span>
+
+            {/* Kinetic Progress Bar */}
             <div className="flex items-center gap-2">
               {slides.map((_, i) => (
                 <button
                   key={i}
-                  onClick={() => setCurrent(i)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    i === current ? "w-8 bg-amber" : "w-2 bg-white/40 hover:bg-white/70"
-                  }`}
-                  aria-label={`Go to slide ${i + 1}`}
-                />
+                  onClick={() => { setCurrent(i); setKey((prev) => prev + 1); }}
+                  className="relative h-1.5 rounded-full overflow-hidden transition-all duration-300 cursor-pointer bg-white/20"
+                  style={{ width: i === current ? "48px" : "12px" }}
+                  aria-label={`Jump to slide ${i + 1}`}
+                >
+                  {i === current && (
+                    <div key={`progress-${key}`} className="absolute inset-0 bg-gradient-to-r from-primary to-amber rounded-full animate-[progress_7s_linear_forwards]" />
+                  )}
+                </button>
               ))}
             </div>
-            <span className="font-mono text-xs text-white/60">
-              0{slides.length}
-            </span>
+
+            <span className="font-mono text-xs text-slate-400">0{slides.length}</span>
           </div>
 
+          {/* Frosted Control Arrows */}
           <div className="flex items-center gap-2">
             <button
               onClick={prevSlide}
-              className="p-3 rounded-full bg-white/15 hover:bg-white/30 text-white backdrop-blur-md border border-white/20 transition-all duration-200 cursor-pointer interactive-tap"
+              className="p-3 rounded-full bg-white/10 hover:bg-white/25 text-white backdrop-blur-md border border-white/15 transition-all duration-200 cursor-pointer interactive-tap"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextSlide}
-              className="p-3 rounded-full bg-white/15 hover:bg-white/30 text-white backdrop-blur-md border border-white/20 transition-all duration-200 cursor-pointer interactive-tap"
+              className="p-3 rounded-full bg-white/10 hover:bg-white/25 text-white backdrop-blur-md border border-white/15 transition-all duration-200 cursor-pointer interactive-tap"
               aria-label="Next slide"
             >
               <ChevronRight className="w-5 h-5" />

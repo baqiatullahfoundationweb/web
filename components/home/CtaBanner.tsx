@@ -3,7 +3,6 @@ import { Heart, Mail } from "lucide-react";
 import Button from "@/components/ui/Button";
 
 export interface CtaBannerProps {
-  badge?: string;
   title?: string;
   description?: string;
   primaryButtonText?: string;
@@ -14,7 +13,6 @@ export interface CtaBannerProps {
 }
 
 export default function CtaBanner({
-  badge = "Make a Lasting Impact",
   title = "Give a Child a Future Filled with Dignity & Hope",
   description = "Every donation, no matter how small, directly funds daily meals, school tuition, books, and loving residential shelter for vulnerable children in Pakistan.",
   primaryButtonText = "Donate Online Now",
@@ -25,7 +23,7 @@ export default function CtaBanner({
 }: CtaBannerProps) {
   return (
     <section className={`py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 ${className}`}>
-      <div className="relative overflow-hidden rounded-3xl p-8 sm:p-16 text-center shadow-2xl border border-white/30 text-white">
+      <div className="relative overflow-hidden rounded-3xl p-8 sm:p-16 text-center shadow-2xl border border-white/15 text-white">
         {/* Real panoramic background photograph */}
         <Image
           src="/gallery/89.jpg"
@@ -34,24 +32,19 @@ export default function CtaBanner({
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-primary/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#020B0D]/95 via-[#020B0D]/80 to-primary/50" />
 
         <div className="relative z-10 max-w-3xl mx-auto">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-amber text-xs font-bold uppercase tracking-wider mb-5 border border-white/30 shadow-md">
-            <Heart className="w-3.5 h-3.5 fill-current text-accent-red" />
-            {badge}
-          </span>
-
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight mb-5 drop-shadow-md">
             {title}
           </h2>
 
-          <p className="text-base sm:text-lg text-white/90 leading-relaxed mb-8 drop-shadow-xs max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-200/90 leading-relaxed mb-8 drop-shadow-xs max-w-2xl mx-auto">
             {description}
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <Button href={primaryButtonHref} variant="donate" size="lg" className="shadow-xl">
+            <Button href={primaryButtonHref} variant="donate" size="lg" className="shadow-2xl shadow-red-950/50">
               <Heart className="w-4 h-4 fill-current mr-2" />
               <span>{primaryButtonText}</span>
             </Button>
@@ -59,7 +52,7 @@ export default function CtaBanner({
               href={secondaryButtonHref}
               variant="glass"
               size="lg"
-              className="bg-white/20 hover:bg-white text-white hover:text-gray-900 border-white/40 shadow-lg"
+              className="bg-white/10 hover:bg-white/25 text-white border-white/25 shadow-xl"
             >
               <Mail className="w-4 h-4 mr-2" />
               <span>{secondaryButtonText}</span>

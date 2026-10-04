@@ -44,12 +44,10 @@ export default async function LocalizedHomePage({ params }: PageProps) {
         title={dict.impact.title}
         highlight={dict.impact.highlight}
         subtitle={dict.impact.subtitle}
-        eyebrow={dict.impact.eyebrow}
       />
       <HomeAbout
         title={dict.about.title}
         description={dict.about.description}
-        eyebrow={dict.about.eyebrow}
         establishedYear={dict.about.establishedYear}
       />
       <FeaturedCauses
@@ -57,33 +55,27 @@ export default async function LocalizedHomePage({ params }: PageProps) {
         title={dict.causes.title}
         highlight={dict.causes.highlight}
         subtitle={dict.causes.subtitle}
-        eyebrow={dict.causes.eyebrow}
       />
       <VolunteersSection
         title={dict.volunteers.title}
         highlight={dict.volunteers.highlight}
         subtitle={dict.volunteers.subtitle}
-        eyebrow={dict.volunteers.eyebrow}
       />
       <EventsSection
         title={dict.events.title}
         highlight={dict.events.highlight}
         subtitle={dict.events.subtitle}
-        eyebrow={dict.events.eyebrow}
       />
       <GetInvolved
         title={dict.getInvolved.title}
         highlight={dict.getInvolved.highlight}
         subtitle={dict.getInvolved.subtitle}
-        eyebrow={dict.getInvolved.eyebrow}
       />
       <ProjectSpotlight
-        badge={dict.spotlight.badge}
         title={dict.spotlight.title}
         description={dict.spotlight.description}
       />
       <CtaBanner
-        badge={dict.cta.badge}
         title={dict.cta.title}
         description={dict.cta.description}
         primaryButtonText={dict.cta.donateBtn}

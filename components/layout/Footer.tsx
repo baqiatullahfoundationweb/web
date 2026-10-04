@@ -4,13 +4,13 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   const quickLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/projects", label: "Our Projects" },
-    { href: "/gallery", label: "Photo Gallery" },
-    { href: "/blog", label: "News & Relief" },
-    { href: "/donate", label: "Support & Donate" },
-    { href: "/contact", label: "Contact & Visit" },
+    { href: "/eng", label: "Home" },
+    { href: "/eng/about", label: "About Us" },
+    { href: "/eng/projects", label: "Our Projects" },
+    { href: "/eng/gallery", label: "Photo Gallery" },
+    { href: "/eng/blog", label: "News & Relief" },
+    { href: "/eng/donate", label: "Support & Donate" },
+    { href: "/eng/contact", label: "Contact & Visit" },
   ];
 
   const socialLinks = [
@@ -22,13 +22,13 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-white/70 backdrop-blur-xl border-t border-primary/15 text-gray-800 pt-16 pb-12 mt-20">
+    <footer className="relative bg-white/90 backdrop-blur-2xl border-t border-primary/20 text-gray-700 pt-16 pb-12 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-gray-200/80">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-gray-200">
           {/* Brand Column */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-[#FFBF00] shadow-sm shrink-0 bg-[#FFBF00]">
+              <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden ring-2 ring-[#FFBF00] shadow-sm shrink-0 bg-[#FFBF00]">
                 <Image
                   src="/logo/emblem.png"
                   alt="Baqiatullah Foundation Emblem"
@@ -36,7 +36,7 @@ export default function Footer() {
                   className="object-cover"
                 />
               </div>
-              <div className="relative h-11 w-56 shrink-0">
+              <div className="relative h-8 sm:h-9 w-48 sm:w-56 shrink-0">
                 <Image
                   src="/logo/brand-text.png"
                   alt="Baqiatullah Foundation Pakistan"
@@ -55,7 +55,7 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-white/80 border border-gray-200 hover:border-primary hover:text-primary flex items-center justify-center text-xs font-bold text-gray-600 transition-colors shadow-2xs"
+                  className="w-8 h-8 rounded-lg bg-primary/5 border border-primary/20 hover:bg-primary/15 hover:border-primary text-primary flex items-center justify-center text-xs font-bold transition-colors shadow-2xs"
                   aria-label={s.name}
                 >
                   {s.icon}
