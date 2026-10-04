@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Unwan Unicode';
+  src: url('/fonts/Unwan.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-primary: #008B8B;
   --color-primary-dark: #006666;
@@ -17,27 +25,31 @@
   --color-accent-red-subtle: #FBEAEB;
 
   --color-canvas-base: #F3F8F8;
+  --font-poppins: var(--font-poppins), 'Poppins', sans-serif;
+  --font-urdu: 'Unwan Unicode', 'Noto Nastaliq Urdu', serif;
 }
 
 @layer base {
-  :root {
-    --brand-teal: #008B8B;
-    --brand-gold: #FFBF00;
-    --brand-red: #AF0000;
-  }
-
   body {
     background-color: #F4F8F8;
     color: #111827;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-family: var(--font-poppins), 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     position: relative;
     min-height: 100vh;
   }
+
+  [dir="rtl"], .lang-ur {
+    font-family: 'Unwan Unicode', 'Noto Nastaliq Urdu', serif !important;
+  }
+
+  [dir="ltr"], .lang-en {
+    font-family: var(--font-poppins), 'Poppins', sans-serif !important;
+  }
 }
 
-/* Futuristic Ambient Canvas Grid & Radiant Glows */
+/* Ambient Canvas Grid & Radiant Glows */
 .futuristic-ambient-bg {
   position: fixed;
   inset: 0;
@@ -63,14 +75,13 @@
   -webkit-mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 40%, transparent 100%);
 }
 
-/* Glassmorphism Classes (Light Themed, Crisp, Specular) */
+/* Glassmorphism Classes */
 .glass-panel {
   background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
   border: 1px solid rgba(255, 255, 255, 0.9);
   box-shadow: 0 10px 30px -5px rgba(0, 139, 139, 0.04), 
-              0 2px 6px -1px rgba(0, 0, 0, 0.02),
               inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
@@ -89,7 +100,6 @@
   transform: translateY(-4px);
   border-color: rgba(0, 139, 139, 0.3);
   box-shadow: 0 20px 40px -8px rgba(0, 139, 139, 0.12),
-              0 4px 12px -2px rgba(0, 0, 0, 0.03),
               inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
@@ -100,12 +110,10 @@
   transform: scale(0.97);
 }
 
-/* Accessibility */
 @media (prefers-reduced-transparency: reduce) {
   .glass-panel, .glass-card {
     background: #FFFFFF !important;
     backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
     border: 1px solid #D5E5E5 !important;
   }
 }
@@ -113,7 +121,6 @@
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
