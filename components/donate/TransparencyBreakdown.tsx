@@ -1,63 +1,93 @@
-import { PieChart, ShieldCheck, HeartHandshake } from "lucide-react";
+import { PieChart, ShieldCheck } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 
-const TIERS = [
-  {
-    title: "Monthly Nutrition Sponsor",
-    amount: "PKR 5,000 / mo",
-    impact: "Provides three wholesome daily meals, clean milk, and seasonal fruits for one child.",
-  },
-  {
-    title: "Full Academic Scholarship",
-    amount: "PKR 12,000 / mo",
-    impact: "Funds private school tuition, uniforms, textbooks, computer lab access, and specialized tutoring.",
-  },
-  {
-    title: "Complete Residential Care",
-    amount: "PKR 25,000 / mo",
-    impact: "Covers complete living costs: room lodging, nutrition, clothing, healthcare, and parental caregiving.",
-  },
-];
+export interface TransparencyStat {
+  label: string;
+  value: string;
+}
 
-export default function TransparencyBreakdown() {
+export interface TransparencySlice {
+  category: string;
+  percent: number;
+  desc: string;
+}
+
+export interface TransparencyBreakdownProps {
+  title?: string;
+  highlight?: string;
+  subtitle?: string;
+  stats?: TransparencyStat[];
+  breakdown?: TransparencySlice[];
+}
+
+export default function TransparencyBreakdown({
+  title = "Where Every Single Rupee",
+  highlight = "Is Invested",
+  subtitle = "Strict audited breakdown ensuring maximum direct impact on children's nourishment, education, and shelter.",
+  stats = [
+    { label: "Direct Child Welfare", value: "85%" },
+    { label: "Facilities & Utilities", value: "10%" },
+    { label: "Administration & Audit", value: "5%" },
+  ],
+  breakdown = [
+    { category: "Nutritious Food & Milk", percent: 35, desc: "Fresh wholesome meals prepared three times daily." },
+    { category: "Schooling & Computers", percent: 30, desc: "Private school fees, textbooks, uniforms, and computer lab." },
+    { category: "Sanctuary Living & Utilities", percent: 20, desc: "Safe dormitory accommodation, bedding, and solar electricity." },
+    { category: "Pediatric Healthcare", percent: 15, desc: "Doctor visits, routine vaccinations, and emergency medications." },
+  ],
+}: TransparencyBreakdownProps) {
   return (
     <section className="py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <SectionHeader
-          eyebrow="Donor Trust"
-          title="Where Your Contribution"
-          highlight="Creates Real Impact"
-          subtitle="We adhere to the highest standards of fiscal stewardship. Every rupee is accounted for and audited annually."
+          title={title}
+          highlight={highlight}
+          subtitle={subtitle}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
-          {TIERS.map((tier, idx) => (
+        {/* 3 Metric Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {stats.map((s, idx) => (
             <div
               key={idx}
-              className="glass-card p-8 rounded-3xl border border-primary/15 shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-between"
+              className="bg-white/95 backdrop-blur-md p-8 rounded-3xl border border-primary/20 shadow-xl text-center"
             >
-              <div>
-                <span className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
-                  <HeartHandshake className="w-5 h-5 stroke-[2]" />
-                </span>
-                <h4 className="text-lg font-bold text-gray-900 mb-1">{tier.title}</h4>
-                <div className="text-xl font-bold font-mono text-primary mb-3">{tier.amount}</div>
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{tier.impact}</p>
-              </div>
+              <div className="text-4xl font-black font-mono text-primary mb-2">{s.value}</div>
+              <h4 className="text-base font-bold text-gray-950">{s.label}</h4>
             </div>
           ))}
         </div>
 
-        <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-gray-700 shadow-md">
-          <div className="flex items-center gap-3">
-            <PieChart className="w-6 h-6 text-primary shrink-0" />
-            <span>
-              <strong>Fund Distribution:</strong> 40% Daily Nutrition & Meals · 35% Academic Tuition & Supplies · 25% Residential Care & Medical Health.
-            </span>
+        {/* Breakdown Progress Bars */}
+        <div className="bg-white/95 backdrop-blur-md p-8 sm:p-10 rounded-3xl border border-primary/20 shadow-xl space-y-6">
+          <div className="flex items-center gap-3 border-b border-gray-200 pb-4">
+            <PieChart className="w-6 h-6 text-primary" />
+            <h3 className="text-xl font-extrabold text-gray-950">Detailed Allocation Overview</h3>
           </div>
-          <div className="flex items-center gap-2 text-xs font-semibold text-primary bg-primary/10 px-3.5 py-1.5 rounded-full border border-primary/20 shrink-0">
-            <ShieldCheck className="w-4 h-4 text-primary" />
-            <span>100% Verified Allocation</span>
+
+          <div className="space-y-5">
+            {breakdown.map((item, idx) => (
+              <div key={idx} className="space-y-1.5">
+                <div className="flex justify-between items-center text-sm font-bold text-gray-950">
+                  <span>{item.category}</span>
+                  <span className="text-primary font-mono">{item.percent}%</span>
+                </div>
+                <div className="w-full h-3 rounded-full bg-gray-100 overflow-hidden">
+                  <div
+                    className="h-full bg-gradient-to-r from-primary to-amber rounded-full"
+                    style={{ width: `${item.percent}%` }}
+                  />
+                </div>
+                <p className="text-xs text-gray-600 font-normal">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="pt-4 border-t border-gray-200 flex items-center justify-between text-xs text-gray-700">
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-primary" />
+              <span className="font-semibold">Independently Audited & Verified Annually</span>
+            </div>
           </div>
         </div>
       </div>

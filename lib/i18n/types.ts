@@ -1,3 +1,14 @@
+import {
+  AboutPageData,
+  ProjectsPageData,
+  DonatePageData,
+  ContactPageData,
+  GalleryPageData,
+  BlogPageData,
+} from "./types/pages";
+
+export * from "./types/pages";
+
 export type Locale = "eng" | "ur";
 
 export interface NavLink {
@@ -140,4 +151,11 @@ export interface Dictionary {
     copyright: string;
     motto: string;
   };
+  // Subpages data
+  aboutPage: AboutPageData;
+  projectsPage: ProjectsPageData;
+  donatePage: DonatePageData;
+  contactPage: ContactPageData;
+  galleryPage: GalleryPageData;
+  blogPage: BlogPageData;
 }

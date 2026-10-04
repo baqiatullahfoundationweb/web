@@ -2,150 +2,166 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Heart, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Heart, ArrowRight, ShieldCheck } from "lucide-react";
 import Button from "@/components/ui/Button";
-import { type HeroSlide, DEFAULT_SLIDES } from "./heroSlides";
-
-export type { HeroSlide };
+import { HeroSlide, DEFAULT_SLIDES } from "./heroSlides";
 
 export interface HeroSliderProps {
   slides?: HeroSlide[];
-  autoPlayInterval?: number;
-  className?: string;
 }
 
-export default function HeroSlider({
-  slides = DEFAULT_SLIDES,
-  autoPlayInterval = 7000,
-  className = "",
-}: HeroSliderProps) {
+export default function HeroSlider({ slides = DEFAULT_SLIDES }: HeroSliderProps) {
   const [current, setCurrent] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const [key, setKey] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const total = slides.length;
 
-  const nextSlide = useCallback(() => {
-    setCurrent((prev) => (prev + 1) % slides.length);
-    setKey((prev) => prev + 1);
-  }, [slides.length]);
-
-  const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
-    setKey((prev) => prev + 1);
-  };
+  const nextSlide = useCallback(() => setCurrent((p) => (p + 1) % total), [total]);
+  const prevSlide = useCallback(() => setCurrent((p) => (p - 1 + total) % total), [total]);
 
   useEffect(() => {
-    if (paused) return;
-    const timer = setInterval(nextSlide, autoPlayInterval);
+    if (isPaused) return;
+    const timer = setInterval(nextSlide, 7500);
     return () => clearInterval(timer);
-  }, [paused, nextSlide, autoPlayInterval]);
+  }, [isPaused, nextSlide]);
 
-  const activeSlide = slides[current] || slides[0];
+  const slide = slides[current];
 
   return (
     <section
-      className={`relative w-full h-[620px] sm:h-[720px] lg:h-[800px] overflow-hidden bg-[#041a1c] ${className}`}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      aria-roledescription="carousel"
+      className="relative h-screen min-h-[640px] max-h-[1080px] w-full overflow-hidden flex flex-col justify-between pt-20 sm:pt-24 pb-6 sm:pb-8"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
       aria-label="Foundation Highlights"
     >
-      {/* Background Slides with Ken Burns Zoom */}
-      {slides.map((slide, idx) => {
-        const isActive = idx === current;
-        return (
-          <div
-            key={idx}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-out ${
-              isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+      {/* 100vh Full-Bleed Photographic Carousel Background with Ken Burns Zoom */}
+      {slides.map((s, idx) => (
+        <div
+          key={idx}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            idx === current ? "opacity-100 z-0" : "opacity-0 -z-10 pointer-events-none"
+          }`}
+        >
+          <Image
+            src={s.image}
+            alt={s.title}
+            fill
+            className={`object-cover transition-transform duration-7500 ease-out ${
+              idx === current ? "scale-108" : "scale-100"
             }`}
-          >
-            <div className={`relative w-full h-full transition-transform duration-[7500ms] ease-out ${isActive ? "scale-108 translate-x-1" : "scale-100 translate-x-0"}`}>
-              <Image src={slide.image} alt={slide.title} fill priority={idx === 0} className="object-cover object-center" sizes="100vw" />
+            priority={idx === 0}
+            sizes="100vw"
+          />
+          {/* Creative Light Luminous Overlays (NOT dark blackish) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#EDF6F6] via-[#EDF6F6]/90 sm:via-[#EDF6F6]/80 to-[#EDF6F6]/30 rtl:bg-gradient-to-l rtl:from-[#EDF6F6] rtl:via-[#EDF6F6]/90 rtl:to-[#EDF6F6]/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#EDF6F6] via-transparent to-[#EDF6F6]/40" />
+        </div>
+      ))}
+
+      {/* Main Content Stage: Centered Vertically */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          {/* Headline & Action Block */}
+          <div className="lg:col-span-8 space-y-4 sm:space-y-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-white/90 text-primary border border-primary/25 shadow-sm backdrop-blur-md">
+              <ShieldCheck className="w-4 h-4 text-primary" />
+              <span>{slide.badge}</span>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/20" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
+
+            <h1
+              key={`h1-${current}`}
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-[62px] font-black text-gray-950 tracking-tight leading-[1.12] drop-shadow-2xs animate-in fade-in slide-in-from-bottom-3 duration-500"
+            >
+              {slide.title}
+            </h1>
+
+            <p
+              key={`p-${current}`}
+              className="text-base sm:text-xl text-gray-700 leading-relaxed max-w-2xl font-normal drop-shadow-2xs animate-in fade-in slide-in-from-bottom-2 duration-500 delay-100"
+            >
+              {slide.subtitle}
+            </p>
+
+            <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
+              <Button href={slide.ctaPrimaryHref} variant="donate" size="lg" className="shadow-xl shadow-red-950/25">
+                <Heart className="w-4 h-4 fill-current mr-2" />
+                <span>{slide.ctaPrimary}</span>
+              </Button>
+              <Button
+                href={slide.ctaSecondaryHref}
+                variant="glass"
+                size="lg"
+                className="bg-white/95 hover:bg-white text-gray-950 font-bold border-primary/30 shadow-lg"
+              >
+                <span>{slide.ctaSecondary}</span>
+                <ArrowRight className="w-4 h-4 ml-2 text-primary" />
+              </Button>
+            </div>
           </div>
-        );
-      })}
 
-      {/* Kinetic SVG Light Filament Overlay */}
-      <svg className="absolute bottom-0 left-0 right-0 w-full h-24 z-15 pointer-events-none opacity-40" viewBox="0 0 1440 100" preserveAspectRatio="none">
-        <path d="M0 80 Q 360 20, 720 70 T 1440 40" fill="none" stroke="url(#heroLineGlow)" strokeWidth="2" />
-        <defs>
-          <linearGradient id="heroLineGlow" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#008B8B" stopOpacity="0" />
-            <stop offset="30%" stopColor="#008B8B" stopOpacity="0.8" />
-            <stop offset="70%" stopColor="#FFBF00" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#AF0000" stopOpacity="0" />
-          </linearGradient>
-        </defs>
-      </svg>
-
-      {/* Hero Content Container */}
-      <div className="relative z-20 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-end pb-16 sm:pb-20">
-        <div key={key} className="max-w-5xl">
-          {/* Strict 2-Line Wide Headline with Staggered Kinetic Entrance */}
-          <h1 className="text-3xl sm:text-5xl lg:text-[3.75rem] font-extrabold tracking-tight text-white leading-[1.12] mb-5 drop-shadow-md animate-in fade-in slide-in-from-bottom-5 duration-700">
-            {activeSlide.title}
-          </h1>
-
-          <p className="text-base sm:text-lg lg:text-xl text-slate-200/90 leading-relaxed max-w-3xl mb-8 drop-shadow-xs animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
-            {activeSlide.subtitle}
-          </p>
-
-          {/* Elevated Call-to-Actions (Taller Height, Compact Width) */}
-          <div className="flex flex-wrap items-center gap-3.5 animate-in fade-in slide-in-from-bottom-3 duration-700 delay-300">
-            <Button href={activeSlide.ctaPrimaryHref} variant="donate" size="lg" className="shadow-xl shadow-red-950/40">
-              <Heart className="w-4 h-4 fill-current mr-2" />
-              <span>{activeSlide.ctaPrimary}</span>
-            </Button>
-            <Button href={activeSlide.ctaSecondaryHref} variant="glass" size="lg" className="bg-white/10 hover:bg-white/25 text-white border-white/25 shadow-md">
-              <span>{activeSlide.ctaSecondary}</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+          {/* Floating Live Verification Badge in Visual Zone */}
+          <div className="hidden lg:flex lg:col-span-4 justify-end">
+            <div className="bg-white/90 backdrop-blur-xl p-6 rounded-3xl border border-primary/25 shadow-2xl max-w-xs space-y-3">
+              <div className="flex items-center gap-2 text-emerald-700 text-xs font-bold">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span>24/7 Verified Operation</span>
+              </div>
+              <div className="text-3xl font-extrabold font-mono text-primary">250+</div>
+              <p className="text-xs text-gray-600 leading-relaxed font-medium">
+                Resident children receiving maternal home care, nutritious meals, and quality schooling in Lahore.
+              </p>
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* Carousel Timeline & Kinetic Progress Tracker */}
-        <div className="flex items-center justify-between pt-7 mt-8 border-t border-white/15">
-          <div className="flex items-center gap-3 sm:gap-4">
-            <span className="font-mono text-xs font-bold text-amber tracking-wider">0{current + 1}</span>
-
-            {/* Kinetic Progress Bar */}
-            <div className="flex items-center gap-2">
-              {slides.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => { setCurrent(i); setKey((prev) => prev + 1); }}
-                  className="relative h-1.5 rounded-full overflow-hidden transition-all duration-300 cursor-pointer bg-white/20"
-                  style={{ width: i === current ? "48px" : "12px" }}
-                  aria-label={`Jump to slide ${i + 1}`}
-                >
-                  {i === current && (
-                    <div key={`progress-${key}`} className="absolute inset-0 bg-gradient-to-r from-primary to-amber rounded-full animate-[progress_7s_linear_forwards]" />
-                  )}
-                </button>
-              ))}
-            </div>
-
-            <span className="font-mono text-xs text-slate-400">0{slides.length}</span>
+      {/* Floating Bottom Console: Slide Controls & Progress */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-3 sm:p-4 rounded-2xl bg-white/90 backdrop-blur-xl border border-primary/20 shadow-xl">
+          {/* Segmented Timeline Indicator Bars */}
+          <div className="flex items-center gap-3 w-full sm:w-auto flex-1 max-w-md">
+            {slides.map((s, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrent(idx)}
+                className="group flex-1 text-left cursor-pointer transition-all"
+                aria-label={`Slide ${idx + 1}`}
+              >
+                <div className="flex items-center justify-between text-[11px] font-bold text-gray-600 mb-1">
+                  <span className={idx === current ? "text-primary font-black" : ""}>0{idx + 1}</span>
+                  <span className="truncate max-w-[80px] hidden md:inline text-[10px] text-gray-400">
+                    {idx === 0 ? "Care" : idx === 1 ? "Education" : "Relief"}
+                  </span>
+                </div>
+                <div className="h-1.5 rounded-full overflow-hidden bg-gray-200">
+                  <div
+                    className={`h-full rounded-full transition-all duration-300 ${
+                      idx === current
+                        ? "bg-primary w-full animate-pulse"
+                        : idx < current
+                        ? "bg-primary/50 w-full"
+                        : "w-0"
+                    }`}
+                  />
+                </div>
+              </button>
+            ))}
           </div>
 
-          {/* Frosted Control Arrows */}
-          <div className="flex items-center gap-2">
+          {/* Prev / Next Circular Buttons */}
+          <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={prevSlide}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/25 text-white backdrop-blur-md border border-white/15 transition-all duration-200 cursor-pointer interactive-tap"
-              aria-label="Previous slide"
+              className="w-10 h-10 rounded-xl bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 flex items-center justify-center transition-all active:scale-95 cursor-pointer"
+              aria-label="Previous Slide"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-5 h-5 stroke-[2.5]" />
             </button>
             <button
               onClick={nextSlide}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/25 text-white backdrop-blur-md border border-white/15 transition-all duration-200 cursor-pointer interactive-tap"
-              aria-label="Next slide"
+              className="w-10 h-10 rounded-xl bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 flex items-center justify-center transition-all active:scale-95 cursor-pointer"
+              aria-label="Next Slide"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-5 h-5 stroke-[2.5]" />
             </button>
           </div>
         </div>

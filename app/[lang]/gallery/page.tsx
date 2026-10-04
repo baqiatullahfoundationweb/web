@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { LOCALES } from "@/lib/i18n";
+import { getDictionary, LOCALES, Locale } from "@/lib/i18n";
 import GalleryGrid from "@/components/gallery/GalleryGrid";
 import CtaBanner from "@/components/home/CtaBanner";
 
@@ -24,14 +24,29 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function LocalizedGalleryPage({ params }: PageProps) {
   const { lang } = await params;
-  const isUrdu = lang === "ur";
+  const validLang: Locale = lang === "ur" ? "ur" : "eng";
+  const dict = getDictionary(validLang);
+  const data = dict.galleryPage;
+  const donateHref = `/${validLang}/donate`;
+  const contactHref = `/${validLang}/contact`;
 
   return (
     <div className="flex flex-col pt-24 sm:pt-28">
-      <GalleryGrid />
+      <GalleryGrid
+        title={data.title}
+        highlight={data.highlight}
+        subtitle={data.subtitle}
+        categories={data.categories}
+        loadMoreBtnText={data.loadMoreBtn}
+        remainingText={data.remainingText}
+      />
       <CtaBanner
-        primaryButtonHref={isUrdu ? "/ur/donate" : "/eng/donate"}
-        secondaryButtonHref={isUrdu ? "/ur/contact" : "/eng/contact"}
+        title={dict.cta.title}
+        description={dict.cta.description}
+        primaryButtonText={dict.cta.donateBtn}
+        primaryButtonHref={donateHref}
+        secondaryButtonText={dict.cta.contactBtn}
+        secondaryButtonHref={contactHref}
       />
     </div>
   );

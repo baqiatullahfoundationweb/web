@@ -1,64 +1,75 @@
+import Image from "next/image";
 import { CheckCircle2, Heart } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 
-const COMPLETED = [
-  {
-    title: "Computer Literacy Lab",
-    year: "2024",
-    impact: "250+ youth equipped with computers and digital skills",
-    description: "Built a fully functioning computer lab with broadband internet, enabling children to learn coding, graphic design, and typing.",
-  },
-  {
-    title: "Library & Study Resource Center",
-    year: "2023",
-    impact: "Serving 200+ students daily with books and mentorship",
-    description: "Curated over 2,000 academic textbooks, Urdu literature, and quiet study stations fostering a profound reading culture.",
-  },
-  {
-    title: "Vocational Skills Workshops",
-    year: "2023",
-    impact: "120+ senior youth graduated with accredited certificates",
-    description: "Offered practical training in tailoring, electrical work, and digital office administration to establish immediate career readiness.",
-  },
-];
+export interface CompletedProjectItem {
+  title: string;
+  desc: string;
+  image: string;
+  impact: string;
+}
 
-export default function CompletedProjects() {
+export interface CompletedProjectsProps {
+  title?: string;
+  highlight?: string;
+  subtitle?: string;
+  items?: CompletedProjectItem[];
+}
+
+export default function CompletedProjects({
+  title = "Completed Welfare Milestones &",
+  highlight = "Impact Deliveries",
+  subtitle = "Major humanitarian initiatives executed with complete community success.",
+  items = [
+    { title: "Jhang Emergency Flood Relief", desc: "Supplied 300 vulnerable families with multi-week food rations, water filtration kits, and medical aid.", image: "/gallery/88.jpeg", impact: "300 Families Supported" },
+    { title: "Modern IT Computer Lab", desc: "Installed 35 desktop workstations with high-speed internet and coding mentorship curriculum.", image: "/gallery/49.jpg", impact: "100% Student Digital Literacy" },
+    { title: "Healthcare Screening Drive", desc: "Completed comprehensive dental and pediatric assessments for all 250+ resident children.", image: "/gallery/10.jpg", impact: "250+ Children Screened" },
+  ],
+}: CompletedProjectsProps) {
   return (
-    <section className="py-16 sm:py-24 bg-[#FBFBFA] border-t border-[#EAEAEA]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <SectionHeader
-          eyebrow="Milestones"
-          title="Completed Programs of"
-          highlight="Enduring Value"
-          subtitle="A track record of donor accountability and sustainable projects that continue to benefit children every day."
-        />
+    <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6">
+      <SectionHeader
+        title={title}
+        highlight={highlight}
+        subtitle={subtitle}
+      />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {COMPLETED.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-white p-8 rounded-3xl border border-[#EAEAEA] shadow-2xs hover:shadow-sm flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                    <CheckCircle2 className="w-5 h-5 stroke-[2]" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {items.map((item, idx) => (
+          <div
+            key={idx}
+            className="bg-white/95 backdrop-blur-md rounded-3xl overflow-hidden border border-primary/20 shadow-xl hover:shadow-2xl transition-all flex flex-col justify-between"
+          >
+            <div>
+              <div className="relative h-48 w-full overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                    <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
                   </span>
-                  <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">
-                    Completed {item.year}
+                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#FFBF00]/20 text-gray-950">
+                    {item.impact}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed mb-6">{item.description}</p>
-              </div>
-
-              <div className="pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-semibold text-[#008B8B]">
-                <Heart className="w-3.5 h-3.5 fill-current text-[#AF0000]" />
-                <span>{item.impact}</span>
+                <h3 className="text-xl font-extrabold text-gray-950 mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-700 leading-relaxed font-normal">{item.desc}</p>
               </div>
             </div>
-          ))}
-        </div>
+
+            <div className="p-6 pt-0 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-primary mt-4">
+              <Heart className="w-3.5 h-3.5 fill-current text-accent-red" />
+              <span>{item.impact}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

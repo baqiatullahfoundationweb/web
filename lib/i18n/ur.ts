@@ -1,4 +1,12 @@
 import { Dictionary } from "./types";
+import {
+  urAboutPage,
+  urProjectsPage,
+  urDonatePage,
+  urContactPage,
+  urGalleryPage,
+  urBlogPage,
+} from "./ur/subpages";
 
 export const urDictionary: Dictionary = {
   locale: "ur",
@@ -154,4 +162,10 @@ export const urDictionary: Dictionary = {
     copyright: "بقیۃ اللہ فاؤنڈیشن پاکستان۔ رجسٹرڈ فلاحی ادارہ۔",
     motto: "بچوں کی دیکھ بھال اور روشن مستقبل کے لیے پرعزم۔",
   },
+  aboutPage: urAboutPage,
+  projectsPage: urProjectsPage,
+  donatePage: urDonatePage,
+  contactPage: urContactPage,
+  galleryPage: urGalleryPage,
+  blogPage: urBlogPage,
 };

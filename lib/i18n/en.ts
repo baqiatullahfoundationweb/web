@@ -1,4 +1,12 @@
 import { Dictionary } from "./types";
+import {
+  enAboutPage,
+  enProjectsPage,
+  enDonatePage,
+  enContactPage,
+  enGalleryPage,
+  enBlogPage,
+} from "./en/subpages";
 
 export const enDictionary: Dictionary = {
   locale: "eng",
@@ -154,4 +162,10 @@ export const enDictionary: Dictionary = {
     copyright: "Baqiatullah Foundation Pakistan. Registered Non-Profit.",
     motto: "Dedicated to the care and future of children.",
   },
+  aboutPage: enAboutPage,
+  projectsPage: enProjectsPage,
+  donatePage: enDonatePage,
+  contactPage: enContactPage,
+  galleryPage: enGalleryPage,
+  blogPage: enBlogPage,
 };

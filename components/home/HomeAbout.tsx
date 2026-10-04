@@ -8,6 +8,14 @@ export interface HomeAboutProps {
   primaryImage?: string;
   secondaryImage?: string;
   establishedYear?: string;
+  card1Title?: string;
+  card1Desc?: string;
+  card2Title?: string;
+  card2Desc?: string;
+  storyBtnText?: string;
+  storyHref?: string;
+  visitBtnText?: string;
+  visitHref?: string;
   className?: string;
 }
 
@@ -17,6 +25,14 @@ export default function HomeAbout({
   primaryImage = "/gallery/89.jpg",
   secondaryImage = "/gallery/75.jpg",
   establishedYear = "Established 2016 in Pakistan",
+  card1Title = "Maternal Home Care",
+  card1Desc = "24/7 dedicated caregivers offering affection, psychological warmth, and security.",
+  card2Title = "Academic Rigor",
+  card2Desc = "Private English-medium schooling, digital skills, and college degree support.",
+  storyBtnText = "Read Our Full Story",
+  storyHref = "/about",
+  visitBtnText = "Visit Our Lahore Sanctuary",
+  visitHref = "/contact",
   className = "",
 }: HomeAboutProps) {
   return (
@@ -65,35 +81,35 @@ export default function HomeAbout({
               {title}
             </h2>
 
-            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal">
               {description}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="p-5 rounded-2xl bg-white/90 border border-primary/20 shadow-md backdrop-blur-md">
+              <div className="p-5 rounded-2xl bg-white/95 border border-primary/20 shadow-md backdrop-blur-md">
                 <Heart className="w-5 h-5 text-accent-red mb-2" />
-                <h4 className="text-sm font-bold text-gray-950">Maternal Home Care</h4>
-                <p className="text-xs text-gray-600 mt-1">24/7 dedicated caregivers offering affection, psychological warmth, and security.</p>
+                <h4 className="text-sm font-bold text-gray-950">{card1Title}</h4>
+                <p className="text-xs text-gray-700 mt-1 leading-relaxed font-normal">{card1Desc}</p>
               </div>
-              <div className="p-5 rounded-2xl bg-white/90 border border-primary/20 shadow-md backdrop-blur-md">
+              <div className="p-5 rounded-2xl bg-white/95 border border-primary/20 shadow-md backdrop-blur-md">
                 <ShieldCheck className="w-5 h-5 text-primary mb-2" />
-                <h4 className="text-sm font-bold text-gray-950">Academic Rigor</h4>
-                <p className="text-xs text-gray-600 mt-1">Private English-medium schooling, digital skills, and college degree support.</p>
+                <h4 className="text-sm font-bold text-gray-950">{card2Title}</h4>
+                <p className="text-xs text-gray-700 mt-1 leading-relaxed font-normal">{card2Desc}</p>
               </div>
             </div>
 
             <div className="pt-2 flex flex-wrap items-center gap-4">
-              <Button href="/about" variant="teal" size="md">
-                <span>Read Our Full Story</span>
+              <Button href={storyHref} variant="teal" size="md">
+                <span>{storyBtnText}</span>
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
               <Button
-                href="/contact"
+                href={visitHref}
                 variant="glass"
                 size="md"
-                className="bg-white/90 hover:bg-white text-gray-900 border-primary/20 shadow-sm"
+                className="bg-white/95 hover:bg-white text-gray-950 font-bold border-primary/30 shadow-sm"
               >
-                <span>Visit Our Lahore Sanctuary</span>
+                <span>{visitBtnText}</span>
               </Button>
             </div>
           </div>

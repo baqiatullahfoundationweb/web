@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { LOCALES } from "@/lib/i18n";
+import { getDictionary, LOCALES, Locale } from "@/lib/i18n";
 import PaymentMethods from "@/components/donate/PaymentMethods";
 import TransparencyBreakdown from "@/components/donate/TransparencyBreakdown";
 import CtaBanner from "@/components/home/CtaBanner";
@@ -25,15 +25,53 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function LocalizedDonatePage({ params }: PageProps) {
   const { lang } = await params;
-  const isUrdu = lang === "ur";
+  const validLang: Locale = lang === "ur" ? "ur" : "eng";
+  const dict = getDictionary(validLang);
+  const data = dict.donatePage;
+  const donateHref = `/${validLang}/donate`;
+  const contactHref = `/${validLang}/contact`;
 
   return (
     <div className="flex flex-col pt-24 sm:pt-28">
-      <PaymentMethods />
-      <TransparencyBreakdown />
+      <PaymentMethods
+        title={data.payment.title}
+        highlight={data.payment.highlight}
+        subtitle={data.payment.subtitle}
+        bankTitle={data.payment.bankTitle}
+        bankSubtitle={data.payment.bankSubtitle}
+        accountNameLabel={data.payment.accountNameLabel}
+        accountName={data.payment.accountName}
+        accountNumberLabel={data.payment.accountNumberLabel}
+        accountNumber={data.payment.accountNumber}
+        bankNameLabel={data.payment.bankNameLabel}
+        bankName={data.payment.bankName}
+        branchLabel={data.payment.branchLabel}
+        branch={data.payment.branch}
+        swiftLabel={data.payment.swiftLabel}
+        swift={data.payment.swift}
+        instantWalletBadge={data.payment.instantWalletBadge}
+        jazzCashTitle={data.payment.jazzCashTitle}
+        jazzCashNumber={data.payment.jazzCashNumber}
+        easypaisaTitle={data.payment.easypaisaTitle}
+        easypaisaNumber={data.payment.easypaisaNumber}
+        receiptNotice={data.payment.receiptNotice}
+        copyButtonText={data.payment.copyButtonText}
+        copiedButtonText={data.payment.copiedButtonText}
+      />
+      <TransparencyBreakdown
+        title={data.transparency.title}
+        highlight={data.transparency.highlight}
+        subtitle={data.transparency.subtitle}
+        stats={data.transparency.stats}
+        breakdown={data.transparency.breakdown}
+      />
       <CtaBanner
-        primaryButtonHref={isUrdu ? "/ur/donate" : "/eng/donate"}
-        secondaryButtonHref={isUrdu ? "/ur/contact" : "/eng/contact"}
+        title={dict.cta.title}
+        description={dict.cta.description}
+        primaryButtonText={dict.cta.donateBtn}
+        primaryButtonHref={donateHref}
+        secondaryButtonText={dict.cta.contactBtn}
+        secondaryButtonHref={contactHref}
       />
     </div>
   );

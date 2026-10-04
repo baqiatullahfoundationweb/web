@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { LOCALES } from "@/lib/i18n";
+import { getDictionary, LOCALES, Locale } from "@/lib/i18n";
 import OngoingProjects from "@/components/projects/OngoingProjects";
 import CompletedProjects from "@/components/projects/CompletedProjects";
 import CtaBanner from "@/components/home/CtaBanner";
@@ -25,15 +25,36 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function LocalizedProjectsPage({ params }: PageProps) {
   const { lang } = await params;
-  const isUrdu = lang === "ur";
+  const validLang: Locale = lang === "ur" ? "ur" : "eng";
+  const dict = getDictionary(validLang);
+  const data = dict.projectsPage;
+  const donateHref = `/${validLang}/donate`;
+  const contactHref = `/${validLang}/contact`;
 
   return (
     <div className="flex flex-col pt-24 sm:pt-28">
-      <OngoingProjects />
-      <CompletedProjects />
+      <OngoingProjects
+        title={data.ongoing.title}
+        highlight={data.ongoing.highlight}
+        subtitle={data.ongoing.subtitle}
+        fundedLabel={data.ongoing.fundedLabel}
+        supportBtnText={data.ongoing.supportBtn}
+        supportHref={donateHref}
+        items={data.ongoing.items}
+      />
+      <CompletedProjects
+        title={data.completed.title}
+        highlight={data.completed.highlight}
+        subtitle={data.completed.subtitle}
+        items={data.completed.items}
+      />
       <CtaBanner
-        primaryButtonHref={isUrdu ? "/ur/donate" : "/eng/donate"}
-        secondaryButtonHref={isUrdu ? "/ur/contact" : "/eng/contact"}
+        title={dict.cta.title}
+        description={dict.cta.description}
+        primaryButtonText={dict.cta.donateBtn}
+        primaryButtonHref={donateHref}
+        secondaryButtonText={dict.cta.contactBtn}
+        secondaryButtonHref={contactHref}
       />
     </div>
   );

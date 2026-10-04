@@ -27,14 +27,14 @@ export default function Button({
   };
 
   const variantStyles = {
-    teal: "bg-primary hover:bg-primary-dark text-white shadow-md hover:shadow-lg focus:ring-primary/40",
+    teal: "bg-primary hover:bg-primary-dark text-white shadow-md hover:shadow-lg focus:ring-primary/40 font-semibold",
     donate:
-      "bg-accent-red hover:bg-accent-red-dark text-white shadow-md hover:shadow-xl hover:shadow-red-950/40 focus:ring-accent-red/40 font-semibold tracking-wide",
-    gold: "bg-amber hover:bg-amber-dark text-gray-950 shadow-md focus:ring-amber/40 font-semibold",
+      "bg-accent-red hover:bg-accent-red-dark text-white shadow-md hover:shadow-xl hover:shadow-red-950/40 focus:ring-accent-red/40 font-bold tracking-wide",
+    gold: "bg-amber hover:bg-amber-dark text-gray-950 shadow-md focus:ring-amber/40 font-bold",
     outline:
-      "border border-primary/40 hover:border-primary bg-white/10 hover:bg-white/20 text-white focus:ring-primary/30",
+      "border-2 border-primary hover:bg-primary hover:text-white bg-white/80 text-primary shadow-xs font-semibold focus:ring-primary/30",
     glass:
-      "glass-panel hover:bg-white/25 text-white border-white/20 hover:border-primary/50 focus:ring-primary/30",
+      "bg-white/90 hover:bg-white text-gray-950 border border-primary/25 shadow-sm hover:shadow-md hover:border-primary/50 focus:ring-primary/30 font-semibold",
   };
 
   const combinedClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;

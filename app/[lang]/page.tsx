@@ -35,6 +35,10 @@ export default async function LocalizedHomePage({ params }: PageProps) {
   const { lang } = await params;
   const validLang: Locale = lang === "ur" ? "ur" : "eng";
   const dict = getDictionary(validLang);
+  const donateHref = `/${validLang}/donate`;
+  const contactHref = `/${validLang}/contact`;
+  const aboutHref = `/${validLang}/about`;
+  const projectsHref = `/${validLang}/projects`;
 
   return (
     <div className="flex flex-col">
@@ -49,24 +53,48 @@ export default async function LocalizedHomePage({ params }: PageProps) {
         title={dict.about.title}
         description={dict.about.description}
         establishedYear={dict.about.establishedYear}
+        card1Title={dict.about.card1Title}
+        card1Desc={dict.about.card1Desc}
+        card2Title={dict.about.card2Title}
+        card2Desc={dict.about.card2Desc}
+        storyBtnText={dict.about.storyBtn}
+        storyHref={aboutHref}
+        visitBtnText={dict.about.visitBtn}
+        visitHref={contactHref}
       />
       <FeaturedCauses
         causes={dict.causes.items}
         title={dict.causes.title}
         highlight={dict.causes.highlight}
         subtitle={dict.causes.subtitle}
+        raisedLabel={dict.causes.raisedLabel}
+        goalLabel={dict.causes.goalLabel}
+        fundedLabel={dict.causes.fundedLabel}
+        donateBtnText={dict.causes.donateBtn}
+        detailsBtnText={dict.causes.detailsBtn}
+        donateHref={donateHref}
       />
       <VolunteersSection
+        volunteers={dict.volunteers.items}
         title={dict.volunteers.title}
         highlight={dict.volunteers.highlight}
         subtitle={dict.volunteers.subtitle}
+        badgeText={dict.volunteers.badge}
+        calloutTitle={dict.volunteers.calloutTitle}
+        calloutDesc={dict.volunteers.calloutDesc}
+        calloutBtnText={dict.volunteers.calloutBtn}
+        contactHref={contactHref}
       />
       <EventsSection
+        events={dict.events.items}
         title={dict.events.title}
         highlight={dict.events.highlight}
         subtitle={dict.events.subtitle}
+        attendBtnText={dict.events.attendBtn}
+        contactHref={contactHref}
       />
       <GetInvolved
+        pathways={dict.getInvolved.pathways}
         title={dict.getInvolved.title}
         highlight={dict.getInvolved.highlight}
         subtitle={dict.getInvolved.subtitle}
@@ -74,14 +102,24 @@ export default async function LocalizedHomePage({ params }: PageProps) {
       <ProjectSpotlight
         title={dict.spotlight.title}
         description={dict.spotlight.description}
+        stat1Val={dict.spotlight.stat1Val}
+        stat1Lbl={dict.spotlight.stat1Lbl}
+        stat2Val={dict.spotlight.stat2Val}
+        stat2Lbl={dict.spotlight.stat2Lbl}
+        feat1={dict.spotlight.feat1}
+        feat2={dict.spotlight.feat2}
+        exploreBtnText={dict.spotlight.exploreBtn}
+        exploreHref={projectsHref}
+        supportBtnText={dict.spotlight.supportBtn}
+        supportHref={donateHref}
       />
       <CtaBanner
         title={dict.cta.title}
         description={dict.cta.description}
         primaryButtonText={dict.cta.donateBtn}
-        primaryButtonHref={validLang === "ur" ? "/ur/donate" : "/eng/donate"}
+        primaryButtonHref={donateHref}
         secondaryButtonText={dict.cta.contactBtn}
-        secondaryButtonHref={validLang === "ur" ? "/ur/contact" : "/eng/contact"}
+        secondaryButtonHref={contactHref}
       />
     </div>
   );

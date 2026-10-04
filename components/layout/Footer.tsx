@@ -1,16 +1,25 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { getDictionary } from "@/lib/i18n";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isUrdu = pathname.startsWith("/ur");
+  const locale = isUrdu ? "ur" : "eng";
+  const dict = getDictionary(locale);
+
   const quickLinks = [
-    { href: "/eng", label: "Home" },
-    { href: "/eng/about", label: "About Us" },
-    { href: "/eng/projects", label: "Our Projects" },
-    { href: "/eng/gallery", label: "Photo Gallery" },
-    { href: "/eng/blog", label: "News & Relief" },
-    { href: "/eng/donate", label: "Support & Donate" },
-    { href: "/eng/contact", label: "Contact & Visit" },
+    { href: `/${locale}`, label: isUrdu ? "صفحۂ اول" : "Home" },
+    { href: `/${locale}/about`, label: isUrdu ? "ہمارے بارے میں" : "About Us" },
+    { href: `/${locale}/projects`, label: isUrdu ? "ہمارے منصوبے" : "Our Projects" },
+    { href: `/${locale}/gallery`, label: isUrdu ? "تصویری گیلری" : "Photo Gallery" },
+    { href: `/${locale}/blog`, label: isUrdu ? "خبریں و ریلیف" : "News & Relief" },
+    { href: `/${locale}/donate`, label: isUrdu ? "عطیات اور تعاون" : "Support & Donate" },
+    { href: `/${locale}/contact`, label: isUrdu ? "رابطہ کریں" : "Contact & Visit" },
   ];
 
   const socialLinks = [
@@ -22,7 +31,10 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-white/90 backdrop-blur-2xl border-t border-primary/20 text-gray-700 pt-16 pb-12 mt-20">
+    <footer
+      className="relative bg-white/95 backdrop-blur-2xl border-t border-primary/20 text-gray-700 pt-16 pb-12 mt-20"
+      dir={isUrdu ? "rtl" : "ltr"}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-gray-200">
           {/* Brand Column */}
@@ -45,8 +57,8 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p className="text-sm text-gray-600 leading-relaxed max-w-sm">
-              Empowering orphaned and vulnerable children across Pakistan since 2016 through compassionate home care, quality schooling, and moral nourishment.
+            <p className="text-sm text-gray-700 leading-relaxed max-w-sm font-medium">
+              {dict.footer.desc}
             </p>
             <div className="flex items-center gap-2 pt-1">
               {socialLinks.map((s) => (
@@ -55,7 +67,7 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-primary/5 border border-primary/20 hover:bg-primary/15 hover:border-primary text-primary flex items-center justify-center text-xs font-bold transition-colors shadow-2xs"
+                  className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 hover:border-primary text-primary flex items-center justify-center text-xs font-bold transition-colors shadow-2xs"
                   aria-label={s.name}
                 >
                   {s.icon}
@@ -64,17 +76,17 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation Links */}
           <div className="md:col-span-3">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900 mb-4">
-              Navigation
+            <h3 className="text-sm font-bold uppercase tracking-wider text-gray-950 mb-4">
+              {dict.footer.navTitle}
             </h3>
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-600 hover:text-primary transition-colors"
+                    className="text-sm text-gray-700 hover:text-primary font-medium transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -85,24 +97,24 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div className="md:col-span-4">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900 mb-4">
-              Get in Touch
+            <h3 className="text-sm font-bold uppercase tracking-wider text-gray-950 mb-4">
+              {dict.footer.contactTitle}
             </h3>
-            <ul className="space-y-3.5 text-sm text-gray-600">
+            <ul className="space-y-3.5 text-sm text-gray-700 font-medium">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                <span>House No.123/A Block, Nawab Town, Lahore, Pakistan</span>
+                <span>{dict.footer.address}</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-primary shrink-0" />
-                <a href="tel:+923146500512" className="hover:text-primary transition-colors">
-                  +92 314 6500512
+                <a href={`tel:${dict.footer.phone}`} className="hover:text-primary transition-colors font-mono">
+                  {dict.footer.phone}
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-primary shrink-0" />
-                <a href="mailto:baqiatullahpak@gmail.com" className="hover:text-primary transition-colors">
-                  baqiatullahpak@gmail.com
+                <a href={`mailto:${dict.footer.email}`} className="hover:text-primary transition-colors">
+                  {dict.footer.email}
                 </a>
               </li>
             </ul>
@@ -110,10 +122,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-3">
-          <p>© {new Date().getFullYear()} Baqiatullah Foundation Pakistan. Registered Non-Profit.</p>
-          <p className="flex items-center gap-1">
-            <span>Dedicated to the care and future of children.</span>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-600 gap-3">
+          <p>© {new Date().getFullYear()} {dict.footer.copyright}</p>
+          <p className="flex items-center gap-1 font-medium text-gray-700">
+            <span>{dict.footer.motto}</span>
           </p>
         </div>
       </div>
