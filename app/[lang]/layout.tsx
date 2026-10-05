@@ -1,4 +1,5 @@
 import { getDictionary, LOCALES, Locale } from "@/lib/i18n";
+import LogoPreloader from "@/components/loading/LogoPreloader";
 
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
@@ -23,6 +24,7 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
         fontFamily: validLang === "ur" ? "'Unwan Unicode', 'Noto Nastaliq Urdu', serif" : "var(--font-poppins), 'Poppins', sans-serif"
       }}
     >
+      <LogoPreloader />
       {children}
     </div>
   );
