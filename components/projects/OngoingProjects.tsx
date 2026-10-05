@@ -31,9 +31,9 @@ export default function OngoingProjects({
   supportBtnText = "Support This Program",
   supportHref = "/donate",
   items = [
-    { title: "Education Excellence Program", desc: "Providing customized tutoring, English proficiency, and school fees to ensure academic potential.", image: "/gallery/2.jpg", progress: 75, status: "Active Phase II" },
-    { title: "Nutrition & Health Initiative", desc: "Supplying balanced, high-protein daily meals alongside pediatric examinations and hygiene kits.", image: "/gallery/16.jpg", progress: 90, status: "Active Ongoing" },
-    { title: "Housing & Dorm Expansion", desc: "Constructing modern living quarters and study halls to welcome more vulnerable children.", image: "/gallery/49.jpg", progress: 45, status: "Construction" },
+    { title: "Education Excellence Program", desc: "Providing customized tutoring, English proficiency, and school fees to ensure academic potential.", image: "/projects/education-hd.webp", progress: 75, status: "Active Phase II" },
+    { title: "Nutrition & Health Initiative", desc: "Supplying balanced, high-protein daily meals alongside pediatric examinations and hygiene kits.", image: "/projects/health-hd.webp", progress: 90, status: "Active Ongoing" },
+    { title: "Clean Water (WASH) Program", desc: "Installing solar-powered clean drinking water filtration plants and sanitation facilities.", image: "/projects/wash-hd.webp", progress: 65, status: "Active Phase I" },
   ],
 }: OngoingProjectsProps) {
   return (
@@ -50,12 +50,15 @@ export default function OngoingProjects({
           return (
             <div key={idx} className="bg-white/95 backdrop-blur-md rounded-3xl overflow-hidden flex flex-col justify-between border border-primary/20 shadow-xl hover:shadow-2xl transition-all">
               <div>
-                <div className="relative h-52 w-full overflow-hidden">
+                <div className="relative h-52 w-full overflow-hidden bg-slate-200">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
+                    loading="lazy"
+                    decoding="async"
                     className="object-cover hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute top-3.5 right-3.5 px-3 py-1 rounded-full text-xs font-bold bg-[#008B8B] text-white shadow-md">
                     {item.status}

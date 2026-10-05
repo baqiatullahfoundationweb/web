@@ -101,13 +101,14 @@ export default function GalleryGrid({
             <div
               key={item.id}
               onClick={() => setSelectedIdx(item.originalIdx)}
-              className={`group relative rounded-3xl overflow-hidden cursor-pointer border-2 border-white ring-1 ring-primary/20 shadow-xl hover:shadow-2xl transition-all duration-300 ${item.spanClass}`}
+              className={`group relative rounded-3xl overflow-hidden cursor-pointer border-2 border-white ring-1 ring-primary/20 shadow-xl hover:shadow-2xl transition-all duration-300 bg-slate-200 ${item.spanClass}`}
             >
               <Image
                 src={item.src}
                 alt={item.alt}
                 fill
                 loading="lazy"
+                decoding="async"
                 className="object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 33vw"
               />

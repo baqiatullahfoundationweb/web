@@ -33,9 +33,10 @@ export const enAboutPage: AboutPageData = {
     highlight: "Baqiatullah Foundation",
     subtitle: "Meet the directors, trustees, and operational stewards directing our educational mission.",
     members: [
-      { name: "Muhammad Abbas Raza", role: "Founder & Executive Director", desc: "Leading grassroots child welfare initiatives across Pakistan with over 15 years of humanitarian service.", image: "/gallery/20.jpg" },
-      { name: "Dr. Samina Kausar", role: "Director of Pediatric Care", desc: "Supervising maternal health screenings, nutritional diets, and child emotional development programs.", image: "/gallery/30.jpg" },
-      { name: "Syed Ali Haider", role: "Head of Academic Programs", desc: "Overseeing primary education, STEM computer labs, and higher secondary tuition pipelines.", image: "/gallery/35.jpg" },
+      { name: "Muhammad Abbas Raza", role: "Founder & Executive Director", desc: "Leading grassroots child welfare initiatives across Pakistan with over 15 years of humanitarian service.", image: "/team/founder.jpg" },
+      { name: "Dr. Samina Kausar", role: "Chairperson & Trustee", desc: "Supervising institutional partnerships, child protection policies, and organizational governance.", image: "/team/chairperson.jpg" },
+      { name: "Syed Ali Haider", role: "Head of Academic Programs", desc: "Overseeing primary education, STEM computer labs, and higher secondary tuition pipelines.", image: "/team/educationist.jpg" },
+      { name: "Tariq Mahmood", role: "Director of Finance & Compliance", desc: "Ensuring 100% financial transparency, external audits, and meticulous donor reporting.", image: "/team/finance.jpg" },
     ],
   },
 };
@@ -48,9 +49,9 @@ export const enProjectsPage: ProjectsPageData = {
     fundedLabel: "Funded / Completed",
     supportBtn: "Support This Program",
     items: [
-      { title: "Education Excellence Program", desc: "Providing customized tutoring, English proficiency, and school fees to ensure academic potential.", image: "/gallery/2.jpg", progress: 75, status: "Active Phase II" },
-      { title: "Nutrition & Health Initiative", desc: "Supplying balanced, high-protein daily meals alongside pediatric examinations and hygiene kits.", image: "/gallery/16.jpg", progress: 90, status: "Active Ongoing" },
-      { title: "Housing & Dorm Expansion", desc: "Constructing modern living quarters and study halls to welcome more vulnerable children.", image: "/gallery/49.jpg", progress: 45, status: "Construction" },
+      { title: "Education Excellence Program", desc: "Providing customized tutoring, English proficiency, and school fees to ensure academic potential.", image: "/projects/education-hd.webp", progress: 75, status: "Active Phase II" },
+      { title: "Health Services & Nutrition Initiative", desc: "Supplying balanced, high-protein daily meals alongside pediatric examinations and clinic care.", image: "/projects/health-hd.webp", progress: 90, status: "Active Ongoing" },
+      { title: "Clean Water (WASH) Program", desc: "Installing solar-powered clean drinking water filtration plants and sanitation facilities.", image: "/projects/wash-hd.webp", progress: 65, status: "Active Phase I" },
     ],
   },
   completed: {
@@ -58,9 +59,9 @@ export const enProjectsPage: ProjectsPageData = {
     highlight: "Impact Deliveries",
     subtitle: "Major humanitarian initiatives executed with complete community success.",
     items: [
-      { title: "Jhang Emergency Flood Relief", desc: "Supplied 300 vulnerable families with multi-week food rations, water filtration kits, and medical aid.", image: "/gallery/88.jpeg", impact: "300 Families Supported" },
-      { title: "Modern IT Computer Lab", desc: "Installed 35 desktop workstations with high-speed internet and coding mentorship curriculum.", image: "/gallery/49.jpg", impact: "100% Student Digital Literacy" },
-      { title: "Healthcare Screening Drive", desc: "Completed comprehensive dental and pediatric assessments for all 250+ resident children.", image: "/gallery/10.jpg", impact: "250+ Children Screened" },
+      { title: "Jhang Emergency Flood Relief", desc: "Supplied 300 vulnerable families with multi-week food rations, water filtration kits, and medical aid.", image: "/projects/disaster-hd.webp", impact: "300 Families Supported" },
+      { title: "Modern IT Computer Lab", desc: "Installed 35 desktop workstations with high-speed internet and coding mentorship curriculum.", image: "/gallery/opt/49.webp", impact: "100% Student Digital Literacy" },
+      { title: "Healthcare Screening Drive", desc: "Completed comprehensive dental and pediatric assessments for all 250+ resident children.", image: "/gallery/opt/10.webp", impact: "250+ Children Screened" },
     ],
   },
 };

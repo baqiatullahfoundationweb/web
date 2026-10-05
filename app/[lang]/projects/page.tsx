@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getDictionary, LOCALES, Locale } from "@/lib/i18n";
 import OngoingProjects from "@/components/projects/OngoingProjects";
+import HouseClipProjectsGrid from "@/components/projects/HouseClipProjectsGrid";
 import CompletedProjects from "@/components/projects/CompletedProjects";
 import CtaBanner from "@/components/home/CtaBanner";
 
@@ -31,8 +32,11 @@ export default async function LocalizedProjectsPage({ params }: PageProps) {
   const donateHref = `/${validLang}/donate`;
   const contactHref = `/${validLang}/contact`;
 
+  const isUrdu = validLang === "ur";
+
   return (
     <div className="flex flex-col pt-24 sm:pt-28">
+      <HouseClipProjectsGrid isUrdu={isUrdu} />
       <OngoingProjects
         title={data.ongoing.title}
         highlight={data.ongoing.highlight}

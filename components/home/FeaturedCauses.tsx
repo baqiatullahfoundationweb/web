@@ -31,25 +31,25 @@ const DEFAULT_CAUSES: CauseItem[] = [
   {
     title: "Emergency Flood Relief Campaign Jhang",
     category: "Disaster Emergency",
-    image: "/gallery/88.jpeg",
+    image: "/projects/disaster-hd.webp",
     raised: "PKR 2,870,000",
     goal: "PKR 3,500,000",
     percent: 82,
     description: "Delivering life-saving dry food parcels, clean water filtration kits, and medical aid to 300 displaced families.",
   },
   {
-    title: "Orphan Daily Meals & Nutrition Fund",
-    category: "Ongoing Nutrition",
-    image: "/gallery/16.jpg",
+    title: "Health Services & Nutrition Fund",
+    category: "Medical & Nutrition",
+    image: "/projects/health-hd.webp",
     raised: "PKR 1,360,000",
     goal: "PKR 2,000,000",
     percent: 68,
-    description: "Ensuring 250+ resident children receive three fresh, wholesome daily meals, milk, and medical dietary supplements.",
+    description: "Ensuring 250+ resident children receive three fresh daily meals, pediatric clinic checkups, and medicines.",
   },
   {
     title: "Digital Literacy & High-School Tuition",
     category: "Education & Growth",
-    image: "/gallery/2.jpg",
+    image: "/projects/education-hd.webp",
     raised: "PKR 1,330,000",
     goal: "PKR 1,800,000",
     percent: 74,
@@ -89,6 +89,8 @@ export default function FeaturedCauses({
                 src={cause.image}
                 alt={cause.title}
                 fill
+                loading="lazy"
+                decoding="async"
                 className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />

@@ -40,16 +40,20 @@ export type GalleryGridItem =
     };
 
 export const generateGalleryImages = (): RawGalleryImage[] => {
-  return Array.from({ length: 87 }, (_, i) => {
+  return Array.from({ length: 89 }, (_, i) => {
     const id = i + 1;
     let catKey: keyof GalleryCategories = "classes";
-    if (id % 4 === 1) catKey = "care";
-    else if (id % 4 === 2) catKey = "activities";
-    else if (id === 88 || id === 89 || id % 7 === 0) catKey = "relief";
+    if (id === 75 || id === 88 || id === 89 || id % 7 === 0) {
+      catKey = "relief";
+    } else if (id === 10 || id === 16 || id === 30 || id === 62 || id % 4 === 1) {
+      catKey = "care";
+    } else if (id === 24 || id === 34 || id === 54 || id % 4 === 2) {
+      catKey = "activities";
+    }
 
     return {
       id,
-      src: id === 88 ? "/gallery/88.jpeg" : `/gallery/${id}.jpg`,
+      src: `/gallery/opt/${id}.webp`,
       alt: `Baqiatullah Foundation activity ${id}`,
       categoryKey: catKey,
     };

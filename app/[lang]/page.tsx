@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getDictionary, LOCALES, Locale } from "@/lib/i18n";
 import HeroSlider from "@/components/home/HeroSlider";
 import ImpactSection from "@/components/home/ImpactSection";
+import HouseClipProjectsGrid from "@/components/projects/HouseClipProjectsGrid";
 import HomeAbout from "@/components/home/HomeAbout";
 import FeaturedCauses from "@/components/home/FeaturedCauses";
 import VolunteersSection from "@/components/home/VolunteersSection";
@@ -34,6 +35,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function LocalizedHomePage({ params }: PageProps) {
   const { lang } = await params;
   const validLang: Locale = lang === "ur" ? "ur" : "eng";
+  const isUrdu = validLang === "ur";
   const dict = getDictionary(validLang);
   const donateHref = `/${validLang}/donate`;
   const contactHref = `/${validLang}/contact`;
@@ -48,6 +50,10 @@ export default async function LocalizedHomePage({ params }: PageProps) {
         title={dict.impact.title}
         highlight={dict.impact.highlight}
         subtitle={dict.impact.subtitle}
+      />
+      <HouseClipProjectsGrid
+        isUrdu={isUrdu}
+        className="bg-gradient-to-b from-white/70 via-transparent to-transparent border-b border-primary/10"
       />
       <HomeAbout
         title={dict.about.title}

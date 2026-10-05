@@ -19,20 +19,38 @@ const DEFAULT_MEMBERS: TeamMemberItem[] = [
   {
     name: "Muhammad Abbas Raza",
     role: "Founder & Executive Director",
-    image: "/gallery/20.jpg",
+    image: "/team/founder.jpg",
     desc: "Leading grassroots child welfare initiatives across Pakistan with over 15 years of humanitarian service.",
   },
   {
     name: "Dr. Samina Kausar",
-    role: "Director of Pediatric Care",
-    image: "/gallery/30.jpg",
+    role: "Chairperson & Trustee",
+    image: "/team/chairperson.jpg",
     desc: "Supervising maternal health screenings, nutritional diets, and child emotional development programs.",
   },
   {
     name: "Syed Ali Haider",
     role: "Head of Academic Programs",
-    image: "/gallery/35.jpg",
+    image: "/team/educationist.jpg",
     desc: "Overseeing primary education, STEM computer labs, and higher secondary tuition pipelines.",
+  },
+  {
+    name: "Tariq Mahmood",
+    role: "Director of Finance & Compliance",
+    image: "/team/finance.jpg",
+    desc: "Ensuring 100% financial transparency, external audits, and meticulous donor reporting.",
+  },
+  {
+    name: "Syed Hassan Raza",
+    role: "Co-Founder & Field Coordinator",
+    image: "/team/founder2.jpg",
+    desc: "Coordinating disaster response logistics and relief distributions across rural flood zones.",
+  },
+  {
+    name: "Muhammad Baqir",
+    role: "Senior Trustee & Board Advisor",
+    image: "/team/founder3.jpg",
+    desc: "Guiding institutional strategy, moral character formation, and community outreach programs.",
   },
 ];
 
@@ -61,6 +79,8 @@ export default function TeamSection({
                 src={member.image}
                 alt={member.name}
                 fill
+                loading="lazy"
+                decoding="async"
                 className="object-cover object-top hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />

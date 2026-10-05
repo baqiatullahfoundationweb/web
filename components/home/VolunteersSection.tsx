@@ -27,20 +27,20 @@ const DEFAULT_VOLUNTEERS: VolunteerItem[] = [
   {
     name: "Dr. Fatima Zahra",
     role: "Medical & Health Caregiver",
-    image: "/gallery/30.jpg",
+    image: "/team/chairperson.jpg",
     quote: "Ensuring every young girl and boy receives routine health screenings, nutrition monitoring, and preventative care.",
   },
   {
     name: "Hamza Tariq",
     role: "Youth STEM & Coding Mentor",
-    image: "/gallery/35.jpg",
+    image: "/team/educationist.jpg",
     quote: "Teaching digital literacy and web development on weekends to open doors for children in modern tech careers.",
   },
   {
-    name: "Zainab Raza",
-    role: "Educational Tutor & Art Guide",
-    image: "/gallery/14.jpg",
-    quote: "Creating creative art therapies and English reading circles so children express their imaginations freely.",
+    name: "Muhammad Abbas Raza",
+    role: "Founder & Community Mentor",
+    image: "/team/founder.jpg",
+    quote: "Creating loving mentorship circles and providing complete care so every orphan grows with honor and self-reliance.",
   },
 ];
 
@@ -105,9 +105,11 @@ export default function VolunteersSection({
 
       <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/15 p-8 sm:p-12 text-white">
         <Image
-          src="/gallery/75.jpg"
+          src="/gallery/opt/75.webp"
           alt="Volunteers with community"
           fill
+          loading="lazy"
+          decoding="async"
           className="object-cover"
           sizes="100vw"
         />
