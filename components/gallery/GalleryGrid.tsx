@@ -34,7 +34,7 @@ export default function GalleryGrid({
   const isUrdu = pathname.startsWith("/ur");
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
   const [activeCat, setActiveCat] = useState<keyof GalleryCategories>("all");
-  const [visibleCount, setVisibleCount] = useState(21);
+  const [visibleCount, setVisibleCount] = useState(24);
 
   const categoryList: Array<{ key: keyof GalleryCategories; label: string }> = [
     { key: "all", label: categories.all },
@@ -60,7 +60,7 @@ export default function GalleryGrid({
   );
 
   return (
-    <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6">
+    <section className="py-16 max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeader title={title} highlight={highlight} subtitle={subtitle} />
 
       {/* Filter Tabs */}
@@ -70,7 +70,7 @@ export default function GalleryGrid({
             key={cat.key}
             onClick={() => {
               setActiveCat(cat.key);
-              setVisibleCount(21);
+              setVisibleCount(24);
             }}
             className={`px-4 py-2.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer ${
               activeCat === cat.key
@@ -83,8 +83,8 @@ export default function GalleryGrid({
         ))}
       </div>
 
-      {/* 100% Mathematically Gapless Bento Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[230px]">
+      {/* 100% Mathematically Gapless Bento Grid in 4 Columns */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 auto-rows-[190px] sm:auto-rows-[200px] lg:auto-rows-[210px] grid-flow-row-dense">
         {gridItems.map((item) => {
           if (item.type === "playful") {
             return (
@@ -101,7 +101,7 @@ export default function GalleryGrid({
             <div
               key={item.id}
               onClick={() => setSelectedIdx(item.originalIdx)}
-              className={`group relative rounded-3xl overflow-hidden cursor-pointer border-2 border-white ring-1 ring-primary/20 shadow-xl hover:shadow-2xl transition-all duration-300 bg-slate-200 ${item.spanClass}`}
+              className={`group relative rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer border-2 border-white ring-1 ring-primary/20 shadow-md hover:shadow-2xl transition-all duration-300 bg-slate-200 ${item.spanClass}`}
             >
               <Image
                 src={item.src}
@@ -110,7 +110,7 @@ export default function GalleryGrid({
                 loading="lazy"
                 decoding="async"
                 className="object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 33vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
 
@@ -138,7 +138,7 @@ export default function GalleryGrid({
       {visibleCount < filtered.length && (
         <div className="text-center mt-12">
           <button
-            onClick={() => setVisibleCount((p) => p + 21)}
+            onClick={() => setVisibleCount((p) => p + 16)}
             className="px-6 py-3.5 rounded-2xl bg-white hover:bg-gray-50 border-2 border-primary/30 text-gray-950 text-sm font-black shadow-lg hover:border-primary transition-all cursor-pointer active:scale-95"
           >
             {loadMoreBtnText} ({filtered.length - visibleCount} {remainingText})

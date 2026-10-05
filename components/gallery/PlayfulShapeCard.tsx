@@ -50,22 +50,22 @@ export default function PlayfulShapeCard({
 
   return (
     <div
-      className={`relative w-full h-full min-h-[220px] rounded-3xl p-6 flex flex-col items-center justify-between overflow-hidden shadow-xl border-2 border-white/80 ring-1 ring-black/5 select-none transition-transform duration-500 hover:scale-102 ${p.bg} ${p.text} ${className}`}
+      className={`relative w-full h-full min-h-[170px] rounded-2xl sm:rounded-3xl p-3.5 sm:p-4 flex flex-col items-center justify-between overflow-hidden shadow-lg hover:shadow-xl border-2 border-white/80 ring-1 ring-black/5 select-none transition-transform duration-300 hover:scale-102 ${p.bg} ${p.text} ${className}`}
     >
       {/* Background Decorative Polka Dapples */}
       <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#fff_3px,transparent_3px)] [background-size:16px_16px]" />
 
       {/* Top Floating Badge */}
-      <div className="relative z-10 self-start inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/70 backdrop-blur-xs text-[11px] font-extrabold shadow-xs">
-        <Icon className="w-3.5 h-3.5 fill-current" />
+      <div className="relative z-10 self-start inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/75 backdrop-blur-xs text-[10px] sm:text-[11px] font-extrabold shadow-xs">
+        <Icon className="w-3 h-3 fill-current" />
         <span>{isUrdu ? "ننھے معمار" : "Little Stars"}</span>
       </div>
 
       {/* Cute Playful SVG Character Face with Blinking Eyes */}
-      <div className="relative z-10 my-auto flex flex-col items-center justify-center py-4">
+      <div className="relative z-10 my-auto flex flex-col items-center justify-center py-1 sm:py-2">
         <svg
           viewBox="0 0 160 100"
-          className="w-36 h-24 drop-shadow-md overflow-visible"
+          className="w-28 h-18 sm:w-32 sm:h-20 drop-shadow-sm overflow-visible"
         >
           {/* Left Eye */}
           <g className="animate-[pulse_3s_ease-in-out_infinite]">

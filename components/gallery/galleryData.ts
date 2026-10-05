@@ -60,52 +60,119 @@ export const generateGalleryImages = (): RawGalleryImage[] => {
   });
 };
 
-// 100% Mathematically Gapless Bento:
-// Block A: 1 Feature (4 cells) + 1 Photo (1 cell) + 1 Playful (1 cell) = 6 cells (2 full rows)
-// Block B: 3 Photos (3 cells) = 3 cells (1 full row)
-// Every block perfectly fills the 3-column grid with ZERO gaps and ZERO orphaned rectangles.
+// 100% Mathematically Gapless Bento for 4-column desktop grid:
+// Block A (8 cells = 2 rows): 1 Featured (2x2=4) + 2 Photos + 1 Playful + 1 Photo
+// Alternates featured item left and right for an engaging magazine layout.
+// Block B (4 cells = 1 row):  4 standard Photos
+// Every block perfectly fills the 4-column grid with ZERO gaps.
 export const buildGaplessGalleryItems = (images: RawGalleryImage[]): GalleryGridItem[] => {
   const result: GalleryGridItem[] = [];
   let playfulCount = 0;
+  let blockIndex = 0;
   let i = 0;
 
   while (i < images.length) {
-    // 1. Feature Block: 2 rows x 3 columns = 6 cells
-    if (i < images.length) {
-      result.push({
-        type: "image",
-        ...images[i],
-        spanClass: "col-span-1 md:col-span-2 md:row-span-2 min-h-[300px] md:min-h-full",
-        isFeatured: true,
-        originalIdx: i,
-      });
-      i++;
-    }
+    const isAlt = blockIndex % 2 === 1;
+    blockIndex++;
 
-    if (i < images.length) {
-      result.push({
-        type: "image",
-        ...images[i],
-        spanClass: "col-span-1 md:col-span-1 md:row-span-1 min-h-[220px] md:min-h-full",
-        originalIdx: i,
-      });
-      i++;
-
-      // Slot playful card directly underneath to complete the 2x3 block!
+    if (!isAlt) {
+      // Left featured: [Featured 2x2][Photo1][Photo2] / [Featured 2x2][Playful][Photo3]
+      if (i < images.length) {
+        result.push({
+          type: "image",
+          ...images[i],
+          spanClass: "col-span-1 sm:col-span-2 sm:row-span-2 min-h-[220px] sm:min-h-full",
+          isFeatured: true,
+          originalIdx: i,
+        });
+        i++;
+      }
+      if (i < images.length) {
+        result.push({
+          type: "image",
+          ...images[i],
+          spanClass: "col-span-1 min-h-[170px] sm:min-h-full",
+          originalIdx: i,
+        });
+        i++;
+      }
+      if (i < images.length) {
+        result.push({
+          type: "image",
+          ...images[i],
+          spanClass: "col-span-1 min-h-[170px] sm:min-h-full",
+          originalIdx: i,
+        });
+        i++;
+      }
       result.push({
         type: "playful",
         id: `playful-${playfulCount}`,
         variantIndex: playfulCount++,
-        spanClass: "col-span-1 md:col-span-1 md:row-span-1 min-h-[220px] md:min-h-full",
+        spanClass: "col-span-1 min-h-[170px] sm:min-h-full",
       });
+      if (i < images.length) {
+        result.push({
+          type: "image",
+          ...images[i],
+          spanClass: "col-span-1 min-h-[170px] sm:min-h-full",
+          originalIdx: i,
+        });
+        i++;
+      }
+    } else {
+      // Right featured: [Photo1][Photo2][Featured 2x2] / [Playful][Photo3][Featured 2x2]
+      if (i < images.length) {
+        result.push({
+          type: "image",
+          ...images[i],
+          spanClass: "col-span-1 min-h-[170px] sm:min-h-full",
+          originalIdx: i,
+        });
+        i++;
+      }
+      if (i < images.length) {
+        result.push({
+          type: "image",
+          ...images[i],
+          spanClass: "col-span-1 min-h-[170px] sm:min-h-full",
+          originalIdx: i,
+        });
+        i++;
+      }
+      if (i < images.length) {
+        result.push({
+          type: "image",
+          ...images[i],
+          spanClass: "col-span-1 sm:col-span-2 sm:row-span-2 min-h-[220px] sm:min-h-full",
+          isFeatured: true,
+          originalIdx: i,
+        });
+        i++;
+      }
+      result.push({
+        type: "playful",
+        id: `playful-${playfulCount}`,
+        variantIndex: playfulCount++,
+        spanClass: "col-span-1 min-h-[170px] sm:min-h-full",
+      });
+      if (i < images.length) {
+        result.push({
+          type: "image",
+          ...images[i],
+          spanClass: "col-span-1 min-h-[170px] sm:min-h-full",
+          originalIdx: i,
+        });
+        i++;
+      }
     }
 
-    // 2. Standard Row Block: 1 row x 3 columns = 3 cells
-    for (let k = 0; k < 3 && i < images.length; k++) {
+    // Block B: Standard row — 1 row × 4 cols = 4 cells
+    for (let k = 0; k < 4 && i < images.length; k++) {
       result.push({
         type: "image",
         ...images[i],
-        spanClass: "col-span-1 md:col-span-1 md:row-span-1 min-h-[220px] md:min-h-full",
+        spanClass: "col-span-1 min-h-[170px] sm:min-h-full",
         originalIdx: i,
       });
       i++;
