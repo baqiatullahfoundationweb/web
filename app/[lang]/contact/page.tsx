@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { getDictionary, LOCALES, Locale } from "@/lib/i18n";
 import ContactCards from "@/components/contact/ContactCards";
-import ContactForm from "@/components/contact/ContactForm";
 import MapEmbed from "@/components/contact/MapEmbed";
 import CtaBanner from "@/components/home/CtaBanner";
 
@@ -17,13 +16,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang } = await params;
   const isUrdu = lang === "ur";
   const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}/contact`;
+  const title = isUrdu
+    ? "رابطہ اور دورہ | بقیۃ اللہ فاؤنڈیشن پاکستان — نواب ٹاؤن لاہور مرکز"
+    : "Contact & Visit Us | Baqiatullah Foundation Pakistan — Orphanage Lahore";
+  const description = isUrdu
+    ? "لاہور نواب ٹاؤن میں ہمارے مرکز کا پتہ، ہیلپ لائن 03146500512، ملاقات کے اوقات اور گوگل میپس لوکیشن۔"
+    : "Contact Baqiatullah Foundation. Located at House No.123/A Block, Nawab Town, Lahore, Pakistan. Phone: +92 314 6500512.";
+
   return {
-    title: isUrdu
-      ? "رابطہ اور دورہ | بقیۃ اللہ فاؤنڈیشن پاکستان — نواب ٹاؤن لاہور مرکز"
-      : "Contact & Visit Us | Baqiatullah Foundation Pakistan — Orphanage Lahore",
-    description: isUrdu
-      ? "لاہور نواب ٹاؤن میں ہمارے مرکز کا پتہ، ہیلپ لائن 03146500512، ملاقات کے اوقات اور آن لائن رابطہ فارم۔"
-      : "Contact Baqiatullah Foundation. Located at House No.123/A Block, Nawab Town, Lahore, Pakistan. Phone: +92 314 6500512.",
+    title,
+    description,
     alternates: {
       canonical: canonicalUrl,
       languages: {
@@ -31,6 +33,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         ur: "https://baqiatullahfoundation.org/ur/contact",
         "x-default": "https://baqiatullahfoundation.org/eng/contact",
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: "Baqiatullah Foundation Pakistan",
+      images: [{
+        url: "https://baqiatullahfoundation.org/gallery/89.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Baqiatullah Foundation Pakistan Orphanage Contact",
+      }],
+      locale: isUrdu ? "ur_PK" : "en_PK",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://baqiatullahfoundation.org/gallery/89.jpg"],
     },
   };
 }
@@ -57,32 +79,8 @@ export default async function LocalizedContactPage({ params }: PageProps) {
         hoursLabel={data.info.hoursLabel}
         hours={data.info.hours}
       />
-      <section className="py-12 max-w-7xl mx-auto px-4 sm:px-6 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          <div className="lg:col-span-7">
-            <ContactForm
-              title={data.form.title}
-              subtitle={data.form.subtitle}
-              nameLabel={data.form.nameLabel}
-              namePlaceholder={data.form.namePlaceholder}
-              emailLabel={data.form.emailLabel}
-              emailPlaceholder={data.form.emailPlaceholder}
-              phoneLabel={data.form.phoneLabel}
-              phonePlaceholder={data.form.phonePlaceholder}
-              subjectLabel={data.form.subjectLabel}
-              subjects={data.form.subjects}
-              messageLabel={data.form.messageLabel}
-              messagePlaceholder={data.form.messagePlaceholder}
-              submitBtn={data.form.submitBtn}
-              successTitle={data.form.successTitle}
-              successDesc={data.form.successDesc}
-              resetBtn={data.form.resetBtn}
-            />
-          </div>
-          <div className="lg:col-span-5">
-            <MapEmbed />
-          </div>
-        </div>
+      <section className="pb-16 max-w-7xl mx-auto px-4 sm:px-6 w-full">
+        <MapEmbed isUrdu={validLang === "ur"} />
       </section>
       <CtaBanner
         title={dict.cta.title}
