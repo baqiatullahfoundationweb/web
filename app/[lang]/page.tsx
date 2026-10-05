@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { getDictionary, LOCALES, Locale } from "@/lib/i18n";
 import HeroSlider from "@/components/home/HeroSlider";
 import ImpactSection from "@/components/home/ImpactSection";
 import HouseClipProjectsGrid from "@/components/projects/HouseClipProjectsGrid";
 import HomeAbout from "@/components/home/HomeAbout";
 import FeaturedCauses from "@/components/home/FeaturedCauses";
-import VolunteersSection from "@/components/home/VolunteersSection";
-import EventsSection from "@/components/home/EventsSection";
-import GetInvolved from "@/components/home/GetInvolved";
-import ProjectSpotlight from "@/components/home/ProjectSpotlight";
-import HomeFaqSection from "@/components/home/HomeFaqSection";
 import StructuredData from "@/components/home/StructuredData";
 import CtaBanner from "@/components/home/CtaBanner";
+
+// Code-splitting chunks for below-the-fold components
+const VolunteersSection = dynamic(() => import("@/components/home/VolunteersSection"));
+const EventsSection = dynamic(() => import("@/components/home/EventsSection"));
+const GetInvolved = dynamic(() => import("@/components/home/GetInvolved"));
+const ProjectSpotlight = dynamic(() => import("@/components/home/ProjectSpotlight"));
+const HomeFaqSection = dynamic(() => import("@/components/home/HomeFaqSection"));
 
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
@@ -25,23 +28,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang } = await params;
   const isUrdu = lang === "ur";
   const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}`;
+  const title = isUrdu
+    ? "بقیۃ اللہ فاؤنڈیشن پاکستان | لاہور یتیم خانے کو عطیات اور زکوٰۃ کفالت"
+    : "Baqiatullah Foundation Pakistan | Donate to Orphanage Lahore | Zakat Eligible NGO";
+  const description = isUrdu
+    ? "لاہور میں مستند فلاحی این جی او (پنجاب چیریٹی کمیشن PB-LHR-2016-8921)۔ 250+ یتیم بچوں کی رہائش، زکوٰۃ کے مستحق تعلیمی اسکالرشپ، روزانہ کھانا اور سیلاب ریلیف۔"
+    : "Registered NGO in Lahore (Punjab Charity Commission PB-LHR-2016-8921). Donate to Orphanage Lahore: 100% Zakat-eligible child sponsorship, accredited schooling, meals, and relief.";
 
   return {
-    title: isUrdu
-      ? "بقیۃ اللہ فاؤنڈیشن پاکستان | لاہور یتیم خانے کو عطیات اور زکوٰۃ کفالت"
-      : "Baqiatullah Foundation Pakistan | Donate to Orphanage Lahore | Zakat Eligible NGO",
-    description: isUrdu
-      ? "لاہور میں مستند فلاحی این جی او (پنجاب چیریٹی کمیشن PB-LHR-2016-8921)۔ 250+ یتیم بچوں کی رہائش، زکوٰۃ کے مستحق تعلیمی اسکالرشپ، روزانہ کھانا اور سیلاب ریلیف۔"
-      : "Registered NGO in Lahore (Punjab Charity Commission PB-LHR-2016-8921). Donate to Orphanage Lahore: 100% Zakat-eligible child sponsorship, accredited schooling, meals, and relief.",
+    title,
+    description,
     keywords: [
-      "Donate to Orphanage Lahore",
-      "Zakat Eligible Child Sponsorship Pakistan",
-      "NGO in Lahore",
-      "Baqiatullah Foundation Pakistan",
-      "Orphan Care Lahore",
-      "Sponsor a Child Pakistan",
-      "Sadqah Jariyah Pakistan",
-      "Punjab Charity Commission Registered NGO",
+      "Donate to Orphanage Lahore", "Zakat Eligible Child Sponsorship Pakistan",
+      "NGO in Lahore", "Baqiatullah Foundation Pakistan", "Orphan Care Lahore",
+      "Sponsor a Child Pakistan", "Sadqah Jariyah Pakistan", "Punjab Charity Commission Registered NGO",
     ],
     alternates: {
       canonical: canonicalUrl,
@@ -52,24 +52,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       },
     },
     openGraph: {
-      title: isUrdu
-        ? "بقیۃ اللہ فاؤنڈیشن پاکستان | لاہور یتیم خانہ و فلاحی این جی او"
-        : "Baqiatullah Foundation Pakistan | Donate to Orphanage Lahore",
-      description: isUrdu
-        ? "250 سے زائد یتیم بچوں کی رہائش، زکوٰۃ کے مستحق تعلیمی وظائف اور مفت علاج۔"
-        : "Nurturing 250+ orphans in Lahore through 100% Zakat-eligible sponsorship, education, and shelter.",
+      title,
+      description,
       url: canonicalUrl,
       siteName: "Baqiatullah Foundation Pakistan",
-      images: [
-        {
-          url: "https://baqiatullahfoundation.org/gallery/89.jpg",
-          width: 1200,
-          height: 630,
-          alt: "Baqiatullah Foundation Pakistan Orphanage in Lahore",
-        },
-      ],
+      images: [{
+        url: "https://baqiatullahfoundation.org/gallery/89.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Baqiatullah Foundation Pakistan Orphanage in Lahore",
+        type: "image/jpeg",
+      }],
       locale: isUrdu ? "ur_PK" : "en_PK",
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://baqiatullahfoundation.org/gallery/89.jpg"],
+      creator: "@baqiatullahpak",
+      site: "@baqiatullahpak",
     },
   };
 }

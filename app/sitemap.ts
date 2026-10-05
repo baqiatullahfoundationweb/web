@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { BLOG_POSTS } from "@/lib/blogData";
 
 /**
  * =========================================================================================================
@@ -10,56 +11,74 @@ import { MetadataRoute } from "next";
 
 const BASE_URL = "https://baqiatullahfoundation.org";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const languages = ["eng", "ur"] as const;
-  const pages = [
-    "",
-    "/about",
-    "/donate",
-    "/projects",
-    "/gallery",
-    "/blog",
-    "/contact",
-    "/privacy-policy",
-  ];
+interface RouteConfig {
+  path: string;
+  changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
+  priority: number;
+}
 
+const STATIC_ROUTES: RouteConfig[] = [
+  { path: "", changeFrequency: "daily", priority: 1.0 },
+  { path: "/donate", changeFrequency: "daily", priority: 0.95 },
+  { path: "/projects", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/about", changeFrequency: "weekly", priority: 0.85 },
+  { path: "/gallery", changeFrequency: "weekly", priority: 0.85 },
+  { path: "/blog", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/contact", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/privacy-policy", changeFrequency: "yearly", priority: 0.5 },
+];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const currentDate = new Date();
   const entries: MetadataRoute.Sitemap = [];
 
-  // Generate entries for each language + page combination
-  for (const lang of languages) {
-    for (const page of pages) {
-      const url = `${BASE_URL}/${lang}${page}`;
-      const isHome = page === "";
-      const isDonate = page === "/donate";
+  // Root redirect entry
+  entries.push({
+    url: BASE_URL,
+    lastModified: currentDate,
+    changeFrequency: "daily",
+    priority: 1.0,
+    alternates: {
+      languages: {
+        en: `${BASE_URL}/eng`,
+        ur: `${BASE_URL}/ur`,
+        "x-default": `${BASE_URL}/eng`,
+      },
+    },
+  });
 
+  // Multilingual static pages (English & Urdu)
+  for (const route of STATIC_ROUTES) {
+    for (const lang of ["eng", "ur"] as const) {
       entries.push({
-        url,
-        lastModified: new Date(),
-        changeFrequency: isHome || isDonate ? "weekly" : "monthly",
-        priority: isHome ? 1.0 : isDonate ? 0.9 : 0.8,
+        url: `${BASE_URL}/${lang}${route.path}`,
+        lastModified: currentDate,
+        changeFrequency: route.changeFrequency,
+        priority: route.priority,
         alternates: {
           languages: {
-            en: `${BASE_URL}/eng${page}`,
-            ur: `${BASE_URL}/ur${page}`,
+            en: `${BASE_URL}/eng${route.path}`,
+            ur: `${BASE_URL}/ur${route.path}`,
+            "x-default": `${BASE_URL}/eng${route.path}`,
           },
         },
       });
     }
   }
 
-  // Add blog post pages
-  const blogIds = ["1", "2", "3"];
-  for (const lang of languages) {
-    for (const id of blogIds) {
+  // Dynamic Blog Posts
+  for (const post of BLOG_POSTS) {
+    for (const lang of ["eng", "ur"] as const) {
       entries.push({
-        url: `${BASE_URL}/${lang}/blog/${id}`,
-        lastModified: new Date(),
+        url: `${BASE_URL}/${lang}/blog/${post.id}`,
+        lastModified: currentDate,
         changeFrequency: "monthly",
-        priority: 0.6,
+        priority: 0.75,
         alternates: {
           languages: {
-            en: `${BASE_URL}/eng/blog/${id}`,
-            ur: `${BASE_URL}/ur/blog/${id}`,
+            en: `${BASE_URL}/eng/blog/${post.id}`,
+            ur: `${BASE_URL}/ur/blog/${post.id}`,
+            "x-default": `${BASE_URL}/eng/blog/${post.id}`,
           },
         },
       });
