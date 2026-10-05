@@ -17,13 +17,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang } = await params;
   const isUrdu = lang === "ur";
   const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}/projects`;
+  const title = isUrdu
+    ? "فلاحی منصوبے | بقیۃ اللہ فاؤنڈیشن پاکستان — یتیم بچوں کی کفالت و تعلیم"
+    : "Our Welfare Projects | Baqiatullah Foundation Pakistan — Orphan Care Programs";
+  const description = isUrdu
+    ? "لاہور میں یتیم بچوں کی معیاری تعلیم، روزانہ متوازن خوراک، آئی ٹی لیب اور ہنگامی ریلیف کے بنیادی منصوبے۔"
+    : "Explore our ongoing and completed welfare projects in orphan education, child nutrition, IT labs, and flood relief across Pakistan.";
+
   return {
-    title: isUrdu
-      ? "فلاحی منصوبے | بقیۃ اللہ فاؤنڈیشن پاکستان — یتیم بچوں کی کفالت و تعلیم"
-      : "Our Welfare Projects | Baqiatullah Foundation Pakistan — Orphan Care Programs",
-    description: isUrdu
-      ? "لاہور میں یتیم بچوں کی معیاری تعلیم، روزانہ متوازن خوراک، آئی ٹی لیب اور ہنگامی ریلیف کے بنیادی منصوبے۔"
-      : "Explore our ongoing and completed welfare projects in orphan education, child nutrition, IT labs, and flood relief across Pakistan.",
+    title,
+    description,
     alternates: {
       canonical: canonicalUrl,
       languages: {
@@ -31,6 +34,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         ur: "https://baqiatullahfoundation.org/ur/projects",
         "x-default": "https://baqiatullahfoundation.org/eng/projects",
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: "Baqiatullah Foundation Pakistan",
+      images: [{
+        url: "https://baqiatullahfoundation.org/gallery/49.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Baqiatullah Foundation Welfare Projects",
+        type: "image/jpeg",
+      }],
+      locale: isUrdu ? "ur_PK" : "en_PK",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://baqiatullahfoundation.org/gallery/49.jpg"],
     },
   };
 }

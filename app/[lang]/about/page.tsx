@@ -18,13 +18,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang } = await params;
   const isUrdu = lang === "ur";
   const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}/about`;
+  const title = isUrdu
+    ? "ہمارے بارے میں | بقیۃ اللہ فاؤنڈیشن پاکستان — یتیم خانے کی تاریخ و قیادت"
+    : "About Us | Baqiatullah Foundation Pakistan — Orphan Care & Leadership";
+  const description = isUrdu
+    ? "ہماری فاؤنڈیشن کا 8 سالہ فلاحی سفر، عزم، وژن اور بااعتماد قیادت کا تعارف۔ رجسٹرڈ این جی او لاہور۔"
+    : "Learn about our 8-year journey, mission, vision, and leadership team providing holistic orphan care in Lahore, Pakistan.";
+
   return {
-    title: isUrdu
-      ? "ہمارے بارے میں | بقیۃ اللہ فاؤنڈیشن پاکستان — یتیم خانے کی تاریخ و قیادت"
-      : "About Us | Baqiatullah Foundation Pakistan — Orphan Care & Leadership",
-    description: isUrdu
-      ? "ہماری فاؤنڈیشن کا 8 سالہ فلاحی سفر، عزم، وژن اور بااعتماد قیادت کا تعارف۔ رجسٹرڈ این جی او لاہور۔"
-      : "Learn about our 8-year journey, mission, vision, and leadership team providing holistic orphan care in Lahore, Pakistan.",
+    title,
+    description,
     alternates: {
       canonical: canonicalUrl,
       languages: {
@@ -32,6 +35,28 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         ur: "https://baqiatullahfoundation.org/ur/about",
         "x-default": "https://baqiatullahfoundation.org/eng/about",
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: "Baqiatullah Foundation Pakistan",
+      images: [{
+        url: "https://baqiatullahfoundation.org/gallery/89.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Baqiatullah Foundation Leadership & Journey",
+        type: "image/jpeg",
+      }],
+      locale: isUrdu ? "ur_PK" : "en_PK",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://baqiatullahfoundation.org/gallery/89.jpg"],
+      creator: "@baqiatullahpak",
     },
   };
 }

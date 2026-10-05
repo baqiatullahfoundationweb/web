@@ -15,13 +15,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang } = await params;
   const isUrdu = lang === "ur";
   const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}/privacy-policy`;
+  const title = isUrdu
+    ? "پرائیویسی پالیسی اور تحفظ | بقیۃ اللہ فاؤنڈیشن پاکستان"
+    : "Privacy Policy & Safeguarding | Baqiatullah Foundation Pakistan";
+  const description = isUrdu
+    ? "عطیہ دہندگان کے کوائف کی رازداری، مالی شفافیت اور یتیم بچوں کے تحفظ سے متعلق بقیۃ اللہ فاؤنڈیشن کی آفیشل پالیسی۔"
+    : "Official privacy policy, donor data confidentiality, financial transparency, and child safeguarding standards of Baqiatullah Foundation Pakistan.";
+
   return {
-    title: isUrdu
-      ? "پرائیویسی پالیسی اور تحفظ | بقیۃ اللہ فاؤنڈیشن پاکستان"
-      : "Privacy Policy & Safeguarding | Baqiatullah Foundation Pakistan",
-    description: isUrdu
-      ? "عطیہ دہندگان کے کوائف کی رازداری، مالی شفافیت اور یتیم بچوں کے تحفظ سے متعلق بقیۃ اللہ فاؤنڈیشن کی آفیشل پالیسی۔"
-      : "Official privacy policy, donor data confidentiality, financial transparency, and child safeguarding standards of Baqiatullah Foundation Pakistan.",
+    title,
+    description,
     keywords: [
       "Privacy Policy Baqiatullah Foundation",
       "Child Safeguarding Pakistan",
@@ -35,6 +38,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         ur: "https://baqiatullahfoundation.org/ur/privacy-policy",
         "x-default": "https://baqiatullahfoundation.org/eng/privacy-policy",
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: "Baqiatullah Foundation Pakistan",
+      images: [{
+        url: "https://baqiatullahfoundation.org/gallery/89.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Baqiatullah Foundation Privacy & Child Safeguarding Policy",
+        type: "image/jpeg",
+      }],
+      locale: isUrdu ? "ur_PK" : "en_PK",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://baqiatullahfoundation.org/gallery/89.jpg"],
     },
   };
 }

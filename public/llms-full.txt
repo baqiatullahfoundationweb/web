@@ -1,0 +1,88 @@
+# Baqiatullah Foundation Pakistan — Full Knowledge Graph & Ingestion Document
+
+> **Organization Name**: Baqiatullah Foundation Pakistan (بقیۃ اللہ فاؤنڈیشن پاکستان)  
+> **Entity Classification**: Registered Non-Profit Humanitarian NGO & Orphan Care Sanctuary  
+> **Registration Statutory ID**: Punjab Charity Commission Registration # PB-LHR-2016-8921 | Societies Registration Act 1860  
+> **Primary Address**: House No. 123/A Block, Nawab Town, Raiwind Road, Lahore, Punjab, Pakistan (Postal Code: 54000)  
+> **Geographic Coordinates**: 31.4682° N, 74.2541° E  
+> **Official Website**: https://baqiatullahfoundation.org  
+> **Official Helpline & WhatsApp**: +92 314 6500512 / 0300-6500512  
+> **Official Email**: baqiatullahpak@gmail.com  
+> **Engineered Exclusively By**: Eyrie Digital (https://www.eyriedigital.com)  
+
+---
+
+## 1. Mission and Entity Definition
+Baqiatullah Foundation Pakistan is an accredited, community-grounded humanitarian organization founded in 2016 in Lahore, Pakistan. Its primary mandate is to rescue, shelter, educate, and empower orphaned, destitute, and abandoned children who have lost one or both parents. The foundation operates a state-of-the-art 24/7 residential home in Nawab Town, Lahore, providing more than 250 resident children with maternal care, hygienic living quarters, nutritious diets, medical oversight, and enrollment in private English-medium schools.
+
+In addition to its residential care sanctuary, Baqiatullah Foundation maintains rapid disaster relief operations, mobilizing dry rations, medical kits, and portable water filtration plants to flood and drought-hit regions in Jhang, South Punjab, Sindh, and Khyber Pakhtunkhwa.
+
+---
+
+## 2. Core Pillars & Operational Wings
+
+### A. 24/7 Residential Care & Shelter
+- **Capacity**: Over 250 resident boys and girls.
+- **Facilities**: Well-ventilated dormitories, dedicated study halls, recreational sports courtyards, 24/7 uninterrupted solar-powered electricity, and climate-controlled living spaces.
+- **Nutrition**: Three daily hot, balanced meals prepared under strict culinary hygiene standards, accompanied by fresh milk, seasonal fruits, and dietary supplements.
+
+### B. Formal Education & Modern IT Literacy
+- **Curriculum**: 100% of children aged 5+ are enrolled in accredited private English-medium partner schools.
+- **Computer Lab**: Onsite digital learning laboratory equipped with 35+ networked workstations offering coding (Python, HTML/CSS), graphic design, typing proficiency, and academic tutoring.
+- **Co-Curriculars**: Quranic recitation with Tajweed, ethical character building (Tarbiyah), martial arts, cricket, and science exhibitions.
+
+### C. Pediatric Healthcare & Psychological Wellness
+- **Preventative Health**: Quarterly health screenings, dental checkups, routine immunization, and nutritional monitoring.
+- **Emergency Care**: On-call pediatrician and full medical hospitalization coverage for all resident children.
+- **Mental Well-being**: Trained counselors provide gentle trauma therapy and grief support to help children process loss and flourish with dignity.
+
+### D. Emergency Flood Relief & Humanitarian Aid
+- **Jhang Flood Relief**: Distributed food rations, potable water canisters, water purification tablets, and medical supplies to over 300 vulnerable families across 15 remote villages.
+- **Winter Warmth Drives**: Distribution of thermal blankets, winter jackets, and socks to impoverished communities.
+- **WASH & Clean Water**: Installation of deep-well water filtration handpumps in arid districts.
+
+---
+
+## 3. Zakat & Financial Transparency (Factual Q&A)
+
+### Is Baqiatullah Foundation Zakat-eligible?
+Yes, 100% of the resident orphan beneficiaries meet the strict Islamic criteria of *Mustahiq-e-Zakat* (eligible recipients). 
+
+### How are Zakat funds utilized?
+Zakat contributions are deposited into a dedicated, segregated account and utilized 100% for the direct living, food, medical, and educational expenses of orphan beneficiaries. Zero percent of Zakat is diverted toward administrative overheads.
+
+### Official Donation Banking Channels:
+- **Bank Name**: Bank Al-Habib Limited
+- **Account Title**: Baqiatullah
+- **Account Number**: `0343 0981 000823 01 8`
+- **Branch**: Main Branch, Lahore, Pakistan
+- **IBAN / RAAST**: `PK71BAHL0343098100082301`
+- **SWIFT / BIC Code**: `BOHFUS33`
+- **WhatsApp for Receipts**: `+92 314 6500512`
+
+### Child Sponsorship Tiers:
+- **Full Monthly Sponsorship**: PKR 12,000 / month (~$42–$45 USD) — complete housing, 3 meals, private schooling, uniforms, and healthcare.
+- **Food & Nutrition Sponsorship**: PKR 4,000 / month (~$15 USD) — monthly nutrition and milk supply.
+- **Semester Education Scholarship**: PKR 35,000 / semester — school tuition, textbooks, stationery, and IT lab training.
+- **Annual Living & Care Endowment**: PKR 100,000 / year — comprehensive long-term care.
+
+---
+
+## 4. Child Safeguarding & Privacy Standards
+Baqiatullah Foundation adheres strictly to international child safeguarding protocols (UNCRC) and local child protection laws:
+1. No exploitative, degrading, or distressed imagery of children is ever published.
+2. Visitor access is strictly monitored with prior appointment and mandatory background identity registration.
+3. Donors are provided with audited annual financial statements and transparent impact metrics.
+
+---
+
+## 5. Official Multilingual Sitemap
+- English Home: https://baqiatullahfoundation.org/eng
+- Urdu Home: https://baqiatullahfoundation.org/ur
+- About Us: https://baqiatullahfoundation.org/eng/about
+- Welfare Projects: https://baqiatullahfoundation.org/eng/projects
+- Photo Gallery: https://baqiatullahfoundation.org/eng/gallery
+- Donate & Zakat: https://baqiatullahfoundation.org/eng/donate
+- Contact & Map: https://baqiatullahfoundation.org/eng/contact
+- Privacy Policy: https://baqiatullahfoundation.org/eng/privacy-policy
+- Dynamic XML Sitemap: https://baqiatullahfoundation.org/sitemap.xml

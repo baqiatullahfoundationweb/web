@@ -15,13 +15,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang } = await params;
   const isUrdu = lang === "ur";
   const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}/gallery`;
+  const title = isUrdu
+    ? "تصویری گیلری | بقیۃ اللہ فاؤنڈیشن پاکستان — یتیم بچوں کی زندگی کی جھلکیاں"
+    : "Photo Gallery | Baqiatullah Foundation Pakistan — Life at Orphan Sanctuary";
+  const description = isUrdu
+    ? "فاؤنڈیشن کے بچوں کی تعلیمی، تربیتی اور سیلاب ریلیف کی اصل تصاویر دیکھیں۔ لاہور یتیم خانہ۔"
+    : "View over 80 authentic photos capturing moments of education, daily care, sports, and emergency flood relief in Pakistan.";
+
   return {
-    title: isUrdu
-      ? "تصویری گیلری | بقیۃ اللہ فاؤنڈیشن پاکستان — یتیم بچوں کی زندگی کی جھلکیاں"
-      : "Photo Gallery | Baqiatullah Foundation Pakistan — Life at Orphan Sanctuary",
-    description: isUrdu
-      ? "فاؤنڈیشن کے بچوں کی تعلیمی، تربیتی اور سیلاب ریلیف کی اصل تصاویر دیکھیں۔ لاہور یتیم خانہ۔"
-      : "View over 80 authentic photos capturing moments of education, daily care, sports, and emergency flood relief in Pakistan.",
+    title,
+    description,
     alternates: {
       canonical: canonicalUrl,
       languages: {
@@ -29,6 +32,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         ur: "https://baqiatullahfoundation.org/ur/gallery",
         "x-default": "https://baqiatullahfoundation.org/eng/gallery",
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: "Baqiatullah Foundation Pakistan",
+      images: [{
+        url: "https://baqiatullahfoundation.org/gallery/89.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Baqiatullah Foundation Photo Moments",
+        type: "image/jpeg",
+      }],
+      locale: isUrdu ? "ur_PK" : "en_PK",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://baqiatullahfoundation.org/gallery/89.jpg"],
     },
   };
 }

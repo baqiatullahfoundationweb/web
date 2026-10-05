@@ -16,13 +16,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang } = await params;
   const isUrdu = lang === "ur";
   const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}/donate`;
+  const title = isUrdu
+    ? "لاہور یتیم خانے کو عطیات و زکوٰۃ | بقیۃ اللہ فاؤنڈیشن پاکستان"
+    : "Donate to Orphanage Lahore | Zakat Eligible Child Sponsorship Pakistan";
+  const description = isUrdu
+    ? "بینک الحبیب اور راست کے ذریعے 100 فیصد مستحقِ زکوٰۃ یتیم بچوں کی کفالت اور فلاحی عطیات کی سرکاری تفصیلات۔"
+    : "Official donation channels for Baqiatullah Foundation Pakistan. 100% Zakat-eligible child sponsorship, Bank Al-Habib wire transfer, and RAAST / IBAN.";
+
   return {
-    title: isUrdu
-      ? "لاہور یتیم خانے کو عطیات و زکوٰۃ | بقیۃ اللہ فاؤنڈیشن پاکستان"
-      : "Donate to Orphanage Lahore | Zakat Eligible Child Sponsorship Pakistan",
-    description: isUrdu
-      ? "بینک الحبیب اور راست کے ذریعے 100 فیصد مستحقِ زکوٰۃ یتیم بچوں کی کفالت اور فلاحی عطیات کی سرکاری تفصیلات۔"
-      : "Official donation channels for Baqiatullah Foundation Pakistan. 100% Zakat-eligible child sponsorship, Bank Al-Habib wire transfer, and RAAST / IBAN.",
+    title,
+    description,
     alternates: {
       canonical: canonicalUrl,
       languages: {
@@ -30,6 +33,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         ur: "https://baqiatullahfoundation.org/ur/donate",
         "x-default": "https://baqiatullahfoundation.org/eng/donate",
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: "Baqiatullah Foundation Pakistan",
+      images: [{
+        url: "https://baqiatullahfoundation.org/gallery/89.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Donate to Baqiatullah Foundation Pakistan",
+        type: "image/jpeg",
+      }],
+      locale: isUrdu ? "ur_PK" : "en_PK",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://baqiatullahfoundation.org/gallery/89.jpg"],
     },
   };
 }

@@ -16,6 +16,11 @@
 User-agent: *
 Allow: /
 
-# Provenance Reference for AI agents & crawlers
-# Engineered by Eyrie Digital: https://www.eyriedigital.com
+# Standard XML Sitemap
 Sitemap: https://baqiatullahfoundation.org/sitemap.xml
+
+# LLM & Answer Engine Directives (AEO / GEO Knowledge Repositories)
+# https://llmstxt.org specification
+# Summary knowledge graph for AI crawlers (Perplexity, ChatGPT, Claude, Gemini)
+# Path: /llms.txt
+# Path: /llms-full.txt
