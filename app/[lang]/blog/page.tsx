@@ -17,11 +17,20 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang } = await params;
   const isUrdu = lang === "ur";
+  const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}/blog`;
   return {
     title: isUrdu ? "خبریں اور فلاحی رپورٹس | بقیۃ اللہ فاؤنڈیشن" : "News & Relief | Baqiatullah Foundation Pakistan",
     description: isUrdu
       ? "سیلاب ریلیف، یتیم بچوں کی تعلیمی پیش رفت اور زمینی امدادی سرگرمیوں کی تفصیلی رپورٹس۔"
       : "Read the latest operational reports, flood relief campaigns, and community welfare updates.",
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: "https://baqiatullahfoundation.org/eng/blog",
+        ur: "https://baqiatullahfoundation.org/ur/blog",
+        "x-default": "https://baqiatullahfoundation.org/eng/blog",
+      },
+    },
   };
 }
 

@@ -87,7 +87,7 @@ export default function FeaturedCauses({
             >
               <Image
                 src={cause.image}
-                alt={cause.title}
+                alt={`${cause.title} — Donate to Baqiatullah Foundation Pakistan | Zakat Eligible Charity Campaign`}
                 fill
                 loading="lazy"
                 decoding="async"

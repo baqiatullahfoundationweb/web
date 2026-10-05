@@ -14,6 +14,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang } = await params;
   const isUrdu = lang === "ur";
+  const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}/privacy-policy`;
   return {
     title: isUrdu
       ? "پرائیویسی پالیسی اور تحفظ | بقیۃ اللہ فاؤنڈیشن پاکستان"
@@ -27,6 +28,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       "Donor Data Protection Lahore",
       "Non-Profit Privacy Standards",
     ],
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: "https://baqiatullahfoundation.org/eng/privacy-policy",
+        ur: "https://baqiatullahfoundation.org/ur/privacy-policy",
+        "x-default": "https://baqiatullahfoundation.org/eng/privacy-policy",
+      },
+    },
   };
 }
 

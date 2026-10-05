@@ -173,7 +173,7 @@ export default function GalleryGrid({
             className="relative max-w-4xl max-h-[85vh] w-full h-[70vh] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image src={visibleImages[selectedIdx].src} alt="" fill className="object-contain" />
+            <Image src={visibleImages[selectedIdx].src} alt={visibleImages[selectedIdx].alt || "Baqiatullah Foundation Pakistan gallery photo"} fill className="object-contain" />
           </div>
           <button
             onClick={(e) => {

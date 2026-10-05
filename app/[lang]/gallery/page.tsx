@@ -12,6 +12,8 @@ interface PageProps {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { lang } = await params;
+  const isUrdu = lang === "ur";
   const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}/gallery`;
   return {
     title: isUrdu
