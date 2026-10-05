@@ -16,11 +16,22 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang } = await params;
   const isUrdu = lang === "ur";
+  const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}/projects`;
   return {
-    title: isUrdu ? "منصوبہ جات | بقیۃ اللہ فاؤنڈیشن پاکستان" : "Our Projects | Baqiatullah Foundation Pakistan",
+    title: isUrdu
+      ? "فلاحی منصوبے | بقیۃ اللہ فاؤنڈیشن پاکستان — یتیم بچوں کی کفالت و تعلیم"
+      : "Our Welfare Projects | Baqiatullah Foundation Pakistan — Orphan Care Programs",
     description: isUrdu
-      ? "یتیم بچوں کی تعلیم، روزانہ خوراک، ہاسٹل کی توسیع اور ہنر سکھانے کے منصوبے۔"
-      : "Explore our ongoing and completed projects in child education, daily nutrition, dorm expansions.",
+      ? "لاہور میں یتیم بچوں کی معیاری تعلیم، روزانہ متوازن خوراک، آئی ٹی لیب اور ہنگامی ریلیف کے بنیادی منصوبے۔"
+      : "Explore our ongoing and completed welfare projects in orphan education, child nutrition, IT labs, and flood relief across Pakistan.",
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: "https://baqiatullahfoundation.org/eng/projects",
+        ur: "https://baqiatullahfoundation.org/ur/projects",
+        "x-default": "https://baqiatullahfoundation.org/eng/projects",
+      },
+    },
   };
 }
 

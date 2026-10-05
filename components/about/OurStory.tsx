@@ -37,6 +37,7 @@ export default function OurStory({
             src="/gallery/89.jpg"
             alt="Baqiatullah Foundation children and caregivers"
             fill
+            sizes="(max-width: 1024px) 100vw, 42vw"
             className="object-cover"
             priority
           />

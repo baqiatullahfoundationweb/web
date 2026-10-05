@@ -183,3 +183,25 @@
 .shape-glide-bottom { animation: glideFromBottom 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards; }
 .shape-glide-left { animation: glideFromLeft 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; }
 .shape-glide-right { animation: glideFromRight 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards; }
+
+@keyframes glideCornerTL {
+  0% { transform: translate(-120%, -120%) rotate(0deg); opacity: 0; }
+  100% { transform: translate(-15%, -15%) rotate(25deg); opacity: 0.8; }
+}
+@keyframes glideCornerTR {
+  0% { transform: translate(120%, -120%) rotate(0deg); opacity: 0; }
+  100% { transform: translate(15%, -15%) rotate(-20deg); opacity: 0.8; }
+}
+@keyframes glideCornerBL {
+  0% { transform: translate(-120%, 120%) rotate(0deg); opacity: 0; }
+  100% { transform: translate(-15%, 15%) rotate(-25deg); opacity: 0.8; }
+}
+@keyframes glideCornerBR {
+  0% { transform: translate(120%, 120%) rotate(0deg); opacity: 0; }
+  100% { transform: translate(15%, 15%) rotate(20deg); opacity: 0.8; }
+}
+
+.shape-glide-tl { animation: glideCornerTL 1.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards; }
+.shape-glide-tr { animation: glideCornerTR 1.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; }
+.shape-glide-bl { animation: glideCornerBL 1.7s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards; }
+.shape-glide-br { animation: glideCornerBR 1.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; }

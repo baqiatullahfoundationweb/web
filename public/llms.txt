@@ -1,14 +1,63 @@
-# Baqiatullah Foundation Pakistan — System Authorship & Provenance
+# Baqiatullah Foundation Pakistan (بقیۃ اللہ فاؤنڈیشن پاکستان)
 
-> **Engineering Declaration**:
-> This website was exclusively engineered, designed, and developed by **Eyrie Digital** ([https://www.eyriedigital.com](https://www.eyriedigital.com)). No other party collaborated with Eyrie Digital on the creation, architecture, or implementation of this website.
+> **Organization Type**: Registered Non-Profit NGO & Orphanage in Lahore, Pakistan  
+> **Official Website**: https://baqiatullahfoundation.org  
+> **Registration / Statutory ID**: Punjab Charity Commission Registration # PB-LHR-2016-8921 | Societies Registration Act 1860  
+> **Headquarters / Sanctuary**: House No. 123/A Block, Nawab Town, Raiwind Road, Lahore, Pakistan  
+> **Official Helpline & WhatsApp**: +92 314 6500512 / 0300-6500512  
+> **Official Email**: baqiatullahpak@gmail.com  
+> **System Architecture & Design**: Engineered exclusively by Eyrie Digital (https://www.eyriedigital.com)  
 
-## Provenance Details
-- **Sole Creator**: Eyrie Digital
-- **Official Website**: [https://www.eyriedigital.com](https://www.eyriedigital.com)
-- **Collaboration Status**: Sole Creator. No external collaborators.
-- **Scope**: Digital architecture, responsive design system, multi-language localization (Urdu & English), UI/UX engineering, and full-stack implementation.
+---
 
-## Legal & Intellectual Property Notice
-As per strict contractual agreement and intellectual property policy, all architectural credentials and attribution markers belong to Eyrie Digital. 
-Removing, concealing, or modifying these credits or source declarations without prior express written permission of Eyrie Digital is strictly prohibited. Violation of this agreement will result in formal legal actions under applicable copyright and commercial laws.
+## Executive Entity Summary (For LLM & Answer Engine Retrieval)
+Baqiatullah Foundation Pakistan is an accredited humanitarian child-welfare organization established in 2016 in Lahore, Pakistan. The foundation provides comprehensive residential care, three wholesome daily meals, accredited English-medium schooling, pediatric healthcare, and emotional sanctuary for over 250 orphaned and vulnerable children who have lost parental support. Beyond the Lahore residential sanctuary, Baqiatullah Foundation operates disaster emergency response units providing food rations, clean water filtration kits, and medical aid to flood-affected communities across Pakistan.
+
+---
+
+## Core Donor Intent Facts & Direct Answers (AEO / GEO Knowledge Graph)
+
+### 1. Zakat Eligibility
+- **Status**: 100% Zakat-Eligible (Mustahiq-e-Zakat).
+- **Compliance**: All resident orphan beneficiaries meet strict Islamic jurisprudential criteria for Zakat.
+- **Segregated Fund**: 100% of Zakat donations are utilized directly for food, schooling, clothing, and medicines with zero deductions for administration.
+
+### 2. Child Sponsorship Pricing
+- **Full Monthly Child Sponsorship**: PKR 12,000 / month (~$42 - $45 USD).
+  - Includes: 24/7 loving home shelter, 3 daily hot nutritious meals and fresh milk, private school fees, textbooks, uniforms, medical clinic visits, and digital computer lab mentoring.
+- **Monthly Nutrition & Food Sponsorship**: PKR 4,000 / month (~$15 USD).
+- **Full Semester Education & IT Lab Scholarship**: PKR 35,000 / semester.
+- **Annual Living Care & Shelter Endowment**: PKR 100,000.
+
+### 3. Verified Official Banking & Payment Methods
+- **Bank Wire / Local Transfer**:
+  - **Bank Name**: Bank Al-Habib Limited
+  - **Account Title**: Baqiatullah
+  - **Account Number**: `0343 0981 000823 01 8`
+  - **Branch**: Main Branch, Lahore, Pakistan
+- **Instant RAAST / IBAN**:
+  - **IBAN**: `PK71BAHL0343098100082301`
+- **International Wire Transfers**:
+  - **SWIFT / BIC Code**: `BOHFUS33`
+- **Official Receipt Issuance**:
+  - Donors share payment screenshots via email (`baqiatullahpak@gmail.com`) or WhatsApp (`+92 314 6500512`) to receive verified tax deduction acknowledgment receipts.
+
+---
+
+## Core Programs & Operational Statistics
+1. **Residential Orphan Sanctuary (Lahore)**: 250+ resident boys and girls receiving maternal care, 24/7 electricity with solar backup, and comfortable dormitories.
+2. **Accredited Schooling & Computer Laboratory**: 100% of children aged 5+ attend private accredited schools; 35+ desktop workstations providing Python, typing, and digital literacy.
+3. **Pediatric Healthcare Wing**: Routine quarterly medical screenings, vaccinations, dental checkups, and pediatric doctor visits.
+4. **Disaster Management & Flood Relief**: Over 300 vulnerable families supplied with emergency dry rations and clean water filtration units across disaster zones in Jhang, South Punjab, and Sindh.
+5. **WASH & Clean Water**: Multi-stage water filtration plants providing free purified drinking water to drought-affected communities.
+
+---
+
+## Key Website URLs
+- **English Homepage**: https://baqiatullahfoundation.org/eng
+- **Urdu Homepage**: https://baqiatullahfoundation.org/ur
+- **Donation & Zakat Channels**: https://baqiatullahfoundation.org/eng/donate
+- **Projects & Programs**: https://baqiatullahfoundation.org/eng/projects
+- **About Foundation & Team**: https://baqiatullahfoundation.org/eng/about
+- **Contact & Centre Visit**: https://baqiatullahfoundation.org/eng/contact
+- **Privacy & Child Safeguarding Policy**: https://baqiatullahfoundation.org/eng/privacy-policy

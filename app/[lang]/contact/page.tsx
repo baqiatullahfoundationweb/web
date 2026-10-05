@@ -16,11 +16,22 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang } = await params;
   const isUrdu = lang === "ur";
+  const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}/contact`;
   return {
-    title: isUrdu ? "رابطہ اور دورہ | بقیۃ اللہ فاؤنڈیشن پاکستان" : "Contact & Visit Us | Baqiatullah Foundation Pakistan",
+    title: isUrdu
+      ? "رابطہ اور دورہ | بقیۃ اللہ فاؤنڈیشن پاکستان — نواب ٹاؤن لاہور مرکز"
+      : "Contact & Visit Us | Baqiatullah Foundation Pakistan — Orphanage Lahore",
     description: isUrdu
-      ? "لاہور نواب ٹاؤن میں ہمارے مرکز کا پتہ، فون نمبر 03146500512 اور آن لائن رابطہ فارم۔"
-      : "Contact Baqiatullah Foundation. Located at House No.123/A Block, Nawab Town, Lahore, Pakistan.",
+      ? "لاہور نواب ٹاؤن میں ہمارے مرکز کا پتہ، ہیلپ لائن 03146500512، ملاقات کے اوقات اور آن لائن رابطہ فارم۔"
+      : "Contact Baqiatullah Foundation. Located at House No.123/A Block, Nawab Town, Lahore, Pakistan. Phone: +92 314 6500512.",
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: "https://baqiatullahfoundation.org/eng/contact",
+        ur: "https://baqiatullahfoundation.org/ur/contact",
+        "x-default": "https://baqiatullahfoundation.org/eng/contact",
+      },
+    },
   };
 }
 

@@ -15,11 +15,22 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang } = await params;
   const isUrdu = lang === "ur";
+  const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}/donate`;
   return {
-    title: isUrdu ? "عطیات اور تعاون | بقیۃ اللہ فاؤنڈیشن پاکستان" : "Donate & Support | Baqiatullah Foundation Pakistan",
+    title: isUrdu
+      ? "لاہور یتیم خانے کو عطیات و زکوٰۃ | بقیۃ اللہ فاؤنڈیشن پاکستان"
+      : "Donate to Orphanage Lahore | Zakat Eligible Child Sponsorship Pakistan",
     description: isUrdu
-      ? "بینک الحبیب اور راست کے ذریعے تصدیق شدہ فلاحی عطیات اور یتیم بچوں کی کفالت کی تفصیلات۔"
-      : "Official donation channels for Baqiatullah Foundation. Bank Al-Habib wire transfer and RAAST / IBAN account.",
+      ? "بینک الحبیب اور راست کے ذریعے 100 فیصد مستحقِ زکوٰۃ یتیم بچوں کی کفالت اور فلاحی عطیات کی سرکاری تفصیلات۔"
+      : "Official donation channels for Baqiatullah Foundation Pakistan. 100% Zakat-eligible child sponsorship, Bank Al-Habib wire transfer, and RAAST / IBAN.",
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: "https://baqiatullahfoundation.org/eng/donate",
+        ur: "https://baqiatullahfoundation.org/ur/donate",
+        "x-default": "https://baqiatullahfoundation.org/eng/donate",
+      },
+    },
   };
 }
 

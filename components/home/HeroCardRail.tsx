@@ -71,7 +71,7 @@ export default function HeroCardRail({
               >
                 <Image
                   src={s.image}
-                  alt={s.title}
+                  alt={s.altText || s.title}
                   fill
                   className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                   sizes="(max-width: 640px) 230px, (max-width: 1024px) 270px, 300px"

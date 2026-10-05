@@ -74,7 +74,7 @@ export default function EventsSection({
           >
             <Image
               src={event.image}
-              alt={event.title}
+              alt={`${event.title} - Baqiatullah Foundation Pakistan Orphanage and Community Welfare Event in Lahore`}
               fill
               className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
               sizes="(max-width: 768px) 100vw, 33vw"

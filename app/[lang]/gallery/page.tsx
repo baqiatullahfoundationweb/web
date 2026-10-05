@@ -12,13 +12,22 @@ interface PageProps {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { lang } = await params;
-  const isUrdu = lang === "ur";
+  const canonicalUrl = `https://baqiatullahfoundation.org/${isUrdu ? "ur" : "eng"}/gallery`;
   return {
-    title: isUrdu ? "تصویری گیلری | بقیۃ اللہ فاؤنڈیشن پاکستان" : "Photo Gallery | Baqiatullah Foundation Pakistan",
+    title: isUrdu
+      ? "تصویری گیلری | بقیۃ اللہ فاؤنڈیشن پاکستان — یتیم بچوں کی زندگی کی جھلکیاں"
+      : "Photo Gallery | Baqiatullah Foundation Pakistan — Life at Orphan Sanctuary",
     description: isUrdu
-      ? "فاؤنڈیشن کے بچوں کی تعلیمی، تربیتی اور سیلاب ریلیف کی اصل تصاویر دیکھیں۔"
-      : "View over 80 authentic photos capturing moments of education, daily care, flood relief.",
+      ? "فاؤنڈیشن کے بچوں کی تعلیمی، تربیتی اور سیلاب ریلیف کی اصل تصاویر دیکھیں۔ لاہور یتیم خانہ۔"
+      : "View over 80 authentic photos capturing moments of education, daily care, sports, and emergency flood relief in Pakistan.",
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: "https://baqiatullahfoundation.org/eng/gallery",
+        ur: "https://baqiatullahfoundation.org/ur/gallery",
+        "x-default": "https://baqiatullahfoundation.org/eng/gallery",
+      },
+    },
   };
 }
 

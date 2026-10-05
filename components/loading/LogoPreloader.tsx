@@ -57,29 +57,37 @@ export default function LogoPreloader() {
       }`}
       aria-label="Baqiatullah Foundation Logo Creation"
     >
-      {/* Dynamic Geometric Decorative Shapes Coming from All 4 Sides and Stopping Halfway */}
+      {/* Dynamic Geometric Decorative Shapes Coming from All 4 Sides & Corners, Stopping Halfway */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        {/* Top: Teal Organic Arched Pill */}
-        <div className="absolute -top-12 left-1/4 w-36 h-48 sm:w-48 sm:h-64 rounded-full bg-gradient-to-b from-[#008B8B] to-[#005C5C] shadow-2xl shape-glide-top opacity-75 blur-[1px]" />
+        {/* Top Center: Deep Emerald / Teal Pill */}
+        <div className="absolute -top-16 left-1/4 w-36 h-56 sm:w-52 sm:h-72 rounded-full bg-gradient-to-b from-[#008B8B] to-[#005C5C] shadow-2xl shape-glide-top opacity-85" />
         
-        {/* Bottom: Warm Coral / Amber Geometric Wedge */}
-        <div className="absolute -bottom-14 right-1/4 w-44 h-52 sm:w-60 sm:h-72 rounded-3xl bg-gradient-to-t from-[#D11A1A] via-[#AF0000] to-[#E74C3C] shadow-2xl shape-glide-bottom opacity-75 blur-[1px]" />
+        {/* Top Right: Sky Blue / Violet Oval */}
+        <div className="absolute -top-14 right-1/4 w-40 h-52 sm:w-56 sm:h-64 rounded-3xl bg-gradient-to-b from-[#0284C7] to-[#4338CA] shadow-2xl shape-glide-top opacity-80" />
 
-        {/* Left: Deep Ocean Indigo / Cyan Diamond */}
-        <div className="absolute top-1/3 -left-12 w-32 h-44 sm:w-44 sm:h-56 rounded-2xl bg-gradient-to-r from-[#0284C7] to-[#008B8B] shadow-2xl shape-glide-left opacity-75 blur-[1px]" />
+        {/* Bottom Right: Warm Amber / Ruby Wedge */}
+        <div className="absolute -bottom-16 right-1/4 w-48 h-60 sm:w-64 sm:h-80 rounded-3xl bg-gradient-to-t from-[#D11A1A] via-[#AF0000] to-[#E74C3C] shadow-2xl shape-glide-bottom opacity-85" />
 
-        {/* Right: Vibrant Golden Sun Burst Block */}
-        <div className="absolute top-1/2 -right-12 w-36 h-48 sm:w-52 sm:h-64 rounded-3xl bg-gradient-to-l from-[#FF8C00] via-[#F39C12] to-[#FFBF00] shadow-2xl shape-glide-right opacity-75 blur-[1px]" />
-      </div>
+        {/* Bottom Left: Vibrant Sunburst Orange Block */}
+        <div className="absolute -bottom-14 left-1/4 w-44 h-56 sm:w-60 sm:h-72 rounded-3xl bg-gradient-to-t from-[#EA580C] to-[#F59E0B] shadow-2xl shape-glide-bottom opacity-80" />
 
-      {/* Top Header: Coordinates Line Removed, Only Skip CTA cleanly aligned */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto flex items-center justify-end">
-        <button
-          onClick={handleSkip}
-          className="px-4 py-1.5 rounded-full bg-teal-950/15 hover:bg-teal-950 hover:text-white text-teal-950 border border-teal-950/25 shadow-xs transition-all cursor-pointer font-sans text-xs font-black"
-        >
-          {isUrdu ? "چھوڑیں Skip →" : "Skip Intro →"}
-        </button>
+        {/* Left Side: Deep Cyan / Emerald Diamond */}
+        <div className="absolute top-1/3 -left-16 w-36 h-48 sm:w-52 sm:h-64 rounded-3xl bg-gradient-to-r from-[#0D9488] to-[#008B8B] shadow-2xl shape-glide-left opacity-85" />
+
+        {/* Right Side: Golden Yellow Radiant Capsule */}
+        <div className="absolute top-1/2 -right-16 w-40 h-52 sm:w-56 sm:h-72 rounded-3xl bg-gradient-to-l from-[#F59E0B] via-[#F39C12] to-[#FFBF00] shadow-2xl shape-glide-right opacity-85" />
+
+        {/* Top-Left Corner: Forest Green Pill */}
+        <div className="absolute -top-12 -left-12 w-32 h-44 sm:w-44 sm:h-56 rounded-full bg-gradient-to-br from-[#15803D] to-[#047857] shadow-xl shape-glide-tl opacity-80" />
+
+        {/* Top-Right Corner: Magenta / Coral Rounded Block */}
+        <div className="absolute -top-12 -right-12 w-32 h-44 sm:w-44 sm:h-56 rounded-3xl bg-gradient-to-bl from-[#BE185D] to-[#E11D48] shadow-xl shape-glide-tr opacity-80" />
+
+        {/* Bottom-Left Corner: Royal Indigo Wedge */}
+        <div className="absolute -bottom-12 -left-12 w-36 h-48 sm:w-48 sm:h-60 rounded-3xl bg-gradient-to-tr from-[#1E40AF] to-[#0284C7] shadow-xl shape-glide-bl opacity-80" />
+
+        {/* Bottom-Right Corner: Deep Tangerine Arched Pill */}
+        <div className="absolute -bottom-12 -right-12 w-36 h-48 sm:w-48 sm:h-60 rounded-full bg-gradient-to-tl from-[#C2410C] to-[#EA580C] shadow-xl shape-glide-br opacity-80" />
       </div>
 
       {/* Centerpiece: Slow-Mo Closeup Progressive Stroke Camera & Authentic Lockup */}

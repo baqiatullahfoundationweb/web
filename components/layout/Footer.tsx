@@ -75,6 +75,10 @@ export default function Footer() {
             <p className="text-sm text-gray-700 leading-relaxed max-w-sm font-medium">
               {dict.footer.desc}
             </p>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-[11px] font-bold text-primary">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              <span>{isUrdu ? "رجسٹرڈ این جی او: پنجاب چیریٹی کمیشن PB-LHR-2016-8921" : "Govt Reg: Punjab Charity Commission PB-LHR-2016-8921"}</span>
+            </div>
             <div className="flex items-center gap-2 pt-1">
               {socialLinks.map((s) => (
                 <a
