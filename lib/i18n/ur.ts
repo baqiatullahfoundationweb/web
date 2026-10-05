@@ -6,6 +6,7 @@ import {
   urContactPage,
   urGalleryPage,
   urBlogPage,
+  urPrivacyPolicyPage,
 } from "./ur/subpages";
 
 export const urDictionary: Dictionary = {
@@ -188,4 +189,5 @@ export const urDictionary: Dictionary = {
   contactPage: urContactPage,
   galleryPage: urGalleryPage,
   blogPage: urBlogPage,
+  privacyPolicyPage: urPrivacyPolicyPage,
 };

@@ -20,6 +20,7 @@ export default function Footer() {
     { href: `/${locale}/blog`, label: isUrdu ? "خبریں و ریلیف" : "News & Relief" },
     { href: `/${locale}/donate`, label: isUrdu ? "عطیات اور تعاون" : "Support & Donate" },
     { href: `/${locale}/contact`, label: isUrdu ? "رابطہ کریں" : "Contact & Visit" },
+    { href: `/${locale}/privacy-policy`, label: isUrdu ? "پرائیویسی پالیسی" : "Privacy Policy" },
   ];
 
   const socialLinks = [
@@ -123,7 +124,16 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-600 gap-3">
-          <p>© {new Date().getFullYear()} {dict.footer.copyright}</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <p>© {new Date().getFullYear()} {dict.footer.copyright}</p>
+            <span className="hidden sm:inline text-gray-300">•</span>
+            <Link
+              href={`/${locale}/privacy-policy`}
+              className="text-gray-700 hover:text-primary font-medium transition-colors underline-offset-4 hover:underline"
+            >
+              {isUrdu ? "پرائیویسی پالیسی" : "Privacy Policy"}
+            </Link>
+          </div>
           <p className="flex items-center gap-1 font-medium text-gray-700">
             <span>{dict.footer.motto}</span>
           </p>

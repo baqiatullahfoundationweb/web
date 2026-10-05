@@ -5,6 +5,7 @@ import {
   ContactPageData,
   GalleryPageData,
   BlogPageData,
+  PrivacyPolicyPageData,
 } from "./types/pages";
 
 export * from "./types/pages";
@@ -158,4 +159,5 @@ export interface Dictionary {
   contactPage: ContactPageData;
   galleryPage: GalleryPageData;
   blogPage: BlogPageData;
+  privacyPolicyPage: PrivacyPolicyPageData;
 }

@@ -5,3 +5,4 @@ export {
   urGalleryPage,
   urBlogPage,
 } from "./subpagesB";
+export { urPrivacyPolicyPage } from "./privacyPolicy";

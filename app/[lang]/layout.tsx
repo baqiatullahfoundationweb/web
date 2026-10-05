@@ -18,7 +18,7 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
   return (
     <div
       dir={dict.dir}
-      lang={validLang}
+      lang={validLang === "ur" ? "ur" : "en"}
       className={validLang === "ur" ? "lang-ur" : "lang-en"}
       style={{
         fontFamily: validLang === "ur" ? "'Unwan Unicode', 'Noto Nastaliq Urdu', serif" : "var(--font-poppins), 'Poppins', sans-serif"

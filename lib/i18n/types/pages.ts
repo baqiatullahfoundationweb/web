@@ -147,3 +147,33 @@ export interface BlogPageData {
     impactPoints: string[];
   }>;
 }
+
+export interface PrivacyPolicyPageData {
+  badge: string;
+  title: string;
+  highlight: string;
+  subtitle: string;
+  lastUpdated: string;
+  principles: Array<{
+    icon: string;
+    title: string;
+    desc: string;
+  }>;
+  sections: Array<{
+    id: string;
+    title: string;
+    content: string[];
+    bullets?: string[];
+  }>;
+  contactBox: {
+    title: string;
+    desc: string;
+    emailLabel: string;
+    email: string;
+    phoneLabel: string;
+    phone: string;
+    addressLabel: string;
+    address: string;
+    btnText: string;
+  };
+}
