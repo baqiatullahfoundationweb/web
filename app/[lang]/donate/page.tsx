@@ -18,8 +18,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: isUrdu ? "عطیات اور تعاون | بقیۃ اللہ فاؤنڈیشن پاکستان" : "Donate & Support | Baqiatullah Foundation Pakistan",
     description: isUrdu
-      ? "بینک الحبیب، جیز کیش اور ایزی پیسہ کے ذریعے تصدیق شدہ فلاحی عطیات کی تفصیلات۔"
-      : "Official donation channels for Baqiatullah Foundation. Bank Al-Habib wire transfer, JazzCash, Easypaisa.",
+      ? "بینک الحبیب اور راست کے ذریعے تصدیق شدہ فلاحی عطیات اور یتیم بچوں کی کفالت کی تفصیلات۔"
+      : "Official donation channels for Baqiatullah Foundation. Bank Al-Habib wire transfer and RAAST / IBAN account.",
   };
 }
 
@@ -43,20 +43,18 @@ export default async function LocalizedDonatePage({ params }: PageProps) {
         accountName={data.payment.accountName}
         accountNumberLabel={data.payment.accountNumberLabel}
         accountNumber={data.payment.accountNumber}
+        ibanLabel={data.payment.ibanLabel}
+        iban={data.payment.iban}
         bankNameLabel={data.payment.bankNameLabel}
         bankName={data.payment.bankName}
         branchLabel={data.payment.branchLabel}
         branch={data.payment.branch}
         swiftLabel={data.payment.swiftLabel}
         swift={data.payment.swift}
-        instantWalletBadge={data.payment.instantWalletBadge}
-        jazzCashTitle={data.payment.jazzCashTitle}
-        jazzCashNumber={data.payment.jazzCashNumber}
-        easypaisaTitle={data.payment.easypaisaTitle}
-        easypaisaNumber={data.payment.easypaisaNumber}
         receiptNotice={data.payment.receiptNotice}
         copyButtonText={data.payment.copyButtonText}
         copiedButtonText={data.payment.copiedButtonText}
+        isUrdu={validLang === "ur"}
       />
       <TransparencyBreakdown
         title={data.transparency.title}
@@ -64,6 +62,7 @@ export default async function LocalizedDonatePage({ params }: PageProps) {
         subtitle={data.transparency.subtitle}
         stats={data.transparency.stats}
         breakdown={data.transparency.breakdown}
+        isUrdu={validLang === "ur"}
       />
       <CtaBanner
         title={dict.cta.title}
