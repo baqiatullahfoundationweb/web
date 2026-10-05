@@ -107,9 +107,9 @@ export const enDictionary: Dictionary = {
     calloutDesc: "Join our 85+ active volunteers in Lahore for weekend tutoring, computer literacy, sports mentoring, or medical health camps.",
     calloutBtn: "Join as a Volunteer",
     items: [
-      { name: "Dr. Fatima Zahra", role: "Medical & Health Caregiver", image: "/team/chairperson.jpg", quote: "Ensuring every young girl and boy receives routine health screenings, nutrition monitoring, and preventative care." },
-      { name: "Hamza Tariq", role: "Youth STEM & Coding Mentor", image: "/team/educationist.jpg", quote: "Teaching digital literacy and web development on weekends to open doors for children in modern tech careers." },
-      { name: "Muhammad Abbas Raza", role: "Founder & Community Mentor", image: "/team/founder.jpg", quote: "Creating loving mentorship circles and providing complete care so every orphan grows with honor and self-reliance." },
+      { name: "Zain Ali", role: "Founder & Executive Director", image: "/team/founder.jpg", quote: "Creating loving mentorship circles and providing complete care so every orphan grows with honor, quality education, and self-reliance." },
+      { name: "Dr. Samina Kausar", role: "Chairperson & Senior Trustee", image: "/team/chairperson.jpg", quote: "Ensuring every young girl and boy receives routine health screenings, nutrition monitoring, and compassionate care." },
+      { name: "Syed Ali Haider", role: "Head of Academic Programs", image: "/team/educationist.jpg", quote: "Teaching digital literacy, STEM curricula, and academic mastery to open doors for children in modern careers." },
     ],
   },
   events: {

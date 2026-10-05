@@ -89,13 +89,13 @@ export default function HeroSlider({ slides }: { slides?: HeroSlide[] }) {
             <span>{slide.badge}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-[62px] font-black text-gray-950 tracking-tight leading-[1.05] uppercase">
-            {titleParts[0]}
+          <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-[50px] font-black text-gray-950 tracking-tight leading-none uppercase whitespace-nowrap overflow-hidden text-ellipsis max-w-[85vw] sm:max-w-2xl lg:max-w-3xl block">
+            <span className="inline">{titleParts[0]}</span>
             {titleParts[1] && (
-              <>
-                <span className="mx-2 sm:mx-3 text-gray-400 font-light">——</span>
-                <span className="block sm:inline">{titleParts[1]}</span>
-              </>
+              <span className="inline whitespace-nowrap">
+                <span className="mx-1.5 sm:mx-2.5 text-gray-400 font-light">——</span>
+                <span>{titleParts[1]}</span>
+              </span>
             )}
           </h1>
 

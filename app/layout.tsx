@@ -39,8 +39,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${poppins.variable} h-full scroll-smooth`}>
-      <body className="min-h-full flex flex-col text-slate-900 antialiased font-sans relative selection:bg-[#008B8B] selection:text-white bg-[#EDF6F6]">
+    <html lang="en" className={`${poppins.variable} min-h-screen scroll-smooth`}>
+      <body className="min-h-screen flex flex-col text-slate-900 antialiased font-sans relative selection:bg-[#008B8B] selection:text-white bg-[#EDF6F6]">
         <AmbientSvgBackground />
 
         <SmoothScroll>

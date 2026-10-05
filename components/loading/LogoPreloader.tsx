@@ -8,29 +8,22 @@ import BaqiatullahEmblemDraw from "./BaqiatullahEmblemDraw";
 export default function LogoPreloader() {
   const pathname = usePathname();
   const isUrdu = pathname.startsWith("/ur");
-  const [mounted, setMounted] = useState(false);
   const [progress, setProgress] = useState(0);
   const [exiting, setExiting] = useState(false);
-  const [dismissed, setDismissed] = useState(true);
+  const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
-    // Check url param ?preview_intro=true or session storage
-    const searchParams = new URLSearchParams(window.location.search);
-    const isPreview = searchParams.get("preview_intro") === "true";
     const isBot =
       typeof navigator !== "undefined" &&
       /Lighthouse|Chrome-Lighthouse|Googlebot/i.test(navigator.userAgent);
-    const hasPlayed = (!isPreview && sessionStorage.getItem("baiq_intro_seen")) || (isBot && !isPreview);
-    if (hasPlayed) {
+    if (isBot) {
       setDismissed(true);
       return;
     }
 
-    setDismissed(false);
-    setMounted(true);
-
     const start = Date.now();
-    const duration = 2800; // 2.8s slow-mo piece-by-piece creation
+    const duration = 3500; // Stays for 3.5s to 4.0s on page load
+
     const timer = setInterval(() => {
       const elapsed = Date.now() - start;
       const pct = Math.min(Math.round((elapsed / duration) * 100), 100);
@@ -38,13 +31,12 @@ export default function LogoPreloader() {
 
       if (elapsed >= duration) {
         clearInterval(timer);
-        setTimeout(() => setExiting(true), 350);
+        setExiting(true);
         setTimeout(() => {
-          sessionStorage.setItem("baiq_intro_seen", "true");
           setDismissed(true);
-        }, 1100);
+        }, 600);
       }
-    }, 40);
+    }, 35);
 
     return () => clearInterval(timer);
   }, []);
@@ -52,12 +44,11 @@ export default function LogoPreloader() {
   const handleSkip = () => {
     setExiting(true);
     setTimeout(() => {
-      sessionStorage.setItem("baiq_intro_seen", "true");
       setDismissed(true);
-    }, 500);
+    }, 400);
   };
 
-  if (dismissed || !mounted) return null;
+  if (dismissed) return null;
 
   return (
     <div
