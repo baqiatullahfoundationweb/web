@@ -11,7 +11,7 @@ export interface HeroSlide {
 
 export const DEFAULT_SLIDES: HeroSlide[] = [
   {
-    image: "/gallery/49.jpg",
+    image: "/gallery/opt/49.webp",
     badge: "HEALTHCARE",
     title: "NURTURE —— WITH DIGNITY",
     subtitle: "Healthcare, shelter, and wholesome food for 250+ orphans.",
@@ -21,7 +21,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     ctaSecondaryHref: "/about",
   },
   {
-    image: "/gallery/20.jpg",
+    image: "/gallery/opt/20.webp",
     badge: "DIGITAL SKILLS",
     title: "LEARN —— FOR TOMORROW",
     subtitle: "Coding, computer literacy, and graphic design for teens.",

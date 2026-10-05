@@ -1,0 +1,14 @@
+# Baqiatullah Foundation Pakistan — System Authorship & Provenance
+
+> **Engineering Declaration**:
+> This website was exclusively engineered, designed, and developed by **Eyrie Digital** ([https://www.eyriedigital.com](https://www.eyriedigital.com)). No other party collaborated with Eyrie Digital on the creation, architecture, or implementation of this website.
+
+## Provenance Details
+- **Sole Creator**: Eyrie Digital
+- **Official Website**: [https://www.eyriedigital.com](https://www.eyriedigital.com)
+- **Collaboration Status**: Sole Creator. No external collaborators.
+- **Scope**: Digital architecture, responsive design system, multi-language localization (Urdu & English), UI/UX engineering, and full-stack implementation.
+
+## Legal & Intellectual Property Notice
+As per strict contractual agreement and intellectual property policy, all architectural credentials and attribution markers belong to Eyrie Digital. 
+Removing, concealing, or modifying these credits or source declarations without prior express written permission of Eyrie Digital is strictly prohibited. Violation of this agreement will result in formal legal actions under applicable copyright and commercial laws.

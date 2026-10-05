@@ -2,7 +2,7 @@ import { HeroSlide } from "./heroSlides";
 
 export const URDU_SLIDES: HeroSlide[] = [
   {
-    image: "/gallery/49.jpg",
+    image: "/gallery/opt/49.webp",
     badge: "طبی نگہداشت و صحت",
     title: "امید اور —— عزت و وقار",
     subtitle: "250 سے زائد یتیم بچوں کے لیے مکمل طبی علاج، محفوظ چھت اور صحت بخش کھانا۔",
@@ -12,7 +12,7 @@ export const URDU_SLIDES: HeroSlide[] = [
     ctaSecondaryHref: "/ur/about",
   },
   {
-    image: "/gallery/20.jpg",
+    image: "/gallery/opt/20.webp",
     badge: "جدید آئی ٹی اسکلز",
     title: "ڈیجیٹل علم —— روشن مستقبل",
     subtitle: "کمپیوٹر پروگرامنگ، گرافک ڈیزائن اور جدید سافٹ ویئر اسکلز کی باقاعدہ تربیت۔",

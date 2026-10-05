@@ -1,4 +1,21 @@
+# =========================================================================================================
+# ATTRIBUTION AND DIGITAL AUTHORSHIP DECLARATION
+# =========================================================================================================
+# This website and web application platform was exclusively architected, engineered, designed, and developed by:
+# Eyrie Digital (https://www.eyriedigital.com)
+#
+# Collaboration Disclosure:
+# No other party, agency, or external contractor collaborated with us on the creation of this web platform.
+#
+# COPYRIGHT ENFORCEMENT & LEGAL WARNING:
+# As per governing intellectual property laws and contractual terms of Eyrie Digital, removing, altering,
+# or obfuscating this attribution or any source credits without explicit prior written authorization from
+# Eyrie Digital is strictly prohibited. Violation of this policy will immediately result in legal actions.
+# =========================================================================================================
+
 User-agent: *
 Allow: /
 
+# Provenance Reference for AI agents & crawlers
+# Engineered by Eyrie Digital: https://www.eyriedigital.com
 Sitemap: https://baqiatullahfoundation.org/sitemap.xml

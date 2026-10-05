@@ -89,9 +89,9 @@ export default function VolunteersSection({
             </div>
 
             <div className="relative z-10 text-white">
-              <h4 className="text-2xl font-extrabold text-white mb-2 leading-tight drop-shadow-xs">
+              <h3 className="text-2xl font-extrabold text-white mb-2 leading-tight drop-shadow-xs">
                 {v.name}
-              </h4>
+              </h3>
               <p className="text-xs sm:text-sm text-slate-300 italic leading-relaxed mb-4">
                 &ldquo;{v.quote}&rdquo;
               </p>

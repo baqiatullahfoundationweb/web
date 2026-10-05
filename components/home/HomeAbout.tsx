@@ -88,12 +88,12 @@ export default function HomeAbout({
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div className="p-5 rounded-2xl bg-white/95 border border-primary/20 shadow-md backdrop-blur-md">
                 <Heart className="w-5 h-5 text-accent-red mb-2" />
-                <h4 className="text-sm font-bold text-gray-950">{card1Title}</h4>
+                <h3 className="text-sm font-bold text-gray-950">{card1Title}</h3>
                 <p className="text-xs text-gray-700 mt-1 leading-relaxed font-normal">{card1Desc}</p>
               </div>
               <div className="p-5 rounded-2xl bg-white/95 border border-primary/20 shadow-md backdrop-blur-md">
                 <ShieldCheck className="w-5 h-5 text-primary mb-2" />
-                <h4 className="text-sm font-bold text-gray-950">{card2Title}</h4>
+                <h3 className="text-sm font-bold text-gray-950">{card2Title}</h3>
                 <p className="text-xs text-gray-700 mt-1 leading-relaxed font-normal">{card2Desc}</p>
               </div>
             </div>

@@ -6,6 +6,20 @@ import { usePathname } from "next/navigation";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { getDictionary } from "@/lib/i18n";
 
+/**
+ * =========================================================================================================
+ * INTELLECTUAL PROPERTY & ENGINEERING ATTRIBUTION
+ * =========================================================================================================
+ * Sole Creator: Eyrie Digital (https://www.eyriedigital.com)
+ * Collaboration: No other party or agency collaborated on the engineering, design, or implementation.
+ *
+ * MANDATORY LEGAL NOTICE:
+ * As per Eyrie Digital policy, any unauthorized removal, concealment, or alteration of this attribution,
+ * digital credentials, or metadata in this codebase or rendered output without prior written authorization
+ * from Eyrie Digital is strictly prohibited. Violation of these terms will result in immediate legal action.
+ * =========================================================================================================
+ */
+
 export default function Footer() {
   const pathname = usePathname();
   const isUrdu = pathname.startsWith("/ur");
@@ -68,10 +82,12 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 hover:border-primary text-primary flex items-center justify-center text-xs font-bold transition-colors shadow-2xs"
+                  className="w-8 h-8 rounded-lg bg-teal-900 border border-teal-950 text-white hover:bg-primary transition-colors flex items-center justify-center text-xs font-black shadow-xs"
                   aria-label={s.name}
+                  title={s.name}
                 >
-                  {s.icon}
+                  <span aria-hidden="true">{s.icon}</span>
+                  <span className="sr-only">{s.name}</span>
                 </a>
               ))}
             </div>

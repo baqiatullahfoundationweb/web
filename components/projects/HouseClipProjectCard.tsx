@@ -39,7 +39,6 @@ export default function HouseClipProjectCard({
     <Link
       href={href}
       className={`group flex flex-col items-center select-none cursor-pointer transition-transform duration-300 hover:-translate-y-2 ${className}`}
-      aria-label={title}
     >
       {/* 1. Outer House Silhouette Frame with Colored Architectural Border */}
       <div
