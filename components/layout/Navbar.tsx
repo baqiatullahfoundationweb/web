@@ -38,10 +38,18 @@ export default function Navbar() {
     setMobileOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) setMobileOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-2 sm:px-4 md:px-6 py-2 sm:py-3 transition-all duration-300">
       <div
-        className={`mx-auto max-w-7xl rounded-2xl md:rounded-full transition-all duration-300 px-3 sm:px-5 py-2 flex items-center justify-between gap-2 ${
+        className={`mx-auto max-w-7xl rounded-2xl md:rounded-full transition-all duration-300 px-2.5 sm:px-5 py-2 flex items-center justify-between gap-1.5 sm:gap-2 ${
           scrolled
             ? "bg-white/95 backdrop-blur-xl shadow-xl shadow-teal-950/10 border border-primary/20"
             : "bg-white/90 backdrop-blur-md shadow-md shadow-teal-950/5 border border-primary/15"
@@ -49,18 +57,18 @@ export default function Navbar() {
         dir={isUrdu ? "rtl" : "ltr"}
       >
         {/* Brand Lockup */}
-        <Link href={homeHref} className="flex items-center gap-2 sm:gap-3 group shrink min-w-0" aria-label="Baqiatullah Foundation">
-          <div className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full overflow-hidden ring-2 ring-[#FFBF00] shadow-sm shrink-0 bg-[#FFBF00]">
+        <Link href={homeHref} className="flex items-center gap-1.5 sm:gap-2.5 md:gap-3 group shrink min-w-0" aria-label="Baqiatullah Foundation">
+          <div className="relative w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 rounded-full overflow-hidden ring-2 ring-[#FFBF00] shadow-sm shrink-0 bg-[#FFBF00]">
             <Image src="/logo/emblem.png" alt="Baqiatullah Emblem" fill className="object-cover" priority />
           </div>
-          <div className="relative h-6 sm:h-8 md:h-9 w-32 sm:w-44 md:w-56 lg:w-64 shrink-0">
+          <div className="relative h-5 sm:h-7 md:h-9 w-24 sm:w-36 md:w-52 lg:w-64 shrink min-w-0">
             <Image
               src="/logo/brand-text.png"
               alt="بقیتہ اللہ فاؤنڈیشن پاکستان - BAQIATULLAH FOUNDATION PAKISTAN"
               fill
-              className="object-contain object-left"
+              className="object-contain object-left rtl:object-right"
               priority
-              sizes="(max-width: 640px) 140px, (max-width: 1024px) 200px, 260px"
+              sizes="(max-width: 640px) 110px, (max-width: 1024px) 180px, 260px"
             />
           </div>
         </Link>

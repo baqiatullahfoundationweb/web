@@ -156,3 +156,30 @@
 .animate-slowmo-camera { animation: slowmoCamera 2.6s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
 .animate-shine-sweep { animation: shineSweep 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s infinite; }
 .animate-glint { animation: glintPulse 1.4s ease-in-out 1.0s infinite; }
+
+/* Inward Halfway Shapes Animations */
+@keyframes glideFromTop {
+  0% { transform: translateY(-130%) rotate(0deg); opacity: 0; }
+  60% { opacity: 0.85; }
+  100% { transform: translateY(-20%) rotate(18deg); opacity: 0.75; }
+}
+@keyframes glideFromBottom {
+  0% { transform: translateY(130%) rotate(0deg); opacity: 0; }
+  60% { opacity: 0.85; }
+  100% { transform: translateY(20%) rotate(-15deg); opacity: 0.75; }
+}
+@keyframes glideFromLeft {
+  0% { transform: translateX(-130%) rotate(0deg); opacity: 0; }
+  60% { opacity: 0.85; }
+  100% { transform: translateX(-20%) rotate(12deg); opacity: 0.75; }
+}
+@keyframes glideFromRight {
+  0% { transform: translateX(130%) rotate(0deg); opacity: 0; }
+  60% { opacity: 0.85; }
+  100% { transform: translateX(20%) rotate(-18deg); opacity: 0.75; }
+}
+
+.shape-glide-top { animation: glideFromTop 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; }
+.shape-glide-bottom { animation: glideFromBottom 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards; }
+.shape-glide-left { animation: glideFromLeft 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; }
+.shape-glide-right { animation: glideFromRight 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards; }
