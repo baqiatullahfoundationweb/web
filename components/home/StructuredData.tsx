@@ -1,5 +1,5 @@
 import React from "react";
-import { FAQS_DATA } from "./HomeFaqSection";
+import { FAQS_DATA } from "@/lib/faqData";
 
 interface StructuredDataProps {
   lang: string;
