@@ -14,7 +14,6 @@ export default function HeroSlider({ slides }: { slides?: HeroSlide[] }) {
   // Always ensure rich 12-slide experience
   const slideList = slides && slides.length > 5 ? slides : isUrdu ? URDU_SLIDES : DEFAULT_SLIDES;
   const [current, setCurrent] = useState(0);
-  const [progress, setProgress] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const total = slideList.length;
 
@@ -34,23 +33,6 @@ export default function HeroSlider({ slides }: { slides?: HeroSlide[] }) {
     }, 4500);
     return () => clearInterval(interval);
   }, [isPaused, total]);
-
-  // Smooth Laser Progress Animation
-  useEffect(() => {
-    const raf = requestAnimationFrame(() => setProgress(0));
-    const start = Date.now();
-    const duration = 4500;
-    const interval = setInterval(() => {
-      if (isPaused) return;
-      const elapsed = Date.now() - start;
-      const pct = Math.min((elapsed / duration) * 100, 100);
-      setProgress(pct);
-    }, 50);
-    return () => {
-      cancelAnimationFrame(raf);
-      clearInterval(interval);
-    };
-  }, [current, isPaused]);
 
   const slide = slideList[current] || slideList[0];
 
@@ -102,11 +84,14 @@ export default function HeroSlider({ slides }: { slides?: HeroSlide[] }) {
             )}
           </h1>
 
-          {/* Thin Laser Progress Track */}
+          {/* Thin Laser Progress Track (Hardware Accelerated Zero Re-renders) */}
           <div className="w-48 sm:w-64 h-[2px] bg-gray-300 rounded-full overflow-hidden">
             <div
-              className="h-full bg-primary transition-all duration-75 ease-linear shadow-[0_0_8px_#008B8B]"
-              style={{ width: `${progress}%` }}
+              key={current}
+              className="h-full bg-primary animate-hero-laser shadow-[0_0_8px_#008B8B]"
+              style={{
+                animationPlayState: isPaused ? "paused" : "running",
+              }}
             />
           </div>
         </div>

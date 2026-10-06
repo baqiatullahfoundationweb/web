@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { getDictionary, LOCALES, Locale } from "@/lib/i18n";
 import ContactCards from "@/components/contact/ContactCards";
-import ContactForm from "@/components/contact/ContactForm";
 import MapEmbed from "@/components/contact/MapEmbed";
 import CtaBanner from "@/components/home/CtaBanner";
 
@@ -80,9 +79,6 @@ export default async function LocalizedContactPage({ params }: PageProps) {
         hoursLabel={data.info.hoursLabel}
         hours={data.info.hours}
       />
-      <section className="pb-16 max-w-4xl mx-auto px-4 sm:px-6 w-full">
-        <ContactForm {...data.form} />
-      </section>
       <section className="pb-16 max-w-7xl mx-auto px-4 sm:px-6 w-full">
         <MapEmbed isUrdu={validLang === "ur"} />
       </section>

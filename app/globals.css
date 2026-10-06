@@ -205,3 +205,25 @@
 .shape-glide-tr { animation: glideCornerTR 1.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; }
 .shape-glide-bl { animation: glideCornerBL 1.7s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards; }
 .shape-glide-br { animation: glideCornerBR 1.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; }
+
+/* GPU-Accelerated Hardware Laser Progress Bar (Zero React Re-renders) */
+@keyframes heroLaserProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.animate-hero-laser {
+  animation: heroLaserProgress 4500ms linear forwards;
+  transform-origin: left;
+  will-change: transform;
+}
+
+[dir="rtl"] .animate-hero-laser,
+.lang-ur .animate-hero-laser {
+  transform-origin: right;
+}
+

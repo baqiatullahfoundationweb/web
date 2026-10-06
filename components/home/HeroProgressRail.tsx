@@ -6,7 +6,7 @@ import { HeroSlide } from "./heroSlides";
 interface HeroProgressRailProps {
   slides: HeroSlide[];
   current: number;
-  progress: number;
+  progress?: number;
   isPaused: boolean;
   onSelect: (index: number) => void;
   onPrev: () => void;
@@ -17,7 +17,6 @@ interface HeroProgressRailProps {
 export default function HeroProgressRail({
   slides,
   current,
-  progress,
   isPaused,
   onSelect,
   onPrev,
@@ -45,8 +44,11 @@ export default function HeroProgressRail({
                 {isActive && (
                   <div className="absolute top-0 left-0 right-0 h-[3px] bg-gray-200 overflow-hidden">
                     <div
-                      className="h-full bg-primary shadow-[0_0_8px_#008B8B] transition-all duration-75"
-                      style={{ width: `${progress}%` }}
+                      key={current}
+                      className="h-full bg-primary shadow-[0_0_8px_#008B8B] animate-hero-laser"
+                      style={{
+                        animationPlayState: isPaused ? "paused" : "running",
+                      }}
                     />
                   </div>
                 )}
