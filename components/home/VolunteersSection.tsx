@@ -26,19 +26,19 @@ export interface VolunteersSectionProps {
 const DEFAULT_VOLUNTEERS: VolunteerItem[] = [
   {
     name: "Zain Ali",
-    role: "Founder & Executive Director",
-    image: "/team/founder.jpg",
+    role: "Founder & Director",
+    image: "/team/image.png",
     quote: "Creating loving mentorship circles and providing complete care so every orphan grows with honor, quality education, and self-reliance.",
   },
   {
-    name: "Dr. Samina Kausar",
-    role: "Chairperson & Senior Trustee",
+    name: "Aleena Maryam",
+    role: "Chairperson",
     image: "/team/chairperson.jpg",
     quote: "Ensuring every young girl and boy receives routine health screenings, nutrition monitoring, and compassionate care.",
   },
   {
-    name: "Syed Ali Haider",
-    role: "Head of Academic Programs",
+    name: "Syed Sajjad Hussain",
+    role: "Education Coordinator",
     image: "/team/educationist.jpg",
     quote: "Teaching digital literacy, STEM curricula, and academic mastery to open doors for children in modern careers.",
   },

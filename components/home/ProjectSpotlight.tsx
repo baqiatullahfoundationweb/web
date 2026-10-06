@@ -23,8 +23,8 @@ export interface ProjectSpotlightProps {
 export default function ProjectSpotlight({
   title = "Baqiatullah IT & Digital Skills Resource Center",
   description = "Equipped with high-speed internet, modern desktop workstations, and volunteer software mentors, our computer lab equips children with real 21st-century vocational skills — turning dreams of tech careers into reality.",
-  primaryImage = "/gallery/opt/49.webp",
-  secondaryImage = "/gallery/opt/20.webp",
+  primaryImage = "/gallery/opt/36.webp",
+  secondaryImage = "/gallery/opt/89.webp",
   stat1Val = "100%",
   stat1Lbl = "Computer Literacy Rate for Grade 5+",
   stat2Val = "35+",

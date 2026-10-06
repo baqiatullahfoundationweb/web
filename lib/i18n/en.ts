@@ -51,7 +51,7 @@ export const enDictionary: Dictionary = {
         ctaSecondaryHref: "/eng/projects",
       },
       {
-        image: "/gallery/opt/75.webp",
+        image: "/projects/disaster-hd.webp",
         badge: "Emergency Relief & Community Support",
         title: "Humanitarian Hope Extended to Flood-Affected Communities",
         subtitle: "Reaching beyond our sanctuary to provide clean water, food rations, and medical kits to 300+ vulnerable families in remote crisis zones.",
@@ -67,9 +67,9 @@ export const enDictionary: Dictionary = {
     highlight: "Real Achievements",
     subtitle: "Behind every number is a child whose life was safeguarded from poverty, hunger, and vulnerability.",
     metrics: [
-      { value: "250+", label: "Orphaned Children Supported", description: "Full-time residential sanctuary, medical care, and family love in Lahore.", image: "/gallery/opt/20.webp" },
+      { value: "250+", label: "Orphaned Children Supported", description: "Full-time residential sanctuary, medical care, and family love in Lahore.", image: "/gallery/opt/89.webp" },
       { value: "100k+", label: "Nutritious Meals Served", description: "Three warm, protein-rich prepared meals delivered every single day.", image: "/gallery/opt/16.webp" },
-      { value: "50+", label: "Academic Scholarships", description: "Tuition, uniforms, and textbooks funding primary through college education.", image: "/gallery/opt/2.webp" },
+      { value: "50+", label: "Academic Scholarships", description: "Tuition, uniforms, and textbooks funding primary through college education.", image: "/gallery/opt/14.webp" },
       { value: "85+", label: "Dedicated Field Volunteers", description: "Compassionate caregivers, teachers, and emergency relief responders.", image: "/gallery/opt/30.webp" },
     ],
   },
@@ -108,9 +108,9 @@ export const enDictionary: Dictionary = {
     calloutDesc: "Join our 85+ active volunteers in Lahore for weekend tutoring, computer literacy, sports mentoring, or medical health camps.",
     calloutBtn: "Join as a Volunteer",
     items: [
-      { name: "Zain Ali", role: "Founder & Executive Director", image: "/team/founder.jpg", quote: "Creating loving mentorship circles and providing complete care so every orphan grows with honor, quality education, and self-reliance." },
-      { name: "Dr. Samina Kausar", role: "Chairperson & Senior Trustee", image: "/team/chairperson.jpg", quote: "Ensuring every young girl and boy receives routine health screenings, nutrition monitoring, and compassionate care." },
-      { name: "Syed Ali Haider", role: "Head of Academic Programs", image: "/team/educationist.jpg", quote: "Teaching digital literacy, STEM curricula, and academic mastery to open doors for children in modern careers." },
+      { name: "Zain Ali", role: "Founder & Director", image: "/team/image.png", quote: "Creating loving mentorship circles and providing complete care so every orphan grows with honor, quality education, and self-reliance." },
+      { name: "Aleena Maryam", role: "Chairperson", image: "/team/chairperson.jpg", quote: "Ensuring every young girl and boy receives routine health screenings, nutrition monitoring, and compassionate care." },
+      { name: "Syed Sajjad Hussain", role: "Education Coordinator", image: "/team/educationist.jpg", quote: "Teaching digital literacy, STEM curricula, and academic mastery to open doors for children in modern careers." },
     ],
   },
   events: {
@@ -121,7 +121,7 @@ export const enDictionary: Dictionary = {
     items: [
       { title: "Annual Sports & Outdoor Joy Festival", date: "November 15, 2026", time: "10:00 AM - 4:00 PM", location: "Nawab Town Sports Grounds, Lahore", image: "/gallery/opt/24.webp", description: "A joyful day of athletics, cricket tournaments, races, and awards celebrating physical stamina." },
       { title: "Comprehensive Pediatric Medical & Dental Camp", date: "October 28, 2026", time: "9:00 AM - 2:00 PM", location: "Baqiatullah Healthcare Wing, Lahore", image: "/gallery/opt/10.webp", description: "Volunteer physicians and pediatric dentists conducting thorough preventative screenings and hygiene workshops." },
-      { title: "Digital Literacy & Web Coding Workshop", date: "December 05, 2026", time: "11:00 AM - 3:00 PM", location: "IT & Computer Resource Lab", image: "/gallery/opt/49.webp", description: "Senior students demonstrating digital portfolios, basic software programming, and typing competitions." },
+      { title: "Digital Literacy & Web Coding Workshop", date: "December 05, 2026", time: "11:00 AM - 3:00 PM", location: "IT & Computer Resource Lab", image: "/gallery/opt/36.webp", description: "Senior students demonstrating digital portfolios, basic software programming, and typing competitions." },
     ],
   },
   getInvolved: {
@@ -129,10 +129,10 @@ export const enDictionary: Dictionary = {
     highlight: "Lifelong Difference",
     subtitle: "Whether through financial sponsorship, active volunteering, or community sharing, every hand creates hope.",
     pathways: [
-      { title: "Sponsor a Child Monthly", description: "Provide complete shelter, schooling, healthcare, and clothing for PKR 12,000 / month.", image: "/gallery/opt/20.webp", actionText: "Sponsor Now", href: "/eng/donate", badge: "Direct Impact" },
+      { title: "Sponsor a Child Monthly", description: "Provide complete shelter, schooling, healthcare, and clothing for PKR 12,000 / month.", image: "/gallery/opt/89.webp", actionText: "Sponsor Now", href: "/eng/donate", badge: "Direct Impact" },
       { title: "Volunteer Your Skills", description: "Teach English, coding, sports, or offer pediatric medical screening at our Lahore facility.", image: "/gallery/opt/35.webp", actionText: "Join Volunteers", href: "/eng/contact", badge: "Mentorship" },
       { title: "Fund Daily Meals", description: "Sponsor fresh daily breakfasts, lunches, or celebratory feasts for 250+ resident children.", image: "/gallery/opt/16.webp", actionText: "Feed a Child", href: "/eng/donate", badge: "Nutrition" },
-      { title: "Corporate CSR & In-Kind", description: "Partner with us for digital computer labs, solar installations, or corporate matching grants.", image: "/gallery/opt/75.webp", actionText: "Partner With Us", href: "/eng/contact", badge: "Institutional" },
+      { title: "Corporate CSR & In-Kind", description: "Partner with us for digital computer labs, solar installations, or corporate matching grants.", image: "/gallery/opt/36.webp", actionText: "Partner With Us", href: "/eng/contact", badge: "Institutional" },
     ],
   },
   spotlight: {

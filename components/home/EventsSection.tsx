@@ -44,7 +44,7 @@ const DEFAULT_EVENTS: EventItem[] = [
     date: "December 05, 2026",
     time: "11:00 AM - 3:00 PM",
     location: "IT & Computer Resource Lab",
-    image: "/gallery/opt/49.webp",
+    image: "/gallery/opt/36.webp",
     description: "Senior students demonstrating digital portfolios, basic software programming, and typing speed competitions.",
   },
 ];

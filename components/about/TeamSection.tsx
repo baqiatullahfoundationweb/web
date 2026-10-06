@@ -17,40 +17,28 @@ export interface TeamSectionProps {
 
 const DEFAULT_MEMBERS: TeamMemberItem[] = [
   {
-    name: "Muhammad Abbas Raza",
-    role: "Founder & Executive Director",
-    image: "/team/founder.jpg",
-    desc: "Leading grassroots child welfare initiatives across Pakistan with over 15 years of humanitarian service.",
+    name: "Zain Ali",
+    role: "Founder & Director",
+    image: "/team/image.png",
+    desc: "Leading the Foundation’s work to support orphaned and vulnerable children.",
   },
   {
-    name: "Dr. Samina Kausar",
-    role: "Chairperson & Trustee",
+    name: "Aleena Maryam",
+    role: "Chairperson",
     image: "/team/chairperson.jpg",
-    desc: "Supervising maternal health screenings, nutritional diets, and child emotional development programs.",
+    desc: "Providing leadership and guidance as Chairperson of the Foundation.",
   },
   {
-    name: "Syed Ali Haider",
-    role: "Head of Academic Programs",
+    name: "Syed Sajjad Hussain",
+    role: "Education Coordinator",
     image: "/team/educationist.jpg",
-    desc: "Overseeing primary education, STEM computer labs, and higher secondary tuition pipelines.",
+    desc: "Coordinating the Foundation’s education programs.",
   },
   {
-    name: "Tariq Mahmood",
-    role: "Director of Finance & Compliance",
+    name: "Sohail Raza",
+    role: "Finance Secretary",
     image: "/team/finance.jpg",
-    desc: "Ensuring 100% financial transparency, external audits, and meticulous donor reporting.",
-  },
-  {
-    name: "Syed Hassan Raza",
-    role: "Co-Founder & Field Coordinator",
-    image: "/team/founder2.jpg",
-    desc: "Coordinating disaster response logistics and relief distributions across rural flood zones.",
-  },
-  {
-    name: "Muhammad Baqir",
-    role: "Senior Trustee & Board Advisor",
-    image: "/team/founder3.jpg",
-    desc: "Guiding institutional strategy, moral character formation, and community outreach programs.",
+    desc: "Managing the Foundation’s financial administration.",
   },
 ];
 
@@ -81,7 +69,7 @@ export default function TeamSection({
                 fill
                 loading="lazy"
                 decoding="async"
-                className="object-cover object-top hover:scale-105 transition-transform duration-500"
+                className="object-contain object-center hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
             </div>

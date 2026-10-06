@@ -33,10 +33,10 @@ export const enAboutPage: AboutPageData = {
     highlight: "Baqiatullah Foundation",
     subtitle: "Meet the directors, trustees, and operational stewards directing our educational mission.",
     members: [
-      { name: "Muhammad Abbas Raza", role: "Founder & Executive Director", desc: "Leading grassroots child welfare initiatives across Pakistan with over 15 years of humanitarian service.", image: "/team/founder.jpg" },
-      { name: "Dr. Samina Kausar", role: "Chairperson & Trustee", desc: "Supervising institutional partnerships, child protection policies, and organizational governance.", image: "/team/chairperson.jpg" },
-      { name: "Syed Ali Haider", role: "Head of Academic Programs", desc: "Overseeing primary education, STEM computer labs, and higher secondary tuition pipelines.", image: "/team/educationist.jpg" },
-      { name: "Tariq Mahmood", role: "Director of Finance & Compliance", desc: "Ensuring 100% financial transparency, external audits, and meticulous donor reporting.", image: "/team/finance.jpg" },
+      { name: "Zain Ali", role: "Founder & Director", desc: "Leading the Foundation’s work to support orphaned and vulnerable children.", image: "/team/image.png" },
+      { name: "Aleena Maryam", role: "Chairperson", desc: "Providing leadership and guidance as Chairperson of the Foundation.", image: "/team/chairperson.jpg" },
+      { name: "Syed Sajjad Hussain", role: "Education Coordinator", desc: "Coordinating the Foundation’s education programs.", image: "/team/educationist.jpg" },
+      { name: "Sohail Raza", role: "Finance Secretary", desc: "Managing the Foundation’s financial administration.", image: "/team/finance.jpg" },
     ],
   },
 };
@@ -50,10 +50,10 @@ export const enProjectsPage: ProjectsPageData = {
     supportBtn: "Support This Program",
     items: [
       { title: "1. Education", desc: "Private English-medium schooling, syllabus books, uniforms, and academic tutoring for 250+ orphans.", image: "/projects/education-hd.webp", progress: 85, status: "Active Ongoing" },
-      { title: "2. Digital Education", desc: "Equipped modern IT laboratory with 35+ workstations providing coding, graphic design, and typing.", image: "/gallery/opt/49.webp", progress: 90, status: "Active Phase II" },
-      { title: "3. Orphan Support", desc: "100% Zakat-eligible child sponsorship providing monthly living allowances, stationery, and mentorship.", image: "/gallery/opt/20.webp", progress: 78, status: "Active Ongoing" },
+      { title: "2. Digital Education", desc: "Equipped modern IT laboratory with 35+ workstations providing coding, graphic design, and typing.", image: "/gallery/opt/36.webp", progress: 90, status: "Active Phase II" },
+      { title: "3. Orphan Support", desc: "100% Zakat-eligible child sponsorship providing monthly living allowances, stationery, and mentorship.", image: "/gallery/opt/89.webp", progress: 78, status: "Active Ongoing" },
       { title: "4. Food and Ration", desc: "3 daily wholesome protein-rich hot meals, fresh milk schedule, and emergency food relief packages.", image: "/gallery/opt/16.webp", progress: 95, status: "Active Daily" },
-      { title: "5. Clothing", desc: "Seasonal wardrobes, tailored school uniforms, winter coats, festive Eid apparel, and sturdy shoes.", image: "/gallery/opt/2.webp", progress: 80, status: "Active Seasonal" },
+      { title: "5. Clothing", desc: "Seasonal wardrobes, tailored school uniforms, winter coats, festive Eid apparel, and sturdy shoes.", image: "/gallery/opt/82.webp", progress: 80, status: "Active Seasonal" },
       { title: "6. Orphan Care", desc: "24/7 loving residential sanctuary in Lahore with maternal care, hygienic dorms, and solar power backup.", image: "/gallery/opt/89.webp", progress: 92, status: "Active 24/7" },
       { title: "7. Disaster Management", desc: "Rapid disaster relief supplying dry rations, water filtration kits, and medical aid to crisis zones.", image: "/projects/disaster-hd.webp", progress: 70, status: "Active Phase I" },
       { title: "8. Healthcare", desc: "Quarterly pediatric checkups, dental screening camps, 24/7 emergency medical coverage, and medicines.", image: "/projects/health-hd.webp", progress: 88, status: "Active Ongoing" },
@@ -65,7 +65,7 @@ export const enProjectsPage: ProjectsPageData = {
     subtitle: "Major humanitarian initiatives executed with complete community success.",
     items: [
       { title: "Jhang Emergency Flood Relief", desc: "Supplied 300 vulnerable families with multi-week food rations, water filtration kits, and medical aid.", image: "/projects/disaster-hd.webp", impact: "300 Families Supported" },
-      { title: "Modern IT Computer Lab", desc: "Installed 35 desktop workstations with high-speed internet and coding mentorship curriculum.", image: "/gallery/opt/49.webp", impact: "100% Student Digital Literacy" },
+      { title: "Modern IT Computer Lab", desc: "Installed 35 desktop workstations with high-speed internet and coding mentorship curriculum.", image: "/gallery/opt/36.webp", impact: "100% Student Digital Literacy" },
       { title: "Healthcare Screening Drive", desc: "Completed comprehensive dental and pediatric assessments for all 250+ resident children.", image: "/gallery/opt/10.webp", impact: "250+ Children Screened" },
     ],
   },

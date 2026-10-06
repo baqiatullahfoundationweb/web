@@ -45,7 +45,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Registered NGO in Lahore providing accredited English-medium school education to orphaned children",
   },
   {
-    image: "/gallery/opt/75.webp",
+    image: "/projects/disaster-hd.webp",
     badge: "EMERGENCY RELIEF",
     title: "HUMANITARIAN FLOOD RELIEF —— EMERGENCY RESPONSE",
     subtitle: "Clean drinking water, emergency food rations, and medical aid kits for crisis-affected vulnerable families.",
@@ -67,7 +67,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Orphan children at Baqiatullah Foundation sanctuary playing recreational outdoor sports in Lahore",
   },
   {
-    image: "/gallery/opt/62.webp",
+    image: "/gallery/opt/16.webp",
     badge: "FRESH NUTRITION",
     title: "WHOLESOME MEALS FUND —— FEED ORPHANS PAKISTAN",
     subtitle: "Daily warm, balanced, high-protein meals and fresh milk keeping growing minds and bodies healthy.",
@@ -78,7 +78,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Nutritious daily meals prepared for orphan children at Baqiatullah Foundation residential home Lahore",
   },
   {
-    image: "/gallery/opt/16.webp",
+    image: "/gallery/opt/36.webp",
     badge: "SCIENCE & INNOVATION",
     title: "SCIENCE & COMPUTER LAB —— VOCATIONAL EMPOWERMENT",
     subtitle: "Hands-on chemistry, physics, and STEM experiments sparking lifelong curiosity and academic distinction.",
@@ -89,7 +89,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Science and practical technology learning lab for orphan students at Baqiatullah Foundation Pakistan",
   },
   {
-    image: "/gallery/opt/2.webp",
+    image: "/gallery/opt/14.webp",
     badge: "HIGHER EDUCATION",
     title: "COLLEGE SCHOLARSHIP FUND —— BREAKING POVERTY",
     subtitle: "Higher university degree scholarships and vocational diplomas ensuring graduates build independent careers.",

@@ -21,7 +21,7 @@ const SLIDES = [
     badge: "Knowledge & Growth",
   },
   {
-    image: "/gallery/opt/75.webp",
+    image: "/gallery/opt/89.webp",
     title: "Community & Humanitarian Hope",
     subtitle: "Creating a nurturing family sanctuary where every single child is cherished and protected.",
     badge: "Sanctuary for Hope",
