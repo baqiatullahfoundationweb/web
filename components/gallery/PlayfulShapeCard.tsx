@@ -1,6 +1,3 @@
-"use client";
-
-import { useMemo } from "react";
 import { Sparkles, Heart, Star } from "lucide-react";
 
 interface PlayfulShapeProps {

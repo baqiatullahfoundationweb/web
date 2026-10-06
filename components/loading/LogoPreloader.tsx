@@ -17,8 +17,8 @@ export default function LogoPreloader() {
       typeof navigator !== "undefined" &&
       /Lighthouse|Chrome-Lighthouse|Googlebot/i.test(navigator.userAgent);
     if (isBot) {
-      setDismissed(true);
-      return;
+      const timer = setTimeout(() => setDismissed(true), 0);
+      return () => clearTimeout(timer);
     }
 
     const start = Date.now();
@@ -57,6 +57,15 @@ export default function LogoPreloader() {
       }`}
       aria-label="Baqiatullah Foundation Logo Creation"
     >
+      {/* Top Bar with Skip Button */}
+      <div className="relative z-20 w-full flex justify-end">
+        <button
+          onClick={handleSkip}
+          className="px-3.5 py-1.5 rounded-full text-xs font-bold text-gray-900 bg-white/70 hover:bg-white border border-gray-950/15 shadow-sm transition-all cursor-pointer interactive-tap"
+        >
+          {isUrdu ? "چھوڑیں ✕" : "Skip ✕"}
+        </button>
+      </div>
       {/* Dynamic Geometric Decorative Shapes Coming from All 4 Sides & Corners, Stopping Halfway */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         {/* Top Center: Deep Emerald / Teal Pill */}

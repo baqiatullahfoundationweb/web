@@ -27,7 +27,6 @@ export default function OngoingProjects({
   title = "Current Programs Transforming",
   highlight = "Young Lives",
   subtitle = "Transparent progress tracking on key welfare and educational programs active today.",
-  fundedLabel = "Funded / Completed",
   supportBtnText = "Support This Program",
   supportHref = "/donate",
   items = [

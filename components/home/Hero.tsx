@@ -9,19 +9,19 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const SLIDES = [
   {
-    image: "/gallery/49.jpg",
+    image: "/gallery/opt/49.webp",
     title: "Building Brighter Futures",
     subtitle: "Providing compassionate care, quality schooling, and unconditional love for orphaned children in Pakistan.",
     badge: "Baqiatullah Home & Care",
   },
   {
-    image: "/gallery/20.jpg",
+    image: "/gallery/opt/20.webp",
     title: "Excellence in Education",
     subtitle: "Empowering every child with modern digital literacy, tutoring, and academic scholarships.",
     badge: "Knowledge & Growth",
   },
   {
-    image: "/gallery/75.jpg",
+    image: "/gallery/opt/75.webp",
     title: "Community & Humanitarian Hope",
     subtitle: "Creating a nurturing family sanctuary where every single child is cherished and protected.",
     badge: "Sanctuary for Hope",

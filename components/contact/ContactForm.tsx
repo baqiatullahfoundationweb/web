@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle2 } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import Button from "@/components/ui/Button";
 
 export interface ContactFormProps {
@@ -50,18 +50,52 @@ export default function ContactForm({
   resetBtn = "Send another message",
 }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     subject: subjects[0] || "General Inquiry",
     message: "",
+    botField: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
-    setSubmitted(true);
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setErrorMessage("Please complete all required fields (*).");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setErrorMessage(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json().catch(() => null);
+
+      if (res.ok && data?.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMessage(
+          data?.error || "We could not process your request at this time. Please contact our helpline directly."
+        );
+      }
+    } catch {
+      setErrorMessage(
+        "A network connection error occurred. Please try again or reach us via WhatsApp."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -83,7 +117,8 @@ export default function ContactForm({
           <button
             onClick={() => {
               setSubmitted(false);
-              setFormData({ name: "", email: "", phone: "", subject: subjects[0], message: "" });
+              setErrorMessage(null);
+              setFormData({ name: "", email: "", phone: "", subject: subjects[0] || "General Inquiry", message: "", botField: "" });
             }}
             className="text-xs font-bold text-emerald-700 underline mt-2 cursor-pointer"
           >
@@ -92,6 +127,24 @@ export default function ContactForm({
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
+          {errorMessage && (
+            <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs sm:text-sm flex items-center gap-2">
+              <AlertCircle className="w-4 h-4 shrink-0 text-red-600" />
+              <span>{errorMessage}</span>
+            </div>
+          )}
+
+          {/* Hidden honeypot for spam prevention */}
+          <input
+            type="text"
+            name="website"
+            value={formData.botField}
+            onChange={(e) => setFormData({ ...formData, botField: e.target.value })}
+            className="sr-only"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+          />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label htmlFor="name" className="block text-xs font-bold text-gray-950 mb-1">
@@ -169,9 +222,24 @@ export default function ContactForm({
             />
           </div>
 
-          <Button type="submit" variant="teal" size="md" className="w-full sm:w-auto shadow-md">
-            <Send className="w-4 h-4 mr-2" />
-            <span>{submitBtn}</span>
+          <Button
+            type="submit"
+            variant="teal"
+            size="md"
+            disabled={isSubmitting}
+            className="w-full sm:w-auto shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
+          >
+            {isSubmitting ? (
+              <>
+                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                <span>Sending...</span>
+              </>
+            ) : (
+              <>
+                <Send className="w-4 h-4 mr-2" />
+                <span>{submitBtn}</span>
+              </>
+            )}
           </Button>
         </form>
       )}

@@ -4,10 +4,6 @@ import React, { useState } from "react";
 import {
   HelpCircle,
   ChevronDown,
-  Sparkles,
-  ShieldCheck,
-  Building,
-  HeartHandshake,
 } from "lucide-react";
 
 import { FAQItem, FAQS_DATA } from "@/lib/faqData";

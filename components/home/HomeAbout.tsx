@@ -22,8 +22,8 @@ export interface HomeAboutProps {
 export default function HomeAbout({
   title = "More Than an Orphanage — A Loving, Lifelong Family",
   description = "Baqiatullah Foundation was born from a singular promise: that no orphaned child should grow up feeling abandoned, uneducated, or forgotten. What began with 12 children in 2016 has evolved into an accredited residential haven nurturing 250+ youth in Lahore.",
-  primaryImage = "/gallery/89.jpg",
-  secondaryImage = "/gallery/75.jpg",
+  primaryImage = "/gallery/opt/89.webp",
+  secondaryImage = "/gallery/opt/75.webp",
   establishedYear = "Established 2016 in Pakistan",
   card1Title = "Maternal Home Care",
   card1Desc = "24/7 dedicated caregivers offering affection, psychological warmth, and security.",
@@ -40,7 +40,7 @@ export default function HomeAbout({
       {/* Background photographic depth layer */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
         <Image
-          src="/gallery/75.jpg"
+          src="/gallery/opt/75.webp"
           alt=""
           fill
           className="object-cover opacity-[0.09] filter saturate-150 scale-105"

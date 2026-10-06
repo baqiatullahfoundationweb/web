@@ -16,7 +16,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "1",
     title: "Flood Relief Campaign Jhang — Emergency Aid for 300 Families",
     excerpt: "Baqiatullah Foundation delivered urgent rations, potable water, and emergency medical kits to 300 flood-affected families across 15 remote villages in Jhang district.",
-    image: "/gallery/88.jpeg",
+    image: "/gallery/opt/88.webp",
     category: "Emergency Flood Relief",
     date: "September 20, 2025",
     author: "Abbas Raza",

@@ -14,6 +14,7 @@ export interface HouseClipProjectCardProps {
   badgeText?: string;
   href?: string;
   className?: string;
+  showTitle?: boolean;
 }
 
 export default function HouseClipProjectCard({
@@ -26,6 +27,7 @@ export default function HouseClipProjectCard({
   badgeText,
   href = "/donate",
   className = "",
+  showTitle = true,
 }: HouseClipProjectCardProps) {
   const [loaded, setLoaded] = useState(false);
 
@@ -91,14 +93,18 @@ export default function HouseClipProjectCard({
       </div>
 
       {/* 3. Centered Project Title with High Contrast */}
-      <h3 className="mt-4 text-center text-base sm:text-lg lg:text-xl font-extrabold text-gray-950 group-hover:text-primary transition-colors duration-200 leading-tight px-2">
-        {title}
-      </h3>
+      {showTitle && (
+        <>
+          <h3 className="mt-4 text-center text-base sm:text-lg lg:text-xl font-extrabold text-gray-950 group-hover:text-primary transition-colors duration-200 leading-tight px-2">
+            {title}
+          </h3>
 
-      {category && (
-        <span className="text-xs font-bold text-gray-600 mt-1">
-          {category}
-        </span>
+          {category && (
+            <span className="text-xs font-bold text-gray-600 mt-1">
+              {category}
+            </span>
+          )}
+        </>
       )}
     </Link>
   );

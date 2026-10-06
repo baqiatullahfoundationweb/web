@@ -113,7 +113,7 @@ export const enBlogPage: BlogPageData = {
       category: "Emergency Flood Relief",
       date: "September 20, 2025",
       author: "Abbas Raza",
-      image: "/gallery/88.jpeg",
+      image: "/gallery/opt/88.webp",
       content: [
         "Baqiatullah Foundation Pakistan successfully concluded a high-priority emergency flood relief mission in the remote inundated territories of Jhang district.",
         "The operation focused on addressing existential survival needs: supplying potable water, nutritional food staples, and sanitary protection to families whose homes were flooded.",

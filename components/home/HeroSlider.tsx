@@ -37,7 +37,7 @@ export default function HeroSlider({ slides }: { slides?: HeroSlide[] }) {
 
   // Smooth Laser Progress Animation
   useEffect(() => {
-    setProgress(0);
+    const raf = requestAnimationFrame(() => setProgress(0));
     const start = Date.now();
     const duration = 4500;
     const interval = setInterval(() => {
@@ -46,7 +46,10 @@ export default function HeroSlider({ slides }: { slides?: HeroSlide[] }) {
       const pct = Math.min((elapsed / duration) * 100, 100);
       setProgress(pct);
     }, 50);
-    return () => clearInterval(interval);
+    return () => {
+      cancelAnimationFrame(raf);
+      clearInterval(interval);
+    };
   }, [current, isPaused]);
 
   const slide = slideList[current] || slideList[0];

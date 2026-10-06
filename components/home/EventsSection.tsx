@@ -28,7 +28,7 @@ const DEFAULT_EVENTS: EventItem[] = [
     date: "November 15, 2026",
     time: "10:00 AM - 4:00 PM",
     location: "Nawab Town Sports Grounds, Lahore",
-    image: "/gallery/24.jpg",
+    image: "/gallery/opt/24.webp",
     description: "A joyful day of athletics, cricket tournaments, races, and awards celebrating our children's physical stamina and teamwork.",
   },
   {
@@ -36,7 +36,7 @@ const DEFAULT_EVENTS: EventItem[] = [
     date: "October 28, 2026",
     time: "9:00 AM - 2:00 PM",
     location: "Baqiatullah Healthcare Wing, Lahore",
-    image: "/gallery/10.jpg",
+    image: "/gallery/opt/10.webp",
     description: "Volunteer physicians and pediatric dentists conducting thorough preventative screenings, eye tests, and hygiene workshops.",
   },
   {
@@ -44,7 +44,7 @@ const DEFAULT_EVENTS: EventItem[] = [
     date: "December 05, 2026",
     time: "11:00 AM - 3:00 PM",
     location: "IT & Computer Resource Lab",
-    image: "/gallery/49.jpg",
+    image: "/gallery/opt/49.webp",
     description: "Senior students demonstrating digital portfolios, basic software programming, and typing speed competitions.",
   },
 ];

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowRight, Calendar, User } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
@@ -19,7 +18,7 @@ export default function FeaturedRelief() {
           {/* Image */}
           <div className="lg:col-span-5 relative h-64 sm:h-80 w-full rounded-2xl overflow-hidden shadow-inner">
             <Image
-              src="/gallery/88.jpeg"
+              src="/gallery/opt/88.webp"
               alt="Flood Relief Campaign Jhang"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"

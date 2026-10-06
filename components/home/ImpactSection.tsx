@@ -21,25 +21,25 @@ const DEFAULT_METRICS: ImpactMetric[] = [
     value: "250+",
     label: "Orphaned Children Supported",
     description: "Full-time residential sanctuary, medical care, and family love in Lahore.",
-    image: "/gallery/20.jpg",
+    image: "/gallery/opt/20.webp",
   },
   {
     value: "100k+",
     label: "Nutritious Meals Served",
     description: "Three warm, protein-rich prepared meals delivered every single day.",
-    image: "/gallery/16.jpg",
+    image: "/gallery/opt/16.webp",
   },
   {
     value: "50+",
     label: "Academic Scholarships",
     description: "Tuition, uniforms, and textbooks funding primary through college education.",
-    image: "/gallery/2.jpg",
+    image: "/gallery/opt/2.webp",
   },
   {
     value: "85+",
     label: "Dedicated Field Volunteers",
     description: "Compassionate caregivers, teachers, and emergency relief responders.",
-    image: "/gallery/30.jpg",
+    image: "/gallery/opt/30.webp",
   },
 ];
 

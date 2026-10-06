@@ -21,6 +21,11 @@ export default function SectionHeader({
 
   return (
     <div className={`mb-12 md:mb-16 ${isCenter ? "text-center max-w-3xl mx-auto" : "max-w-2xl"} ${className}`}>
+      {eyebrow && (
+        <span className="inline-block text-xs font-bold tracking-wider uppercase text-primary mb-2">
+          {eyebrow}
+        </span>
+      )}
       <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-950 leading-[1.15] mb-4">
         {title}{" "}
         {highlight && <span className="text-primary">{highlight}</span>}

@@ -57,7 +57,7 @@ export default function HeroProgressRail({
                       isActive ? "text-primary" : "text-gray-500"
                     }`}
                   >
-                    0{idx + 1} //
+                    0{idx + 1} {"//"}
                   </span>
 
                   {/* Micro Visualizer Equalizer on Active Slide */}

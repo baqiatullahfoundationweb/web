@@ -7,7 +7,6 @@ import {
   BookOpen,
   Home,
   Stethoscope,
-  Sparkles,
 } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 

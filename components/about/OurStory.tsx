@@ -34,7 +34,7 @@ export default function OurStory({
         {/* Story Photo */}
         <div className="lg:col-span-5 relative h-80 sm:h-96 w-full rounded-3xl overflow-hidden shadow-xl border-2 border-white ring-1 ring-primary/20">
           <Image
-            src="/gallery/89.jpg"
+            src="/gallery/opt/89.webp"
             alt="Baqiatullah Foundation children and caregivers"
             fill
             sizes="(max-width: 1024px) 100vw, 42vw"

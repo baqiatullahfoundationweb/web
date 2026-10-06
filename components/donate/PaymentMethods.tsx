@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import {
   Building2,
   ShieldCheck,
@@ -10,13 +9,7 @@ import {
   ArrowRight,
   Globe2,
   FileCheck,
-  Clock,
   Sparkles,
-  HeartHandshake,
-  QrCode,
-  Share2,
-  HelpCircle,
-  LucideIcon,
   Zap,
 } from "lucide-react";
 import CopyButton from "@/components/ui/CopyButton";
@@ -228,7 +221,7 @@ export default function PaymentMethods({
               <div>
                 <div className="flex items-center gap-2">
                   <h3 className="text-xl sm:text-2xl font-black text-gray-950">
-                    {bankName}
+                    {bankTitle || bankName}
                   </h3>
                   <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-emerald-100 text-emerald-800 border border-emerald-300">
                     {isUrdu ? "مصدقہ این جی او" : "Verified Non-Profit"}

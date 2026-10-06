@@ -26,7 +26,7 @@ export default function CtaBanner({
       <div className="relative overflow-hidden rounded-3xl p-8 sm:p-16 text-center shadow-2xl border border-white/15 text-white">
         {/* Real panoramic background photograph */}
         <Image
-          src="/gallery/89.jpg"
+          src="/gallery/opt/89.webp"
           alt="Baqiatullah Foundation children and caregivers"
           fill
           className="object-cover"

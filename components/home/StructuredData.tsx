@@ -21,7 +21,7 @@ export default function StructuredData({ lang }: StructuredDataProps) {
         alternateName: ["Baqiatullah Orphanage Lahore", "بقیۃ اللہ فاؤنڈیشن", "Baqiatullah Child Welfare"],
         url: baseUrl,
         logo: `${baseUrl}/logo/emblem.png`,
-        image: `${baseUrl}/gallery/89.jpg`,
+        image: `${baseUrl}/gallery/opt/89.webp`,
         description: isUrdu
           ? "لاہور، پاکستان میں یتیم بچوں کی رہائش، معیاری انگلش اسکولنگ، مفت طبی نگہداشت اور سیلاب ریلیف کے لیے وقف رجسٹرڈ فلاحی این جی او۔"
           : "Accredited non-profit NGO and orphan welfare organization in Lahore, Pakistan providing 24/7 residential home care, accredited schooling, nutritious food, and emergency relief.",
@@ -115,7 +115,7 @@ export default function StructuredData({ lang }: StructuredDataProps) {
             addressCountry: "PK",
           },
         },
-        image: [`${baseUrl}/gallery/24.jpg`],
+        image: [`${baseUrl}/gallery/opt/24.webp`],
         organizer: { "@id": `${baseUrl}/#organization` },
       },
       {
@@ -136,7 +136,7 @@ export default function StructuredData({ lang }: StructuredDataProps) {
             addressCountry: "PK",
           },
         },
-        image: [`${baseUrl}/gallery/10.jpg`],
+        image: [`${baseUrl}/gallery/opt/10.webp`],
         organizer: { "@id": `${baseUrl}/#organization` },
       },
     ],

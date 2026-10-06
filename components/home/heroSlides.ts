@@ -34,7 +34,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Zakat Eligible Child Sponsorship Pakistan - Orphaned children learning digital computer literacy skills in Lahore",
   },
   {
-    image: "/gallery/12.jpg",
+    image: "/gallery/opt/12.webp",
     badge: "ACCREDITED EDUCATION",
     title: "EDUCATION SPONSORSHIP —— NGO IN LAHORE",
     subtitle: "Accredited English-medium curriculum, school fees, uniforms, and textbooks empowering future leaders.",
@@ -45,7 +45,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Registered NGO in Lahore providing accredited English-medium school education to orphaned children",
   },
   {
-    image: "/gallery/75.jpg",
+    image: "/gallery/opt/75.webp",
     badge: "EMERGENCY RELIEF",
     title: "HUMANITARIAN FLOOD RELIEF —— EMERGENCY RESPONSE",
     subtitle: "Clean drinking water, emergency food rations, and medical aid kits for crisis-affected vulnerable families.",
@@ -56,7 +56,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Humanitarian emergency flood relief in Pakistan - Baqiatullah Foundation disaster management team distributing aid",
   },
   {
-    image: "/gallery/34.jpg",
+    image: "/gallery/opt/34.webp",
     badge: "RECREATION & SPORTS",
     title: "LOVING RESIDENTIAL HOME —— FAMILY SANCTUARY",
     subtitle: "Physical sports tournaments, seasonal celebrations, and warm maternal care creating real family bonds.",
@@ -67,7 +67,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Orphan children at Baqiatullah Foundation sanctuary playing recreational outdoor sports in Lahore",
   },
   {
-    image: "/gallery/62.jpg",
+    image: "/gallery/opt/62.webp",
     badge: "FRESH NUTRITION",
     title: "WHOLESOME MEALS FUND —— FEED ORPHANS PAKISTAN",
     subtitle: "Daily warm, balanced, high-protein meals and fresh milk keeping growing minds and bodies healthy.",
@@ -78,7 +78,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Nutritious daily meals prepared for orphan children at Baqiatullah Foundation residential home Lahore",
   },
   {
-    image: "/gallery/16.jpg",
+    image: "/gallery/opt/16.webp",
     badge: "SCIENCE & INNOVATION",
     title: "SCIENCE & COMPUTER LAB —— VOCATIONAL EMPOWERMENT",
     subtitle: "Hands-on chemistry, physics, and STEM experiments sparking lifelong curiosity and academic distinction.",
@@ -89,7 +89,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Science and practical technology learning lab for orphan students at Baqiatullah Foundation Pakistan",
   },
   {
-    image: "/gallery/2.jpg",
+    image: "/gallery/opt/2.webp",
     badge: "HIGHER EDUCATION",
     title: "COLLEGE SCHOLARSHIP FUND —— BREAKING POVERTY",
     subtitle: "Higher university degree scholarships and vocational diplomas ensuring graduates build independent careers.",
@@ -100,7 +100,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Higher education college and university scholarship recipients from Baqiatullah Foundation Pakistan",
   },
   {
-    image: "/gallery/30.jpg",
+    image: "/gallery/opt/30.webp",
     badge: "COMMUNITY SERVICE",
     title: "REGISTERED CHARITY IN PAKISTAN —— VOLUNTEER NETWORK",
     subtitle: "Licensed doctors, visiting teachers, and mentors dedicating hundreds of service hours each month.",
@@ -111,7 +111,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Volunteer educators and medical doctors serving orphan children at registered non-profit Baqiatullah Foundation",
   },
   {
-    image: "/gallery/54.jpg",
+    image: "/gallery/opt/54.webp",
     badge: "ARTS & CULTURE",
     title: "CREATIVE CALLIGRAPHY & ARTS —— MENTAL WELLBEING",
     subtitle: "Art workshops, expressive calligraphy, and cultural festivals fostering emotional healing and confidence.",
@@ -122,7 +122,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Children learning creative arts and traditional calligraphy at Baqiatullah Foundation Lahore orphanage",
   },
   {
-    image: "/gallery/88.jpeg",
+    image: "/gallery/opt/88.webp",
     badge: "CLEAN DRINKING WATER",
     title: "WASH & WATER FILTRATION —— SADAQAH JARIYAH",
     subtitle: "Solar-powered clean drinking water filtration plants installed in remote and drought-impacted communities.",
@@ -133,7 +133,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Clean water filtration plant installed by Baqiatullah Foundation Pakistan providing safe drinking water",
   },
   {
-    image: "/gallery/41.jpg",
+    image: "/gallery/opt/41.webp",
     badge: "CHARACTER & ETHICS",
     title: "MORAL NURTURING & VALUES —— HOLISTIC ORPHAN CARE",
     subtitle: "Compassionate mentoring cultivating integrity, honesty, empathy, and social responsibility in every child.",

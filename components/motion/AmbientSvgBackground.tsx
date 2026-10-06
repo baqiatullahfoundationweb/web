@@ -33,7 +33,7 @@ export default function AmbientSvgBackground() {
         style={{ transform: `translate3d(0, ${scrollY * 0.12}px, 0)` }}
       >
         <Image
-          src="/gallery/75.jpg"
+          src="/gallery/opt/75.webp"
           alt=""
           fill
           className="object-cover rounded-3xl filter brightness-90 contrast-120 saturate-125"
@@ -46,7 +46,7 @@ export default function AmbientSvgBackground() {
         style={{ transform: `translate3d(0, ${-scrollY * 0.08}px, 0)` }}
       >
         <Image
-          src="/gallery/89.jpg"
+          src="/gallery/opt/89.webp"
           alt=""
           fill
           className="object-cover rounded-3xl filter brightness-90 contrast-120 saturate-125"
@@ -59,7 +59,7 @@ export default function AmbientSvgBackground() {
         style={{ transform: `translate3d(0, ${scrollY * 0.06}px, 0)` }}
       >
         <Image
-          src="/gallery/20.jpg"
+          src="/gallery/opt/20.webp"
           alt=""
           fill
           className="object-cover rounded-3xl filter brightness-90 contrast-120 saturate-125"
