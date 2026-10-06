@@ -44,13 +44,13 @@ export default function OngoingProjects({
         subtitle={subtitle}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {items.map((item, idx) => {
           const Icon = DEFAULT_ICONS[idx % DEFAULT_ICONS.length];
           return (
             <div key={idx} className="bg-white/95 backdrop-blur-md rounded-3xl overflow-hidden flex flex-col justify-between border border-primary/20 shadow-xl hover:shadow-2xl transition-all">
               <div>
-                <div className="relative h-52 w-full overflow-hidden bg-slate-200">
+                <div className="relative h-48 w-full overflow-hidden bg-slate-200">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -58,7 +58,7 @@ export default function OngoingProjects({
                     loading="lazy"
                     decoding="async"
                     className="object-cover hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   <div className="absolute top-3.5 right-3.5 px-3 py-1 rounded-full text-xs font-bold bg-[#008B8B] text-white shadow-md">
                     {item.status}
@@ -70,20 +70,7 @@ export default function OngoingProjects({
 
                 <div className="p-6">
                   <h3 className="text-xl font-extrabold text-gray-950 mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-700 leading-relaxed mb-6 font-normal">{item.desc}</p>
-
-                  <div className="space-y-1.5 mb-2">
-                    <div className="flex justify-between text-xs font-bold">
-                      <span className="text-gray-600">{fundedLabel}</span>
-                      <span className="text-[#008B8B] font-mono">{item.progress}%</span>
-                    </div>
-                    <div className="w-full h-2.5 rounded-full bg-gray-200 overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-[#008B8B] to-[#FFBF00] rounded-full transition-all duration-1000"
-                        style={{ width: `${item.progress}%` }}
-                      />
-                    </div>
-                  </div>
+                  <p className="text-sm text-gray-700 leading-relaxed mb-4 font-normal">{item.desc}</p>
                 </div>
               </div>
 

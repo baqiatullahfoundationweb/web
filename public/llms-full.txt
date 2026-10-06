@@ -19,27 +19,47 @@ In addition to its residential care sanctuary, Baqiatullah Foundation maintains 
 
 ---
 
-## 2. Core Pillars & Operational Wings
+## 2. Projects of Baqiatullah Foundation (8 Official Welfare Projects)
 
-### A. 24/7 Residential Care & Shelter
-- **Capacity**: Over 250 resident boys and girls.
-- **Facilities**: Well-ventilated dormitories, dedicated study halls, recreational sports courtyards, 24/7 uninterrupted solar-powered electricity, and climate-controlled living spaces.
-- **Nutrition**: Three daily hot, balanced meals prepared under strict culinary hygiene standards, accompanied by fresh milk, seasonal fruits, and dietary supplements.
+### 1. Education
+- **Mandate**: 100% of children aged 5+ are enrolled in accredited private English-medium partner schools.
+- **Coverage**: Comprehensive school fees, syllabus textbooks, notebooks, stationery, exam registration fees, and after-school academic coaching.
+- **Goal**: Full pathway from Nursery up to higher secondary and university degree graduation.
 
-### B. Formal Education & Modern IT Literacy
-- **Curriculum**: 100% of children aged 5+ are enrolled in accredited private English-medium partner schools.
-- **Computer Lab**: Onsite digital learning laboratory equipped with 35+ networked workstations offering coding (Python, HTML/CSS), graphic design, typing proficiency, and academic tutoring.
-- **Co-Curriculars**: Quranic recitation with Tajweed, ethical character building (Tarbiyah), martial arts, cricket, and science exhibitions.
+### 2. Digital Education
+- **Mandate**: 21st-century vocational computing and technical literacy.
+- **Facilities**: Onsite computer laboratory equipped with 35+ high-speed desktop workstations with dedicated fiber-optic internet.
+- **Curriculum**: Touch typing mastery, computer fundamentals, programming basics (Python, HTML/CSS), graphic design, and supervised internet research.
 
-### C. Pediatric Healthcare & Psychological Wellness
-- **Preventative Health**: Quarterly health screenings, dental checkups, routine immunization, and nutritional monitoring.
-- **Emergency Care**: On-call pediatrician and full medical hospitalization coverage for all resident children.
-- **Mental Well-being**: Trained counselors provide gentle trauma therapy and grief support to help children process loss and flourish with dignity.
+### 3. Orphan Support
+- **Mandate**: 100% Zakat-eligible individual child sponsorship program.
+- **Model**: Monthly sponsorship of PKR 12,000 / child (~$42–$45 USD) covering living stipends, school tuition, books, clothing, and moral Tarbiyah mentoring.
+- **Impact**: Provides long-term security, dignity, and self-reliance to children who have lost parental breadwinners.
 
-### D. Emergency Flood Relief & Humanitarian Aid
-- **Jhang Flood Relief**: Distributed food rations, potable water canisters, water purification tablets, and medical supplies to over 300 vulnerable families across 15 remote villages.
-- **Winter Warmth Drives**: Distribution of thermal blankets, winter jackets, and socks to impoverished communities.
-- **WASH & Clean Water**: Installation of deep-well water filtration handpumps in arid districts.
+### 4. Food and Ration
+- **Mandate**: Nutritional excellence and food security for 250+ resident children and crisis-affected families.
+- **Sanctuary Schedule**: Three daily hot, balanced meals prepared under strict hygiene standards plus scheduled fresh dairy milk (breakfast, lunch, dinner).
+- **Outreach**: Monthly dry food ration parcels (flour, pulses, rice, cooking oil, tea, sugar) distributed to impoverished widow-led households.
+
+### 5. Clothing
+- **Mandate**: Preserving self-esteem and physical comfort through complete wardrobes.
+- **Coverage**: 4 seasonal clothing pairs annually per child, tailored English school uniforms, formal shoes, sandals, and festive Eid apparel.
+- **Winter Warmth**: Heavy winter jackets, sweaters, thermal socks, and warm shawls provided before cold season sets in.
+
+### 6. Orphan Care
+- **Mandate**: Comprehensive 24/7 loving residential guardianship at our Nawab Town sanctuary in Lahore.
+- **Facilities**: Hygienic, airy dormitories with private bed spaces, study halls, solar-power backup ensuring zero loadshedding, clean laundry, and 24/7 security.
+- **Maternal Guidance**: Dedicated resident caregivers providing emotional warmth, moral Tarbiyah, and psychological counseling.
+
+### 7. Disaster Management
+- **Mandate**: Rapid humanitarian response during natural disasters, floods, and emergencies.
+- **Field Deployments**: Dispatched over 300 emergency relief packs containing food bags, clean water filtration units, and medical trauma kits to flood-affected villages in Jhang and South Punjab.
+- **WASH Systems**: Installation of deep clean water handpumps and solar water purification units in vulnerable rural districts.
+
+### 8. Healthcare
+- **Mandate**: Complete preventative, routine, and emergency medical protection.
+- **Screenings**: Quarterly pediatric health checkups, dental hygiene camps, eye vision tests, and standard vaccination schedules.
+- **Treatment**: On-call doctors, emergency hospitalization coverage, and 100% free prescription medicines for resident children and needy community members.
 
 ---
 

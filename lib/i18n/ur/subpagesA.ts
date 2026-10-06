@@ -43,15 +43,20 @@ export const urAboutPage: AboutPageData = {
 
 export const urProjectsPage: ProjectsPageData = {
   ongoing: {
-    title: "زیر تکمیل فلاحی اور",
-    highlight: "تعلیمی منصوبے",
-    subtitle: "بچوں کی کفالت اور سہولیات کی فراہمی کے جاری منصوبوں کی شفاف کارکردگی۔",
+    title: "بنیادی فلاحی اور",
+    highlight: "ترقیاتی منصوبے",
+    subtitle: "یتیم بچوں کی تعلیم، کفالت، خوراک، لباس، رہائش اور علاج کے 8 سرگرم ادارے جاتی منصوبے۔",
     fundedLabel: "فنڈز / تکمیل",
     supportBtn: "اس منصوبے کا تعاون کریں",
     items: [
-      { title: "تعلیمی فروغ و اسکول فیس فنڈ", desc: "ہر بچے کی انفرادی کوچنگ، انگلش میڈیم اسکول فیس، یونیفارم اور کتب کی فراہمی۔", image: "/projects/education-hd.webp", progress: 75, status: "فعال مرحلہ دوم" },
-      { title: "صحت و غذائیت کلینکل پروگرام", desc: "250 سے زائد بچوں کے لیے روزانہ تین وقت کا تازہ کھانا، طبی معائنہ اور ادویات کی ترسیل۔", image: "/projects/health-hd.webp", progress: 90, status: "مستقل فعال" },
-      { title: "صاف پینے کا پانی (WASH) مہم", desc: "پسماندہ بستیوں میں سولر واٹر فلٹریشن پلانٹس اور پینے کے صاف پانی کی فراہمی۔", image: "/projects/wash-hd.webp", progress: 65, status: "فعال مرحلہ اول" },
+      { title: "1. تعلیم و تربیت", desc: "پرائیویٹ انگلش میڈیم اسکولنگ، کتب، یونیفارم اور اسکول فیس کی 100٪ فراہمی۔", image: "/projects/education-hd.webp", progress: 85, status: "مستقل فعال" },
+      { title: "2. ڈیجیٹل تعلیم", desc: "جدید کمپیوٹر لیب، 35+ ورک اسٹیشنز، پروگرامنگ، ٹائپنگ اور گرافک ڈیزائننگ۔", image: "/gallery/opt/49.webp", progress: 90, status: "فعال مرحلہ دوم" },
+      { title: "3. یتیم بچوں کی کفالت", desc: "100٪ زکوٰۃ کے مستحق بچوں کے لیے ماہانہ وظائف، کتب، اور سرپرستی۔", image: "/gallery/opt/20.webp", progress: 78, status: "مستقل فعال" },
+      { title: "4. خوراک اور راشن", desc: "روزانہ 3 وقت تازہ کھانا، خالص دودھ اور مستحق خاندانوں کے لیے خشک راشن بیگز۔", image: "/gallery/opt/16.webp", progress: 95, status: "روزانہ جاری" },
+      { title: "5. لباس اور ملبوسات", desc: "چاروں موسموں کے جوڑے، اسکول یونیفارم، عید کے نئے ملبوسات اور گرم کپڑے۔", image: "/gallery/opt/2.webp", progress: 80, status: "موسمی مہم" },
+      { title: "6. یتیم بچوں کی نگہداشت", desc: "لاہور میں 250+ بچوں کے لیے 24 گھنٹے محفوظ اقامتی مرکز مع سولر پاور اور نگہبان۔", image: "/gallery/opt/89.webp", progress: 92, status: "24/7 فعال" },
+      { title: "7. آفات کا انتظام", desc: "سیلاب اور قدرتی آفات کے دوران ہنگامی راشن، واٹر فلٹریشن کٹس اور خیمے۔", image: "/projects/disaster-hd.webp", progress: 70, status: "ہنگامی مہم" },
+      { title: "8. طبی نگہداشت", desc: "سہ ماہی پیڈیاٹرک کیمپس، دانتوں کا معائنہ، 24 گھنٹے ایمرجنسی علاج اور مفت ادویات۔", image: "/projects/health-hd.webp", progress: 88, status: "مستقل فعال" },
     ],
   },
   completed: {

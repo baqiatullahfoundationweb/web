@@ -27,6 +27,16 @@ export default function StructuredData({ lang }: StructuredDataProps) {
           : "Accredited non-profit NGO and orphan welfare organization in Lahore, Pakistan providing 24/7 residential home care, accredited schooling, nutritious food, and emergency relief.",
         foundingDate: "2016",
         taxID: "PB-LHR-2016-8921",
+        knowsAbout: [
+          "Education (Accredited Schooling)",
+          "Digital Education (Computer & Coding Lab)",
+          "Orphan Support (Zakat Sponsorship)",
+          "Food and Ration (Daily Meals & Food Drives)",
+          "Clothing (Seasonal & School Uniforms)",
+          "Orphan Care (24/7 Residential Sanctuary)",
+          "Disaster Management (Emergency Flood Relief)",
+          "Healthcare (Free Medical Clinic & Camps)",
+        ],
         address: {
           "@type": "PostalAddress",
           streetAddress: "House No. 123/A Block, Nawab Town, Raiwind Road",

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { getDictionary } from "@/lib/i18n";
+import { SocialIcon } from "./SocialIcons";
 
 /**
  * =========================================================================================================
@@ -38,11 +39,11 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { name: "Facebook", href: "https://www.facebook.com/baqiatullahfoundationofficial", icon: "FB" },
-    { name: "Instagram", href: "https://www.instagram.com/baqiatullahfoundation", icon: "IG" },
-    { name: "LinkedIn", href: "https://www.linkedin.com/company/baqiatullahfoundation/?originalSubdomain=pk", icon: "IN" },
-    { name: "YouTube", href: "https://youtube.com/@baqiatullahfoundation", icon: "YT" },
-    { name: "TikTok", href: "https://www.tiktok.com/@baqiatullahfoundation", icon: "TT" },
+    { name: "Facebook", href: "https://www.facebook.com/baqiatullahfoundationofficial" },
+    { name: "Instagram", href: "https://www.instagram.com/baqiatullahfoundation" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/baqiatullahfoundation/?originalSubdomain=pk" },
+    { name: "YouTube", href: "https://youtube.com/@baqiatullahfoundation" },
+    { name: "TikTok", href: "https://www.tiktok.com/@baqiatullahfoundation" },
   ];
 
   return (
@@ -79,18 +80,18 @@ export default function Footer() {
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
               <span>{isUrdu ? "رجسٹرڈ این جی او: پنجاب چیریٹی کمیشن PB-LHR-2016-8921" : "Govt Reg: Punjab Charity Commission PB-LHR-2016-8921"}</span>
             </div>
-            <div className="flex items-center gap-2 pt-1">
+            <div className="flex items-center gap-2.5 pt-1">
               {socialLinks.map((s) => (
                 <a
                   key={s.name}
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-teal-900 border border-teal-950 text-white hover:bg-primary transition-colors flex items-center justify-center text-xs font-black shadow-xs"
+                  className="w-9 h-9 rounded-xl bg-teal-900 border border-teal-950 text-white hover:bg-primary hover:scale-105 active:scale-95 transition-all duration-200 flex items-center justify-center shadow-xs"
                   aria-label={s.name}
                   title={s.name}
                 >
-                  <span aria-hidden="true">{s.icon}</span>
+                  <SocialIcon name={s.name} className="w-4 h-4" />
                   <span className="sr-only">{s.name}</span>
                 </a>
               ))}

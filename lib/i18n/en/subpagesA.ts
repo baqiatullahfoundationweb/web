@@ -43,15 +43,20 @@ export const enAboutPage: AboutPageData = {
 
 export const enProjectsPage: ProjectsPageData = {
   ongoing: {
-    title: "Current Programs Transforming",
+    title: "Flagship Programs Transforming",
     highlight: "Young Lives",
-    subtitle: "Transparent progress tracking on key welfare and educational programs active today.",
+    subtitle: "Active welfare initiatives delivering daily education, nourishment, shelter, and medical care.",
     fundedLabel: "Funded / Completed",
     supportBtn: "Support This Program",
     items: [
-      { title: "Education Excellence Program", desc: "Providing customized tutoring, English proficiency, and school fees to ensure academic potential.", image: "/projects/education-hd.webp", progress: 75, status: "Active Phase II" },
-      { title: "Health Services & Nutrition Initiative", desc: "Supplying balanced, high-protein daily meals alongside pediatric examinations and clinic care.", image: "/projects/health-hd.webp", progress: 90, status: "Active Ongoing" },
-      { title: "Clean Water (WASH) Program", desc: "Installing solar-powered clean drinking water filtration plants and sanitation facilities.", image: "/projects/wash-hd.webp", progress: 65, status: "Active Phase I" },
+      { title: "1. Education", desc: "Private English-medium schooling, syllabus books, uniforms, and academic tutoring for 250+ orphans.", image: "/projects/education-hd.webp", progress: 85, status: "Active Ongoing" },
+      { title: "2. Digital Education", desc: "Equipped modern IT laboratory with 35+ workstations providing coding, graphic design, and typing.", image: "/gallery/opt/49.webp", progress: 90, status: "Active Phase II" },
+      { title: "3. Orphan Support", desc: "100% Zakat-eligible child sponsorship providing monthly living allowances, stationery, and mentorship.", image: "/gallery/opt/20.webp", progress: 78, status: "Active Ongoing" },
+      { title: "4. Food and Ration", desc: "3 daily wholesome protein-rich hot meals, fresh milk schedule, and emergency food relief packages.", image: "/gallery/opt/16.webp", progress: 95, status: "Active Daily" },
+      { title: "5. Clothing", desc: "Seasonal wardrobes, tailored school uniforms, winter coats, festive Eid apparel, and sturdy shoes.", image: "/gallery/opt/2.webp", progress: 80, status: "Active Seasonal" },
+      { title: "6. Orphan Care", desc: "24/7 loving residential sanctuary in Lahore with maternal care, hygienic dorms, and solar power backup.", image: "/gallery/opt/89.webp", progress: 92, status: "Active 24/7" },
+      { title: "7. Disaster Management", desc: "Rapid disaster relief supplying dry rations, water filtration kits, and medical aid to crisis zones.", image: "/projects/disaster-hd.webp", progress: 70, status: "Active Phase I" },
+      { title: "8. Healthcare", desc: "Quarterly pediatric checkups, dental screening camps, 24/7 emergency medical coverage, and medicines.", image: "/projects/health-hd.webp", progress: 88, status: "Active Ongoing" },
     ],
   },
   completed: {
