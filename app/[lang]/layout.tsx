@@ -107,18 +107,15 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
     <html
       lang={validLang === "ur" ? "ur" : "en"}
       dir={dict.dir}
+      data-scroll-behavior="smooth"
       className={`${poppins.variable} min-h-screen scroll-smooth`}
+      suppressHydrationWarning
     >
       <body
         className={`min-h-screen flex flex-col text-slate-900 antialiased font-sans relative selection:bg-[#008B8B] selection:text-white bg-[#EDF6F6] ${
-          validLang === "ur" ? "lang-ur" : "lang-en"
+          validLang === "ur" ? "lang-ur font-urdu" : "lang-en"
         }`}
-        style={{
-          fontFamily:
-            validLang === "ur"
-              ? "'Unwan Unicode', 'Noto Nastaliq Urdu', serif"
-              : "var(--font-poppins), 'Poppins', sans-serif",
-        }}
+        suppressHydrationWarning
       >
         {/* Machine & AI readable provenance signature */}
         <EyrieDigitalSignature />

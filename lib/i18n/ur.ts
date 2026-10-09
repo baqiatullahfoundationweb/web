@@ -51,7 +51,7 @@ export const urDictionary: Dictionary = {
         ctaSecondaryHref: "/ur/projects",
       },
       {
-        image: "/projects/disaster-hd.webp",
+        image: "/projects/disaster-relief.png",
         badge: "ہنگامی ریلیف و کمیونٹی خدمات",
         title: "سیلاب متاثرہ اور پسماندہ خاندانوں کے لیے امید کی کرن",
         subtitle: "جھنگ اور دور دراز بحرانی علاقوں میں 300 سے زائد خاندانوں تک راشن، صاف پانی اور ادویات کی ترسیل۔",
@@ -88,9 +88,9 @@ export const urDictionary: Dictionary = {
     subtitle: "ہر عدد کے پیچھے ایک بچے کی مسکراہٹ ہے جسے بے آسرا پن اور بھوک سے تحفظ ملا۔",
     metrics: [
       { value: "250+", label: "یتیم بچوں کی مستقل کفالت", description: "لاہور سینکچوئری میں مکمل رہائش، محبت بھرا گھریلو ماحول اور طبی نگہداشت۔", image: "/gallery/opt/89.webp" },
-      { value: "100k+", label: "صحت بخش کھانے تقسیم", description: "روزانہ تین وقت تازہ، غذائیت سے بھرپور متوازن خوراک کی فراہمی۔", image: "/gallery/opt/16.webp" },
-      { value: "50+", label: "اعلیٰ تعلیمی وظائف", description: "اسکول فیس، یونیفارم، درسی کتب اور کالج تک مکمل تدریسی معاونت۔", image: "/gallery/opt/14.webp" },
-      { value: "85+", label: "مخلص میدانی رضاکار", description: "طبی ماہرین، اساتذہ اور ہنگامی ریلیف کے شعبے میں سرگرم خدمت گزار۔", image: "/gallery/opt/30.webp" },
+      { value: "100k+", label: "صحت مند اور غذائیت سے بھرپور کھانے تقسیم", description: "روزانہ تین وقت تازہ، غذائیت سے بھرپور متوازن خوراک کی فراہمی۔", image: "/gallery/opt/meal.webp" },
+      { value: "50+", label: "اعلیٰ تعلیمی وظائف", description: "اسکول فیس، یونیفارم، درسی کتب اور کالج تک مکمل تدریسی معاونت۔", image: "/gallery/opt/academic.png" },
+      { value: "85+", label: "مخلص میدانی رضاکار", description: "طبی ماہرین، اساتذہ اور ہنگامی ریلیف کے شعبے میں سرگرم خدمت گزار۔", image: "/gallery/opt/field.png" },
     ],
   },
   about: {
@@ -114,9 +114,9 @@ export const urDictionary: Dictionary = {
     donateBtn: "ابھی عطیہ دیں",
     detailsBtn: "تفصیلات",
     items: [
-      { title: "سیلاب ریلیف مہم ضلع جھنگ", category: "ہنگامی آفت", image: "/projects/disaster-hd.webp", raised: "2,870,000 روپے", goal: "3,500,000 روپے", percent: 82, description: "300 بے گھر خاندانوں تک راشن بیگ، واٹر فلٹریشن کٹس اور فوری ادویات کی ترسیل۔" },
-      { title: "صحت اور روزانہ غذائیت کلینکل فنڈ", category: "طبی نگہداشت و خوراک", image: "/projects/health-hd.webp", raised: "1,360,000 روپے", goal: "2,000,000 روپے", percent: 68, description: "250 سے زائد رہائشی بچوں کے لیے تین وقت کا تازہ کھانا، طبی معائنہ اور ادویات کی فراہمی۔" },
-      { title: "ڈیجیٹل کمپیوٹر لیب و اسکول فیس فنڈ", category: "تعلیم و ترقی", image: "/projects/education-hd.webp", raised: "1,330,000 روپے", goal: "1,800,000 روپے", percent: 74, description: "کمپیوٹر لیب کی اپ گریڈیشن، کوڈنگ اساتذہ، اسکول فیس اور درسی کتب کی معاونت۔" },
+      { title: "سیلاب ریلیف مہم ضلع جھنگ", category: "ہنگامی آفت", image: "/gallery/opt/flood.png", raised: "2,870,000 روپے", goal: "3,500,000 روپے", percent: 82, description: "300 بے گھر خاندانوں تک راشن بیگ، واٹر فلٹریشن کٹس اور فوری ادویات کی ترسیل۔" },
+      { title: "صحت اور روزانہ غذائیت کلینکل فنڈ", category: "طبی نگہداشت و خوراک", image: "/gallery/opt/service.png", raised: "1,360,000 روپے", goal: "2,000,000 روپے", percent: 68, description: "250 سے زائد رہائشی بچوں کے لیے تین وقت کا تازہ کھانا، طبی معائنہ اور ادویات کی فراہمی۔" },
+      { title: "ڈیجیٹل کمپیوٹر لیب و اسکول فیس فنڈ", category: "تعلیم و ترقی", image: "/gallery/opt/digital.png", raised: "1,330,000 روپے", goal: "1,800,000 روپے", percent: 74, description: "کمپیوٹر لیب کی اپ گریڈیشن، کوڈنگ اساتذہ، اسکول فیس اور درسی کتب کی معاونت۔" },
     ],
   },
   volunteers: {
@@ -140,7 +140,7 @@ export const urDictionary: Dictionary = {
     attendBtn: "شرکت کی معلومات",
     items: [
       { title: "سالانہ اسپورٹس و آؤٹ ڈور فیسٹیول", date: "15 نومبر 2026", time: "صبح 10:00 تا شام 4:00", location: "نواب ٹاؤن اسپورٹس گراؤنڈز، لاہور", image: "/gallery/opt/24.webp", description: "بچوں کی جسمانی صحت اور ٹیم ورک کا جشن، کرکٹ میچز اور انعامات کی تقسیم۔" },
-      { title: "جامع پیڈیاٹرک میڈیکل و ڈینٹل کیمپ", date: "28 اکتوبر 2026", time: "صبح 9:00 تا دوپہر 2:00", location: "بقیۃ اللہ ہیلتھ کیئر ونگ، لاہور", image: "/gallery/opt/10.webp", description: "ماہر اطباء کے ذریعے بچوں کا تفصیلی معائنہ، آنکھوں کا ٹیسٹ اور حفظان صحت کی تربیت۔" },
+      { title: "جامع پیڈیاٹرک میڈیکل و ڈینٹل کیمپ", date: "28 اکتوبر 2026", time: "صبح 9:00 تا دوپہر 2:00", location: "بقیۃ اللہ ہیلتھ کیئر ونگ، لاہور", image: "/projects/healthcare-screening.png", description: "ماہر اطباء کے ذریعے بچوں کا تفصیلی معائنہ، آنکھوں کا ٹیسٹ اور حفظان صحت کی تربیت۔" },
       { title: "ڈیجیٹل کمپیوٹر و ویب کوڈنگ ورکشاپ", date: "05 دسمبر 2026", time: "صبح 11:00 تا سہ پہر 3:00", location: "آئی ٹی ریسورس لیب", image: "/gallery/opt/36.webp", description: "سینئر طلبہ کی جانب سے تیار کردہ کمپیوٹر پراجیکٹس اور ٹائپنگ مقابلوں کی نمائش۔" },
     ],
   },
@@ -149,7 +149,7 @@ export const urDictionary: Dictionary = {
     highlight: "مختلف اور آسان طریقے",
     subtitle: "خواہ مالی کفالت ہو، ہنر کی تدریس ہو یا کھانا تقسیم کرنا — ہر نیکی ایک روشن مستقبل تخلیق کرتی ہے۔",
     pathways: [
-      { title: "ماہانہ یتیم بچے کی کفالت", description: "12,000 روپے ماہانہ میں رہائش، اسکول، صحت اور لباس کی مکمل فراہمی۔", image: "/gallery/opt/89.webp", actionText: "ابھی کفالت کریں", href: "/ur/donate", badge: "براہ راست خدمت" },
+      { title: "ماہانہ یتیم بچے کی کفالت", description: "25,000 روپے ماہانہ میں رہائش، اسکول، صحت اور لباس کی مکمل فراہمی۔", image: "/gallery/opt/89.webp", actionText: "ابھی کفالت کریں", href: "/ur/donate", badge: "براہ راست خدمت" },
       { title: "اپنے ہنر کے ذریعے خدمت", description: "لاہور مرکز میں انگریزی، کمپیوٹر پروگرامنگ، کھیل سکھائیں یا میڈیکل کیمپ کریں۔", image: "/gallery/opt/35.webp", actionText: "رضاکار بنیں", href: "/ur/contact", badge: "تعلیمی رہنمائی" },
       { title: "روزانہ خوراک کا انتظام", description: "250 سے زائد بچوں کے لیے صبح کا ناشتہ، دوپہر و رات کے کھانے کا تعاون کریں۔", image: "/gallery/opt/16.webp", actionText: "کھانا کھلائیں", href: "/ur/donate", badge: "روزانہ غذائیت" },
       { title: "کارپوریٹ فلاحی اشتراک", description: "ڈیجیٹل کمپیوٹر لیبز، سولر پینلز یا ادارہ جاتی گرانٹس میں ہمارا ساتھ دیں۔", image: "/gallery/opt/36.webp", actionText: "شراکت داری کریں", href: "/ur/contact", badge: "ادارہ جاتی فنڈ" },

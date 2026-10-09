@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? "لاہور یتیم خانے کو عطیات و زکوٰۃ | بقیۃ اللہ فاؤنڈیشن پاکستان"
     : "Donate to Orphanage Lahore | Zakat Eligible Child Sponsorship Pakistan";
   const description = isUrdu
-    ? "بینک الحبیب اور راست کے ذریعے 100 فیصد مستحقِ زکوٰۃ یتیم بچوں کی کفالت اور فلاحی عطیات کی سرکاری تفصیلات۔"
-    : "Official donation channels for Baqiatullah Foundation Pakistan. 100% Zakat-eligible child sponsorship, Bank Al-Habib wire transfer, and RAAST / IBAN.";
+    ? "یونائیٹڈ بینک لمیٹڈ (UBL) اور راست کے ذریعے 100 فیصد مستحقِ زکوٰۃ یتیم بچوں کی کفالت اور فلاحی عطیات کی سرکاری تفصیلات۔"
+    : "Official donation channels for Baqiatullah Foundation Pakistan. 100% Zakat-eligible child sponsorship, United Bank Limited (UBL) transfer, and RAAST / IBAN.";
 
   return {
     title,

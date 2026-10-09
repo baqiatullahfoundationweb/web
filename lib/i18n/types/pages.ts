@@ -61,10 +61,10 @@ export interface DonatePageData {
     iban?: string;
     bankNameLabel: string;
     bankName: string;
-    branchLabel: string;
-    branch: string;
-    swiftLabel: string;
-    swift: string;
+    branchLabel?: string;
+    branch?: string;
+    swiftLabel?: string;
+    swift?: string;
     receiptNotice: string;
     copyButtonText: string;
     copiedButtonText: string;

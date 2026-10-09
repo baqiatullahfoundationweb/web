@@ -100,17 +100,18 @@ export default function LogoPreloader() {
       </div>
 
       {/* Centerpiece: Slow-Mo Closeup Progressive Stroke Camera & Authentic Lockup */}
-      <div className="relative z-10 my-auto flex flex-col items-center justify-center gap-6">
-        <div className="animate-slowmo-camera relative flex flex-col items-center">
+      <div className="relative z-10 flex min-h-0 flex-1 w-full items-center justify-center py-4 sm:py-8">
+        <div className="animate-slowmo-camera relative flex flex-col items-center gap-0 sm:gap-1">
           {/* Authentic Emblem Drawing Piece by Piece */}
-          <BaqiatullahEmblemDraw className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 drop-shadow-xl" />
+          <BaqiatullahEmblemDraw className="w-56 h-56 sm:w-72 sm:h-72 md:w-88 md:h-88 drop-shadow-xl" />
 
-          {/* Authentic 3D Embossed Teal Brand Text (Wipes in Phase 7: 2.1s - 2.8s) */}
-          <div className="relative w-64 sm:w-80 md:w-96 h-14 sm:h-16 md:h-20 mt-2 animate-fade-in-delayed drop-shadow-md">
+          {/* Authentic 3D Embossed Teal Brand Text */}
+          <div className="relative w-56 sm:w-72 md:w-88 h-10 sm:h-14 md:h-18 animate-fade-in-delayed drop-shadow-md -mt-2 sm:-mt-3">
             <Image
               src="/logo/brand-text.png"
               alt="بقیتہ اللہ فاؤنڈیشن پاکستان - BAQIATULLAH FOUNDATION PAKISTAN"
               fill
+              sizes="(max-width: 640px) 224px, (max-width: 768px) 288px, 352px"
               className="object-contain"
               priority
             />

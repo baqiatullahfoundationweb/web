@@ -21,9 +21,9 @@ export default function CompletedProjects({
   highlight = "Impact Deliveries",
   subtitle = "Major humanitarian initiatives executed with complete community success.",
   items = [
-    { title: "Jhang Emergency Flood Relief", desc: "Supplied 300 vulnerable families with multi-week food rations, water filtration kits, and medical aid.", image: "/gallery/opt/88.webp", impact: "300 Families Supported" },
+    { title: "Jhang Emergency Flood Relief", desc: "Supplied 300 vulnerable families with multi-week food rations, water filtration kits, and medical aid.", image: "/projects/disaster-relief.png", impact: "300 Families Supported" },
     { title: "Modern IT Computer Lab", desc: "Installed 35 desktop workstations with high-speed internet and coding mentorship curriculum.", image: "/gallery/opt/36.webp", impact: "100% Student Digital Literacy" },
-    { title: "Healthcare Screening Drive", desc: "Completed comprehensive dental and pediatric assessments for all 250+ resident children.", image: "/gallery/opt/10.webp", impact: "250+ Children Screened" },
+    { title: "Healthcare Screening Drive", desc: "Completed comprehensive dental and pediatric assessments for all 250+ resident children.", image: "/projects/healthcare-screening.png", impact: "250+ Children Screened" },
   ],
 }: CompletedProjectsProps) {
   return (
@@ -46,6 +46,7 @@ export default function CompletedProjects({
                   src={item.image}
                   alt={item.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>

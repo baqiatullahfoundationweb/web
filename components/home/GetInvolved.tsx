@@ -25,7 +25,7 @@ const DEFAULT_PATHWAYS: PathwayItem[] = [
   {
     icon: Heart,
     title: "Sponsor a Child Monthly",
-    description: "Provide complete shelter, schooling, healthcare, and clothing for PKR 12,000 / month.",
+    description: "Provide complete shelter, schooling, healthcare, and clothing for PKR 25,000 / month.",
     image: "/gallery/opt/89.webp",
     actionText: "Sponsor Now",
     href: "/donate",

@@ -36,6 +36,7 @@ export default function AmbientSvgBackground() {
           src="/gallery/opt/75.webp"
           alt=""
           fill
+          sizes="(max-width: 640px) 650px, 900px"
           className="object-cover rounded-3xl filter brightness-90 contrast-120 saturate-125"
         />
         <div className="absolute inset-0 bg-radial from-transparent via-[#EDF6F6]/40 to-[#EDF6F6]" />
@@ -49,6 +50,7 @@ export default function AmbientSvgBackground() {
           src="/gallery/opt/89.webp"
           alt=""
           fill
+          sizes="(max-width: 640px) 600px, 850px"
           className="object-cover rounded-3xl filter brightness-90 contrast-120 saturate-125"
         />
         <div className="absolute inset-0 bg-radial from-transparent via-[#EDF6F6]/40 to-[#EDF6F6]" />
@@ -62,6 +64,7 @@ export default function AmbientSvgBackground() {
           src="/gallery/opt/20.webp"
           alt=""
           fill
+          sizes="(max-width: 640px) 650px, 900px"
           className="object-cover rounded-3xl filter brightness-90 contrast-120 saturate-125"
         />
         <div className="absolute inset-0 bg-radial from-transparent via-[#EDF6F6]/40 to-[#EDF6F6]" />

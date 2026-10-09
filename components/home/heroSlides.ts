@@ -34,7 +34,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Zakat Eligible Child Sponsorship Pakistan - Orphaned children learning digital computer literacy skills in Lahore",
   },
   {
-    image: "/gallery/opt/12.webp",
+    image: "/gallery/opt/academic.png",
     badge: "ACCREDITED EDUCATION",
     title: "EDUCATION SPONSORSHIP —— NGO IN LAHORE",
     subtitle: "Accredited English-medium curriculum, school fees, uniforms, and textbooks empowering future leaders.",
@@ -45,7 +45,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Registered NGO in Lahore providing accredited English-medium school education to orphaned children",
   },
   {
-    image: "/projects/disaster-hd.webp",
+    image: "/gallery/opt/flood.png",
     badge: "EMERGENCY RELIEF",
     title: "HUMANITARIAN FLOOD RELIEF —— EMERGENCY RESPONSE",
     subtitle: "Clean drinking water, emergency food rations, and medical aid kits for crisis-affected vulnerable families.",
@@ -56,7 +56,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Humanitarian emergency flood relief in Pakistan - Baqiatullah Foundation disaster management team distributing aid",
   },
   {
-    image: "/gallery/opt/34.webp",
+    image: "/gallery/opt/sports.png",
     badge: "RECREATION & SPORTS",
     title: "LOVING RESIDENTIAL HOME —— FAMILY SANCTUARY",
     subtitle: "Physical sports tournaments, seasonal celebrations, and warm maternal care creating real family bonds.",
@@ -67,8 +67,8 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Orphan children at Baqiatullah Foundation sanctuary playing recreational outdoor sports in Lahore",
   },
   {
-    image: "/gallery/opt/16.webp",
-    badge: "FRESH NUTRITION",
+    image: "/gallery/opt/meal.webp",
+    badge: "HEALTHY AND NUTRITIOUS MEALS",
     title: "WHOLESOME MEALS FUND —— FEED ORPHANS PAKISTAN",
     subtitle: "Daily warm, balanced, high-protein meals and fresh milk keeping growing minds and bodies healthy.",
     ctaPrimary: "Feed a Child",
@@ -100,8 +100,8 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Higher education college and university scholarship recipients from Baqiatullah Foundation Pakistan",
   },
   {
-    image: "/gallery/opt/30.webp",
-    badge: "COMMUNITY SERVICE",
+    image: "/gallery/opt/community.png",
+    badge: "COMMUNITY SERVICES",
     title: "REGISTERED CHARITY IN PAKISTAN —— VOLUNTEER NETWORK",
     subtitle: "Licensed doctors, visiting teachers, and mentors dedicating hundreds of service hours each month.",
     ctaPrimary: "Volunteer With Us",
@@ -133,9 +133,9 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Clean water filtration plant installed by Baqiatullah Foundation Pakistan providing safe drinking water",
   },
   {
-    image: "/gallery/opt/41.webp",
+    image: "/gallery/opt/learning.png",
     badge: "CHARACTER & ETHICS",
-    title: "MORAL NURTURING & VALUES —— HOLISTIC ORPHAN CARE",
+    title: "ETHICAL LEARNING & CHARACTER BUILDING —— HOLISTIC ORPHAN CARE",
     subtitle: "Compassionate mentoring cultivating integrity, honesty, empathy, and social responsibility in every child.",
     ctaPrimary: "Become a Mentor",
     ctaPrimaryHref: "/contact",

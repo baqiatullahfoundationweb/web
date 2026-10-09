@@ -43,7 +43,7 @@ export default function HeroSlider({ slides }: { slides?: HeroSlide[] }) {
 
   return (
     <section
-      className="relative h-screen max-h-[110vh] min-h-[640px] w-full overflow-hidden flex flex-col justify-between pt-20 sm:pt-22 pb-6 px-4 sm:px-8 select-none bg-[#E9EEF3]"
+      className="relative h-screen w-full overflow-hidden flex flex-col justify-between pt-20 sm:pt-22 pb-4 sm:pb-6 px-4 sm:px-8 select-none bg-[#E9EEF3]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       aria-label="Editorial Humanitarian Hero Showcase"
@@ -56,7 +56,7 @@ export default function HeroSlider({ slides }: { slides?: HeroSlide[] }) {
       </div>
 
       {/* Floating Horizontal Staggered Cards Rail (12 Images) */}
-      <div className="relative z-10 w-full my-auto">
+      <div className="relative z-10 w-full flex-1 min-h-0 overflow-hidden">
         <HeroCardRail
           slides={slideList}
           activeIdx={current}
@@ -74,10 +74,10 @@ export default function HeroSlider({ slides }: { slides?: HeroSlide[] }) {
             <span>{slide.badge}</span>
           </div>
 
-          <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-[50px] font-black text-gray-950 tracking-tight leading-none uppercase whitespace-nowrap overflow-hidden text-ellipsis max-w-[85vw] sm:max-w-2xl lg:max-w-3xl block">
-            <span className="inline">{titleParts[0]}</span>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[50px] font-black text-gray-950 tracking-tight leading-tight uppercase max-w-[90vw] sm:max-w-2xl lg:max-w-3xl">
+            <span>{titleParts[0]}</span>
             {titleParts[1] && (
-              <span className="inline whitespace-nowrap">
+              <span>
                 <span className="mx-1.5 sm:mx-2.5 text-gray-400 font-light">——</span>
                 <span>{titleParts[1]}</span>
               </span>

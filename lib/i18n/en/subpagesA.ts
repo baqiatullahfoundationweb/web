@@ -49,7 +49,7 @@ export const enProjectsPage: ProjectsPageData = {
     fundedLabel: "Funded / Completed",
     supportBtn: "Support This Program",
     items: [
-      { title: "1. Education", desc: "Private English-medium schooling, syllabus books, uniforms, and academic tutoring for 250+ orphans.", image: "/projects/education-hd.webp", progress: 85, status: "Active Ongoing" },
+      { title: "1. Education", desc: "Private English-medium schooling, syllabus books, uniforms, and academic tutoring for 250+ orphans.", image: "/projects/education.png", progress: 85, status: "Active Ongoing" },
       { title: "2. Digital Education", desc: "Equipped modern IT laboratory with 35+ workstations providing coding, graphic design, and typing.", image: "/gallery/opt/36.webp", progress: 90, status: "Active Phase II" },
       { title: "3. Orphan Support", desc: "100% Zakat-eligible child sponsorship providing monthly living allowances, stationery, and mentorship.", image: "/gallery/opt/89.webp", progress: 78, status: "Active Ongoing" },
       { title: "4. Food and Ration", desc: "3 daily wholesome protein-rich hot meals, fresh milk schedule, and emergency food relief packages.", image: "/gallery/opt/16.webp", progress: 95, status: "Active Daily" },

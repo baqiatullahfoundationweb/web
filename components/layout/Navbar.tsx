@@ -60,7 +60,7 @@ export default function Navbar() {
         {/* Brand Lockup */}
         <Link href={homeHref} className="flex items-center gap-1.5 sm:gap-2.5 md:gap-3 group shrink min-w-0" aria-label="Baqiatullah Foundation">
           <div className="relative w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 rounded-full overflow-hidden ring-2 ring-[#FFBF00] shadow-sm shrink-0 bg-[#FFBF00]">
-            <Image src="/logo/emblem.png" alt="Baqiatullah Emblem" fill className="object-cover" priority />
+            <Image src="/logo/emblem.png" alt="Baqiatullah Emblem" fill className="object-cover" priority sizes="44px" />
           </div>
           <div className="relative h-5 sm:h-7 md:h-9 w-24 sm:w-36 md:w-52 lg:w-64 shrink min-w-0">
             <Image

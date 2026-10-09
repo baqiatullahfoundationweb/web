@@ -30,8 +30,8 @@ export default function OngoingProjects({
   supportBtnText = "Support This Program",
   supportHref = "/donate",
   items = [
-    { title: "Education Excellence Program", desc: "Providing customized tutoring, English proficiency, and school fees to ensure academic potential.", image: "/projects/education-hd.webp", progress: 75, status: "Active Phase II" },
-    { title: "Nutrition & Health Initiative", desc: "Supplying balanced, high-protein daily meals alongside pediatric examinations and hygiene kits.", image: "/projects/health-hd.webp", progress: 90, status: "Active Ongoing" },
+    { title: "Education Excellence Program", desc: "Providing customized tutoring, English proficiency, and school fees to ensure academic potential.", image: "/projects/education.png", progress: 75, status: "Active Phase II" },
+    { title: "Nutrition & Health Initiative", desc: "Supplying balanced, high-protein daily meals alongside pediatric examinations and hygiene kits.", image: "/projects/healthcare-screening.png", progress: 90, status: "Active Ongoing" },
     { title: "Clean Water (WASH) Program", desc: "Installing solar-powered clean drinking water filtration plants and sanitation facilities.", image: "/projects/wash-hd.webp", progress: 65, status: "Active Phase I" },
   ],
 }: OngoingProjectsProps) {

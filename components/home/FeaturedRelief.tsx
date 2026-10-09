@@ -18,9 +18,10 @@ export default function FeaturedRelief() {
           {/* Image */}
           <div className="lg:col-span-5 relative h-64 sm:h-80 w-full rounded-2xl overflow-hidden shadow-inner">
             <Image
-              src="/gallery/opt/88.webp"
+              src="/projects/disaster-relief.png"
               alt="Flood Relief Campaign Jhang"
               fill
+              sizes="(max-width: 1024px) 100vw, 42vw"
               className="object-cover hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#FFBF00] text-gray-950 text-xs font-bold shadow-sm">

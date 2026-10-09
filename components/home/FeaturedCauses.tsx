@@ -45,19 +45,19 @@ const DEFAULT_CAUSES: CauseItem[] = [
   {
     title: "Emergency Flood Relief Campaign Jhang",
     category: "Disaster Emergency",
-    image: "/projects/disaster-hd.webp",
+    image: "/gallery/opt/flood.png",
     description: "Delivering life-saving dry food parcels, clean water filtration kits, and medical aid to 300 displaced families.",
   },
   {
     title: "Health Services & Nutrition Fund",
     category: "Medical & Nutrition",
-    image: "/projects/health-hd.webp",
+    image: "/gallery/opt/service.png",
     description: "Ensuring 250+ resident children receive three fresh daily meals, pediatric clinic checkups, and medicines.",
   },
   {
     title: "Digital Literacy & High-School Tuition",
     category: "Education & Growth",
-    image: "/projects/education-hd.webp",
+    image: "/gallery/opt/digital.png",
     description: "Funding modern computer lab equipment, coding mentorship, private school fees, and academic textbooks.",
   },
 ];

@@ -17,6 +17,7 @@ export default function BaqiatullahEmblemDraw({
           src="/logo/logo-teal.png"
           alt="Baqiatullah Foundation Emblem"
           fill
+          sizes="(max-width: 640px) 256px, (max-width: 768px) 320px, 384px"
           className="object-contain"
           priority
         />

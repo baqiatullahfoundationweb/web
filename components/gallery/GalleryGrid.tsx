@@ -107,7 +107,8 @@ export default function GalleryGrid({
                 src={item.src}
                 alt={item.alt}
                 fill
-                loading="lazy"
+                loading={item.originalIdx === 0 ? "eager" : "lazy"}
+                priority={item.originalIdx === 0}
                 decoding="async"
                 className="object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -173,7 +174,7 @@ export default function GalleryGrid({
             className="relative max-w-4xl max-h-[85vh] w-full h-[70vh] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image src={visibleImages[selectedIdx].src} alt={visibleImages[selectedIdx].alt || "Baqiatullah Foundation Pakistan gallery photo"} fill className="object-contain" />
+            <Image src={visibleImages[selectedIdx].src} alt={visibleImages[selectedIdx].alt || "Baqiatullah Foundation Pakistan gallery photo"} fill className="object-contain" sizes="(max-width: 1024px) 100vw, 896px" />
           </div>
           <button
             onClick={(e) => {

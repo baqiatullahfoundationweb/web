@@ -74,7 +74,7 @@ export const enPrivacyPolicyPage: PrivacyPolicyPageData = {
       title: "4. Payment Security & Financial Data Handling",
       content: [
         "We prioritize the highest security standards for all charitable transactions. Baqiatullah Foundation does not collect, log, or store credit card CVV numbers, debit PINs, or online banking passwords on our servers.",
-        "Direct contributions are executed directly between donors and verified banking channels, including Bank Al-Habib Limited (Account: 0343 0981 000823 01 8 / IBAN: PK71BAHL0343098100082301).",
+        "Direct contributions are executed directly between donors and verified banking channels, including United Bank Limited (UBL) (Account: 2830377202049 / IBAN: PK82UNIL0109000377202049).",
       ],
     },
     {

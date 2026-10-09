@@ -64,6 +64,7 @@ export default async function LocalizedBlogPage({ params }: PageProps) {
                     src={post.image}
                     alt={post.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-106 transition-transform duration-600"
                   />
                   <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-bold bg-[#FFBF00] text-gray-950 shadow-md">

@@ -33,7 +33,7 @@ In addition to its residential care sanctuary, Baqiatullah Foundation maintains 
 
 ### 3. Orphan Support
 - **Mandate**: 100% Zakat-eligible individual child sponsorship program.
-- **Model**: Monthly sponsorship of PKR 12,000 / child (~$42–$45 USD) covering living stipends, school tuition, books, clothing, and moral Tarbiyah mentoring.
+- **Model**: Monthly sponsorship of PKR 25,000 / child covering living stipends, school tuition, books, clothing, and moral Tarbiyah mentoring.
 - **Impact**: Provides long-term security, dignity, and self-reliance to children who have lost parental breadwinners.
 
 ### 4. Food and Ration
@@ -72,16 +72,14 @@ Yes, 100% of the resident orphan beneficiaries meet the strict Islamic criteria 
 Zakat contributions are deposited into a dedicated, segregated account and utilized 100% for the direct living, food, medical, and educational expenses of orphan beneficiaries. Zero percent of Zakat is diverted toward administrative overheads.
 
 ### Official Donation Banking Channels:
-- **Bank Name**: Bank Al-Habib Limited
-- **Account Title**: Baqiatullah
-- **Account Number**: `0343 0981 000823 01 8`
-- **Branch**: Main Branch, Lahore, Pakistan
-- **IBAN / RAAST**: `PK71BAHL0343098100082301`
-- **SWIFT / BIC Code**: `BOHFUS33`
+- **Bank Name**: United Bank Limited (UBL)
+- **Account Title**: `BAQIATULLAH FOUNDATION`
+- **Account Number**: `2830377202049`
+- **IBAN / RAAST**: `PK82UNIL0109000377202049`
 - **WhatsApp for Receipts**: `+92 314 6500512`
 
 ### Child Sponsorship Tiers:
-- **Full Monthly Sponsorship**: PKR 12,000 / month (~$42–$45 USD) — complete housing, 3 meals, private schooling, uniforms, and healthcare.
+- **Full Monthly Sponsorship**: PKR 25,000 / month — complete housing, 3 meals, private schooling, uniforms, and healthcare.
 - **Food & Nutrition Sponsorship**: PKR 4,000 / month (~$15 USD) — monthly nutrition and milk supply.
 - **Semester Education Scholarship**: PKR 35,000 / semester — school tuition, textbooks, stationery, and IT lab training.
 - **Annual Living & Care Endowment**: PKR 100,000 / year — comprehensive long-term care.

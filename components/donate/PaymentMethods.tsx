@@ -44,25 +44,21 @@ export default function PaymentMethods({
   highlight = "Donation Channels",
   subtitle = "100% of your contributions go directly toward food, lodging, and accredited schooling for our children.",
   bankTitle = "Direct Official Bank Wire",
-  bankSubtitle = "Bank Al-Habib Limited — Designated Welfare Account",
+  bankSubtitle = "United Bank Limited (UBL) — Designated Welfare Account",
   accountNameLabel = "Account Name (Title)",
-  accountName = "Baqiatullah",
+  accountName = "BAQIATULLAH FOUNDATION",
   accountNumberLabel = "Account Number (Local Transfer)",
-  accountNumber = "0343 0981 000823 01 8",
+  accountNumber = "2830377202049",
   ibanLabel = "Official IBAN (International & RAAST)",
-  iban = "PK71BAHL0343098100082301",
+  iban = "PK82UNIL0109000377202049",
   bankNameLabel = "Bank Name",
-  bankName = "Bank Al-Habib Limited",
-  branchLabel = "Branch",
-  branch = "Main Branch, Lahore",
-  swiftLabel = "SWIFT / BIC Code",
-  swift = "BOHFUS33",
+  bankName = "United Bank Limited (UBL)",
   receiptNotice = "Please share your bank transfer receipt with our finance desk at baqiatullahpak@gmail.com or WhatsApp +92 314 6500512 for an official tax acknowledgement receipt.",
   isUrdu = false,
 }: PaymentMethodsProps) {
   // Interactive Preset Selector for Donors
-  const [selectedTier, setSelectedTier] = useState<number>(12000);
-  const [activeTab, setActiveTab] = useState<"wire" | "raast" | "international">("wire");
+  const [selectedTier, setSelectedTier] = useState<number>(25000);
+  const [activeTab, setActiveTab] = useState<"wire" | "raast">("wire");
 
   const impactTiers = [
     {
@@ -74,7 +70,7 @@ export default function PaymentMethods({
       highlight: false,
     },
     {
-      amount: 12000,
+      amount: 25000,
       label: isUrdu ? "مکمل ماہانہ کفالت" : "Complete Child Sponsorship",
       desc: isUrdu
         ? "رہائش، اسکول فیس، یونیفارم، صحت اور تین وقت کا کھانا۔"
@@ -205,7 +201,7 @@ export default function PaymentMethods({
         </div>
       </div>
 
-      {/* Main Bank Al-Habib Verified Console */}
+      {/* Main UBL Verified Console */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left Column: Official Bank Account Card */}
         <div className="lg:col-span-8 bg-white/95 backdrop-blur-xl p-6 sm:p-10 rounded-3xl border border-primary/25 shadow-xl relative overflow-hidden">
@@ -257,17 +253,6 @@ export default function PaymentMethods({
               >
                 {isUrdu ? "راست / IBAN" : "RAAST / IBAN"}
               </button>
-              <button
-                type="button"
-                onClick={() => setActiveTab("international")}
-                className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
-                  activeTab === "international"
-                    ? "bg-white text-primary shadow-xs"
-                    : "text-gray-600 hover:text-gray-950"
-                }`}
-              >
-                {isUrdu ? "بین الاقوامی سوئفٹ" : "Int'l SWIFT"}
-              </button>
             </div>
           </div>
 
@@ -312,8 +297,8 @@ export default function PaymentMethods({
               <CopyButton textToCopy={iban.replace(/\s+/g, "")} />
             </div>
 
-            {/* Three Grid Metadata (Bank Name, Branch, SWIFT) */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            {/* Bank Metadata */}
+            <div className="grid grid-cols-1 gap-3 pt-2">
               <div className="p-4 rounded-2xl bg-white border border-gray-200 shadow-2xs">
                 <span className="text-xs font-bold text-gray-500 block mb-1">
                   {bankNameLabel}
@@ -323,26 +308,6 @@ export default function PaymentMethods({
                 </span>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white border border-gray-200 shadow-2xs">
-                <span className="text-xs font-bold text-gray-500 block mb-1">
-                  {branchLabel}
-                </span>
-                <span className="text-sm font-extrabold text-gray-950 block">
-                  {branch}
-                </span>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-white border border-gray-200 shadow-2xs flex items-center justify-between">
-                <div>
-                  <span className="text-xs font-bold text-gray-500 block mb-1">
-                    {swiftLabel}
-                  </span>
-                  <span className="text-sm font-mono font-extrabold text-gray-950 block">
-                    {swift}
-                  </span>
-                </div>
-                <CopyButton textToCopy={swift} />
-              </div>
             </div>
           </div>
         </div>
@@ -374,8 +339,8 @@ export default function PaymentMethods({
                 </span>
                 <p>
                   {isUrdu
-                    ? "بینک الحبیب اور اوپر دیا گیا اکاؤنٹ نمبر یا آئی بین درج کریں۔ عنوان 'Baqiatullah' خودکار طور پر ظاہر ہوگا۔"
-                    : "Select 'Bank Al-Habib' and paste our Account Number or IBAN. The title 'Baqiatullah' will appear automatically."}
+                    ? "یونائیٹڈ بینک لمیٹڈ (UBL) منتخب کریں اور اوپر دیا گیا اکاؤنٹ نمبر یا آئی بین درج کریں۔ عنوان 'BAQIATULLAH FOUNDATION' خودکار طور پر ظاہر ہوگا۔"
+                    : "Select 'United Bank Limited (UBL)' and paste our Account Number or IBAN. The title 'BAQIATULLAH FOUNDATION' will appear automatically."}
                 </p>
               </li>
 

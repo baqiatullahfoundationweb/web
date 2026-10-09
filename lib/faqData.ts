@@ -24,9 +24,9 @@ export const FAQS_DATA: FAQItem[] = [
     question: "How much does monthly child sponsorship cost in PKR and USD?",
     questionUrdu: "ایک یتیم بچے کی ماہانہ کفالت کے اخراجات پاکستانی روپے اور ڈالر میں کتنے ہیں؟",
     answer:
-      "Full monthly child sponsorship costs PKR 12,000 (approx. $42 - $45 USD). This covers 24/7 loving residential shelter in Lahore, three hot nutritious daily meals, accredited English-medium schooling, uniforms, books, medical screenings, and extracurricular mentorship. Partial nutrition sponsorship is also available at PKR 4,000 (~$15 USD) per month.",
+      "Full monthly child sponsorship costs PKR 25,000. This covers 24/7 loving residential shelter in Lahore, three hot nutritious daily meals, accredited English-medium schooling, uniforms, books, medical screenings, and extracurricular mentorship. Partial nutrition sponsorship is also available at PKR 4,000 per month.",
     answerUrdu:
-      "ایک یتیم بچے کی مکمل ماہانہ کفالت 12,000 پاکستانی روپے (تقریباً 42 سے 45 امریکی ڈالر) ہے۔ اس میں لاہور سینکچری میں 24 گھنٹے رہائش، تین وقت کا تازہ کھانا، معیاری اسکول فیس، کتابیں، یونیفارم، علاج معالجہ اور ہمہ جہت تربیت شامل ہے۔ ماہانہ خوراک کی جزوی کفالت 4,000 روپے ہے۔",
+      "ایک یتیم بچے کی مکمل ماہانہ کفالت 25,000 پاکستانی روپے ہے۔ اس میں لاہور سینکچری میں 24 گھنٹے رہائش، تین وقت کا تازہ کھانا، معیاری اسکول فیس، کتابیں، یونیفارم، علاج معالجہ اور ہمہ جہت تربیت شامل ہے۔ ماہانہ خوراک کی جزوی کفالت 4,000 روپے ہے۔",
   },
   {
     category: "Payment Methods",
@@ -34,9 +34,9 @@ export const FAQS_DATA: FAQItem[] = [
     question: "What payment methods are supported for donations and child sponsorship?",
     questionUrdu: "عطیات اور کفالت جمع کرانے کے کون کون سے طریقے اور ذرائع دستیاب ہیں؟",
     answer:
-      "Donations can be transferred securely via official Pakistani commercial banking directly to Bank Al-Habib Limited (Account Title: Baqiatullah, Account Number: 0343 0981 000823 01 8), instant RAAST ID (PK71BAHL0343098100082301), and international wire transfer using SWIFT Code BOHFUS33. Official tax receipts are dispatched promptly upon receiving transaction slips.",
+      "Donations can be transferred securely via official Pakistani commercial banking directly to United Bank Limited (UBL) (Account Title: BAQIATULLAH FOUNDATION, Account Number: 2830377202049, IBAN: PK82UNIL0109000377202049). Official tax receipts are dispatched promptly upon receiving transaction slips.",
     answerUrdu:
-      "عطیات براہ راست ہمارے تصدیق شدہ فلاحی بینک اکاؤنٹ میں منتقل کیے جا سکتے ہیں: بینک الحبیب لمیٹڈ (عنوان: Baqiatullah، اکاؤنٹ نمبر: 0343 0981 000823 01 8)، فوری راست / آئی بین: PK71BAHL0343098100082301، اور بین الاقوامی ترسیل کے لیے سوئفٹ کوڈ BOHFUS33۔ رسید کی فراہمی پر فوری سرکاری ٹیکس چھوٹ واؤچر جاری کیا جاتا ہے۔",
+      "عطیات براہ راست ہمارے تصدیق شدہ فلاحی بینک اکاؤنٹ میں منتقل کیے جا سکتے ہیں: یونائیٹڈ بینک لمیٹڈ (UBL) (عنوان: BAQIATULLAH FOUNDATION، اکاؤنٹ نمبر: 2830377202049، آئی بین: PK82UNIL0109000377202049)۔ رسید کی فراہمی پر فوری سرکاری ٹیکس چھوٹ واؤچر جاری کیا جاتا ہے۔",
   },
   {
     category: "Legal & NGO Accreditation",

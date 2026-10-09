@@ -27,19 +27,19 @@ const DEFAULT_METRICS: ImpactMetric[] = [
     value: "100k+",
     label: "Nutritious Meals Served",
     description: "Three warm, protein-rich prepared meals delivered every single day.",
-    image: "/gallery/opt/16.webp",
+    image: "/gallery/opt/meal.webp",
   },
   {
     value: "50+",
     label: "Academic Scholarships",
     description: "Tuition, uniforms, and textbooks funding primary through college education.",
-    image: "/gallery/opt/14.webp",
+    image: "/gallery/opt/academic.png",
   },
   {
     value: "85+",
     label: "Dedicated Field Volunteers",
     description: "Compassionate caregivers, teachers, and emergency relief responders.",
-    image: "/gallery/opt/30.webp",
+    image: "/gallery/opt/field.png",
   },
 ];
 
@@ -69,6 +69,7 @@ export default function ImpactSection({
               src={item.image}
               alt={item.label}
               fill
+              unoptimized
               className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             />

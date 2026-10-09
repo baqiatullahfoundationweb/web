@@ -49,7 +49,7 @@ export const urProjectsPage: ProjectsPageData = {
     fundedLabel: "فنڈز / تکمیل",
     supportBtn: "اس منصوبے کا تعاون کریں",
     items: [
-      { title: "1. تعلیم و تربیت", desc: "پرائیویٹ انگلش میڈیم اسکولنگ، کتب، یونیفارم اور اسکول فیس کی 100٪ فراہمی۔", image: "/projects/education-hd.webp", progress: 85, status: "مستقل فعال" },
+      { title: "1. تعلیم و تربیت", desc: "پرائیویٹ انگلش میڈیم اسکولنگ، کتب، یونیفارم اور اسکول فیس کی 100٪ فراہمی۔", image: "/projects/education.png", progress: 85, status: "مستقل فعال" },
       { title: "2. ڈیجیٹل تعلیم", desc: "جدید کمپیوٹر لیب، 35+ ورک اسٹیشنز، پروگرامنگ، ٹائپنگ اور گرافک ڈیزائننگ۔", image: "/gallery/opt/36.webp", progress: 90, status: "فعال مرحلہ دوم" },
       { title: "3. یتیم بچوں کی کفالت", desc: "100٪ زکوٰۃ کے مستحق بچوں کے لیے ماہانہ وظائف، کتب، اور سرپرستی۔", image: "/gallery/opt/89.webp", progress: 78, status: "مستقل فعال" },
       { title: "4. خوراک اور راشن", desc: "روزانہ 3 وقت تازہ کھانا، خالص دودھ اور مستحق خاندانوں کے لیے خشک راشن بیگز۔", image: "/gallery/opt/16.webp", progress: 95, status: "روزانہ جاری" },

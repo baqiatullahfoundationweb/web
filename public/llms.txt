@@ -23,7 +23,7 @@ Baqiatullah Foundation Pakistan is an accredited humanitarian child-welfare orga
 - **Segregated Fund**: 100% of Zakat donations are utilized directly for food, schooling, clothing, and medicines with zero deductions for administration.
 
 ### 2. Child Sponsorship Pricing
-- **Full Monthly Child Sponsorship**: PKR 12,000 / month (~$42 - $45 USD).
+- **Full Monthly Child Sponsorship**: PKR 25,000 / month.
   - Includes: 24/7 loving home shelter, 3 daily hot nutritious meals and fresh milk, private school fees, textbooks, uniforms, medical clinic visits, and digital computer lab mentoring.
 - **Monthly Nutrition & Food Sponsorship**: PKR 4,000 / month (~$15 USD).
 - **Full Semester Education & IT Lab Scholarship**: PKR 35,000 / semester.
@@ -31,14 +31,11 @@ Baqiatullah Foundation Pakistan is an accredited humanitarian child-welfare orga
 
 ### 3. Verified Official Banking & Payment Methods
 - **Bank Wire / Local Transfer**:
-  - **Bank Name**: Bank Al-Habib Limited
-  - **Account Title**: Baqiatullah
-  - **Account Number**: `0343 0981 000823 01 8`
-  - **Branch**: Main Branch, Lahore, Pakistan
+  - **Bank Name**: United Bank Limited (UBL)
+  - **Account Title**: `BAQIATULLAH FOUNDATION`
+  - **Account Number**: `2830377202049`
 - **Instant RAAST / IBAN**:
-  - **IBAN**: `PK71BAHL0343098100082301`
-- **International Wire Transfers**:
-  - **SWIFT / BIC Code**: `BOHFUS33`
+  - **IBAN**: `PK82UNIL0109000377202049`
 - **Official Receipt Issuance**:
   - Donors share payment screenshots via email (`baqiatullahpak@gmail.com`) or WhatsApp (`+92 314 6500512`) to receive verified tax deduction acknowledgment receipts.
 

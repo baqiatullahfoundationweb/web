@@ -43,6 +43,7 @@ export default function HomeAbout({
           src="/gallery/opt/75.webp"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover opacity-[0.09] filter saturate-150 scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#EDF6F6]/95 via-transparent to-[#EDF6F6]/95" />

@@ -61,6 +61,7 @@ export default function Footer() {
                   src="/logo/emblem.png"
                   alt="Baqiatullah Foundation Emblem"
                   fill
+                  sizes="44px"
                   className="object-cover"
                 />
               </div>
@@ -69,6 +70,7 @@ export default function Footer() {
                   src="/logo/brand-text.png"
                   alt="Baqiatullah Foundation Pakistan"
                   fill
+                  sizes="(max-width: 640px) 192px, 224px"
                   className="object-contain object-left"
                 />
               </div>
