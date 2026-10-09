@@ -120,7 +120,7 @@ export const enDictionary: Dictionary = {
     attendBtn: "Attend / Inquire",
     items: [
       { title: "Annual Sports & Outdoor Joy Festival", date: "November 15, 2026", time: "10:00 AM - 4:00 PM", location: "Nawab Town Sports Grounds, Lahore", image: "/gallery/opt/24.webp", description: "A joyful day of athletics, cricket tournaments, races, and awards celebrating physical stamina." },
-      { title: "Comprehensive Pediatric Medical & Dental Camp", date: "October 28, 2026", time: "9:00 AM - 2:00 PM", location: "Baqiatullah Healthcare Wing, Lahore", image: "/projects/healthcare-screening.png", description: "Volunteer physicians and pediatric dentists conducting thorough preventative screenings and hygiene workshops." },
+      { title: "Comprehensive Pediatric Medical & Dental Camp", date: "October 28, 2026", time: "9:00 AM - 2:00 PM", location: "Baqiatullah Healthcare Wing, Lahore", image: "/gallery/opt/service.png", description: "Volunteer physicians and pediatric dentists conducting thorough preventative screenings and hygiene workshops." },
       { title: "Digital Literacy & Web Coding Workshop", date: "December 05, 2026", time: "11:00 AM - 3:00 PM", location: "IT & Computer Resource Lab", image: "/gallery/opt/36.webp", description: "Senior students demonstrating digital portfolios, basic software programming, and typing competitions." },
     ],
   },

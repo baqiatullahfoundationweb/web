@@ -18,7 +18,7 @@ export default function FeaturedRelief() {
           {/* Image */}
           <div className="lg:col-span-5 relative h-64 sm:h-80 w-full rounded-2xl overflow-hidden shadow-inner">
             <Image
-              src="/projects/disaster-relief.png"
+              src="/gallery/opt/flood.png"
               alt="Flood Relief Campaign Jhang"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"
