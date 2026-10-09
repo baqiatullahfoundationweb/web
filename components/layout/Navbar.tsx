@@ -154,9 +154,9 @@ export default function Navbar() {
               </Button>
 
               <div className="flex items-center justify-between text-xs text-gray-600 px-2 pt-1 font-medium">
-                <a href="tel:03006500512" className="flex items-center gap-1.5 text-primary hover:underline">
+                <a href="tel:+923146500512" className="flex items-center gap-1.5 text-primary hover:underline">
                   <Phone className="w-3.5 h-3.5" />
-                  <span>0300-6500512</span>
+                  <span>+92 314 6500512</span>
                 </a>
                 <span>{isUrdu ? "لاہور سینکچوئری" : "Lahore Sanctuary"}</span>
               </div>

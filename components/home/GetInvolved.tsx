@@ -53,7 +53,7 @@ const DEFAULT_PATHWAYS: PathwayItem[] = [
     icon: Building2,
     title: "Corporate CSR & In-Kind",
     description: "Partner with us for digital computer labs, solar installations, or corporate matching grants.",
-    image: "/gallery/opt/36.webp",
+    image: "/gallery/opt/digital-learn.png",
     actionText: "Partner With Us",
     href: "/contact",
     badge: "Institutional",

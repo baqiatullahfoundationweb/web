@@ -26,7 +26,7 @@ export const enDictionary: Dictionary = {
       { href: "/eng/contact", label: "Contact" },
     ],
     donateNow: "Donate Now",
-    helpline: "0300-6500512",
+    helpline: "+92 314 6500512",
   },
   hero: {
     slides: [
@@ -121,7 +121,7 @@ export const enDictionary: Dictionary = {
     items: [
       { title: "Annual Sports & Outdoor Joy Festival", date: "November 15, 2026", time: "10:00 AM - 4:00 PM", location: "Nawab Town Sports Grounds, Lahore", image: "/gallery/opt/24.webp", description: "A joyful day of athletics, cricket tournaments, races, and awards celebrating physical stamina." },
       { title: "Comprehensive Pediatric Medical & Dental Camp", date: "October 28, 2026", time: "9:00 AM - 2:00 PM", location: "Baqiatullah Healthcare Wing, Lahore", image: "/gallery/opt/service.png", description: "Volunteer physicians and pediatric dentists conducting thorough preventative screenings and hygiene workshops." },
-      { title: "Digital Literacy & Web Coding Workshop", date: "December 05, 2026", time: "11:00 AM - 3:00 PM", location: "IT & Computer Resource Lab", image: "/gallery/opt/36.webp", description: "Senior students demonstrating digital portfolios, basic software programming, and typing competitions." },
+      { title: "Digital Literacy & Web Coding Workshop", date: "December 05, 2026", time: "11:00 AM - 3:00 PM", location: "IT & Computer Resource Lab", image: "/gallery/opt/digital-learn.png", description: "Senior students demonstrating digital portfolios, basic software programming, and typing competitions." },
     ],
   },
   getInvolved: {
@@ -131,8 +131,8 @@ export const enDictionary: Dictionary = {
     pathways: [
       { title: "Sponsor a Child Monthly", description: "Provide complete shelter, schooling, healthcare, and clothing for PKR 25,000 / month.", image: "/gallery/opt/89.webp", actionText: "Sponsor Now", href: "/eng/donate", badge: "Direct Impact" },
       { title: "Volunteer Your Skills", description: "Teach English, coding, sports, or offer pediatric medical screening at our Lahore facility.", image: "/gallery/opt/35.webp", actionText: "Join Volunteers", href: "/eng/contact", badge: "Mentorship" },
-      { title: "Fund Daily Meals", description: "Sponsor fresh daily breakfasts, lunches, or celebratory feasts for 250+ resident children.", image: "/gallery/opt/16.webp", actionText: "Feed a Child", href: "/eng/donate", badge: "Nutrition" },
-      { title: "Corporate CSR & In-Kind", description: "Partner with us for digital computer labs, solar installations, or corporate matching grants.", image: "/gallery/opt/36.webp", actionText: "Partner With Us", href: "/eng/contact", badge: "Institutional" },
+      { title: "Fund Daily Meals", description: "Sponsor fresh daily breakfasts, lunches, or celebratory feasts for 250+ resident children.", image: "/gallery/opt/meal.webp", actionText: "Feed a Child", href: "/eng/donate", badge: "Nutrition" },
+      { title: "Corporate CSR & In-Kind", description: "Partner with us for digital computer labs, solar installations, or corporate matching grants.", image: "/gallery/opt/digital-learn.png", actionText: "Partner With Us", href: "/eng/contact", badge: "Institutional" },
     ],
   },
   spotlight: {

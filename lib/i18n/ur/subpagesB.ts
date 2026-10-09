@@ -73,7 +73,7 @@ export const urContactPage: ContactPageData = {
     addressLabel: "مرکز کا پتہ",
     address: "مکان نمبر 123/اے بلاک، نواب ٹاؤن، لاہور، پاکستان",
     phoneLabel: "ہیلپ لائن و واٹس ایپ",
-    phone: "0300-6500512 / 0314-6500512",
+    phone: "+92 314 6500512",
     emailLabel: "آفیشل ای میل",
     email: "baqiatullahpak@gmail.com",
     hoursLabel: "ملاقات کے اوقات",

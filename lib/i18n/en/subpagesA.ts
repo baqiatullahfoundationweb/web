@@ -50,9 +50,9 @@ export const enProjectsPage: ProjectsPageData = {
     supportBtn: "Support This Program",
     items: [
       { title: "1. Education", desc: "Private English-medium schooling, syllabus books, uniforms, and academic tutoring for 250+ orphans.", image: "/projects/education.png", progress: 85, status: "Active Ongoing" },
-      { title: "2. Digital Education", desc: "Equipped modern IT laboratory with 35+ workstations providing coding, graphic design, and typing.", image: "/gallery/opt/36.webp", progress: 90, status: "Active Phase II" },
+      { title: "2. Digital Education", desc: "Equipped modern IT laboratory with 35+ workstations providing coding, graphic design, and typing.", image: "/gallery/opt/digital-learn.png", progress: 90, status: "Active Phase II" },
       { title: "3. Orphan Support", desc: "100% Zakat-eligible child sponsorship providing monthly living allowances, stationery, and mentorship.", image: "/gallery/opt/89.webp", progress: 78, status: "Active Ongoing" },
-      { title: "4. Food and Ration", desc: "3 daily wholesome protein-rich hot meals, fresh milk schedule, and emergency food relief packages.", image: "/gallery/opt/16.webp", progress: 95, status: "Active Daily" },
+      { title: "4. Food and Ration", desc: "3 daily wholesome protein-rich hot meals, fresh milk schedule, and emergency food relief packages.", image: "/gallery/opt/meal.webp", progress: 95, status: "Active Daily" },
       { title: "5. Clothing", desc: "Seasonal wardrobes, tailored school uniforms, winter coats, festive Eid apparel, and sturdy shoes.", image: "/gallery/opt/82.webp", progress: 80, status: "Active Seasonal" },
       { title: "6. Orphan Care", desc: "24/7 loving residential sanctuary in Lahore with maternal care, hygienic dorms, and solar power backup.", image: "/gallery/opt/89.webp", progress: 92, status: "Active 24/7" },
       { title: "7. Disaster Management", desc: "Rapid disaster relief supplying dry rations, water filtration kits, and medical aid to crisis zones.", image: "/gallery/opt/flood.png", progress: 70, status: "Active Phase I" },
@@ -65,7 +65,7 @@ export const enProjectsPage: ProjectsPageData = {
     subtitle: "Major humanitarian initiatives executed with complete community success.",
     items: [
       { title: "Jhang Emergency Flood Relief", desc: "Supplied 300 vulnerable families with multi-week food rations, water filtration kits, and medical aid.", image: "/gallery/opt/flood.png", impact: "300 Families Supported" },
-      { title: "Modern IT Computer Lab", desc: "Installed 35 desktop workstations with high-speed internet and coding mentorship curriculum.", image: "/gallery/opt/36.webp", impact: "100% Student Digital Literacy" },
+      { title: "Modern IT Computer Lab", desc: "Installed 35 desktop workstations with high-speed internet and coding mentorship curriculum.", image: "/gallery/opt/digital-learn.png", impact: "100% Student Digital Literacy" },
       { title: "Healthcare Screening Drive", desc: "Completed comprehensive dental and pediatric assessments for all 250+ resident children.", image: "/gallery/opt/10.webp", impact: "250+ Children Screened" },
     ],
   },

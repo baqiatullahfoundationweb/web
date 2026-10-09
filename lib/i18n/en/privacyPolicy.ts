@@ -108,7 +108,7 @@ export const enPrivacyPolicyPage: PrivacyPolicyPageData = {
     emailLabel: "Official Email",
     email: "baqiatullahpak@gmail.com",
     phoneLabel: "Helpline & WhatsApp",
-    phone: "+92 314 6500512 / 0300-6500512",
+    phone: "+92 314 6500512",
     addressLabel: "Head Office & Residence",
     address: "House No.123/A Block, Nawab Town, Lahore, Pakistan",
     btnText: "Get in Touch with Administration",

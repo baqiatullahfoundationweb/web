@@ -22,7 +22,7 @@ export default function CompletedProjects({
   subtitle = "Major humanitarian initiatives executed with complete community success.",
   items = [
     { title: "Jhang Emergency Flood Relief", desc: "Supplied 300 vulnerable families with multi-week food rations, water filtration kits, and medical aid.", image: "/gallery/opt/flood.png", impact: "300 Families Supported" },
-    { title: "Modern IT Computer Lab", desc: "Installed 35 desktop workstations with high-speed internet and coding mentorship curriculum.", image: "/gallery/opt/36.webp", impact: "100% Student Digital Literacy" },
+    { title: "Modern IT Computer Lab", desc: "Installed 35 desktop workstations with high-speed internet and coding mentorship curriculum.", image: "/gallery/opt/digital-learn.png", impact: "100% Student Digital Literacy" },
     { title: "Healthcare Screening Drive", desc: "Completed comprehensive dental and pediatric assessments for all 250+ resident children.", image: "/gallery/opt/service.png", impact: "250+ Children Screened" },
   ],
 }: CompletedProjectsProps) {

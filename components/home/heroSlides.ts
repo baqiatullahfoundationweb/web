@@ -78,7 +78,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Nutritious daily meals prepared for orphan children at Baqiatullah Foundation residential home Lahore",
   },
   {
-    image: "/gallery/opt/36.webp",
+    image: "/gallery/opt/digital-learn.png",
     badge: "SCIENCE & INNOVATION",
     title: "SCIENCE & COMPUTER LAB —— VOCATIONAL EMPOWERMENT",
     subtitle: "Hands-on chemistry, physics, and STEM experiments sparking lifelong curiosity and academic distinction.",
@@ -122,7 +122,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     altText: "Children learning creative arts and traditional calligraphy at Baqiatullah Foundation Lahore orphanage",
   },
   {
-    image: "/gallery/opt/88.webp",
+    image: "/gallery/opt/drink.png",
     badge: "CLEAN DRINKING WATER",
     title: "WASH & WATER FILTRATION —— SADAQAH JARIYAH",
     subtitle: "Solar-powered clean drinking water filtration plants installed in remote and drought-impacted communities.",

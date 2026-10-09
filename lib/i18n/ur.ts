@@ -26,7 +26,7 @@ export const urDictionary: Dictionary = {
       { href: "/ur/contact", label: "رابطہ کریں" },
     ],
     donateNow: "ابھی عطیہ دیں",
-    helpline: "0300-6500512",
+    helpline: "+92 314 6500512",
   },
   hero: {
     slides: [
@@ -141,7 +141,7 @@ export const urDictionary: Dictionary = {
     items: [
       { title: "سالانہ اسپورٹس و آؤٹ ڈور فیسٹیول", date: "15 نومبر 2026", time: "صبح 10:00 تا شام 4:00", location: "نواب ٹاؤن اسپورٹس گراؤنڈز، لاہور", image: "/gallery/opt/24.webp", description: "بچوں کی جسمانی صحت اور ٹیم ورک کا جشن، کرکٹ میچز اور انعامات کی تقسیم۔" },
       { title: "جامع پیڈیاٹرک میڈیکل و ڈینٹل کیمپ", date: "28 اکتوبر 2026", time: "صبح 9:00 تا دوپہر 2:00", location: "بقیۃ اللہ ہیلتھ کیئر ونگ، لاہور", image: "/gallery/opt/service.png", description: "ماہر اطباء کے ذریعے بچوں کا تفصیلی معائنہ، آنکھوں کا ٹیسٹ اور حفظان صحت کی تربیت۔" },
-      { title: "ڈیجیٹل کمپیوٹر و ویب کوڈنگ ورکشاپ", date: "05 دسمبر 2026", time: "صبح 11:00 تا سہ پہر 3:00", location: "آئی ٹی ریسورس لیب", image: "/gallery/opt/36.webp", description: "سینئر طلبہ کی جانب سے تیار کردہ کمپیوٹر پراجیکٹس اور ٹائپنگ مقابلوں کی نمائش۔" },
+      { title: "ڈیجیٹل کمپیوٹر و ویب کوڈنگ ورکشاپ", date: "05 دسمبر 2026", time: "صبح 11:00 تا سہ پہر 3:00", location: "آئی ٹی ریسورس لیب", image: "/gallery/opt/digital-learn.png", description: "سینئر طلبہ کی جانب سے تیار کردہ کمپیوٹر پراجیکٹس اور ٹائپنگ مقابلوں کی نمائش۔" },
     ],
   },
   getInvolved: {
@@ -151,8 +151,8 @@ export const urDictionary: Dictionary = {
     pathways: [
       { title: "ماہانہ یتیم بچے کی کفالت", description: "25,000 روپے ماہانہ میں رہائش، اسکول، صحت اور لباس کی مکمل فراہمی۔", image: "/gallery/opt/89.webp", actionText: "ابھی کفالت کریں", href: "/ur/donate", badge: "براہ راست خدمت" },
       { title: "اپنے ہنر کے ذریعے خدمت", description: "لاہور مرکز میں انگریزی، کمپیوٹر پروگرامنگ، کھیل سکھائیں یا میڈیکل کیمپ کریں۔", image: "/gallery/opt/35.webp", actionText: "رضاکار بنیں", href: "/ur/contact", badge: "تعلیمی رہنمائی" },
-      { title: "روزانہ خوراک کا انتظام", description: "250 سے زائد بچوں کے لیے صبح کا ناشتہ، دوپہر و رات کے کھانے کا تعاون کریں۔", image: "/gallery/opt/16.webp", actionText: "کھانا کھلائیں", href: "/ur/donate", badge: "روزانہ غذائیت" },
-      { title: "کارپوریٹ فلاحی اشتراک", description: "ڈیجیٹل کمپیوٹر لیبز، سولر پینلز یا ادارہ جاتی گرانٹس میں ہمارا ساتھ دیں۔", image: "/gallery/opt/36.webp", actionText: "شراکت داری کریں", href: "/ur/contact", badge: "ادارہ جاتی فنڈ" },
+      { title: "روزانہ خوراک کا انتظام", description: "250 سے زائد بچوں کے لیے صبح کا ناشتہ، دوپہر و رات کے کھانے کا تعاون کریں۔", image: "/gallery/opt/meal.webp", actionText: "کھانا کھلائیں", href: "/ur/donate", badge: "روزانہ غذائیت" },
+      { title: "کارپوریٹ فلاحی اشتراک", description: "ڈیجیٹل کمپیوٹر لیبز، سولر پینلز یا ادارہ جاتی گرانٹس میں ہمارا ساتھ دیں۔", image: "/gallery/opt/digital-learn.png", actionText: "شراکت داری کریں", href: "/ur/contact", badge: "ادارہ جاتی فنڈ" },
     ],
   },
   spotlight: {
@@ -178,7 +178,7 @@ export const urDictionary: Dictionary = {
     navTitle: "اہم لنکس",
     contactTitle: "رابطہ کی تفصیلات",
     address: "مکان نمبر 123/اے بلاک، نواب ٹاؤن، لاہور، پاکستان",
-    phone: "0300-6500512",
+    phone: "+92 314 6500512",
     email: "baqiatullahpak@gmail.com",
     copyright: "بقیۃ اللہ فاؤنڈیشن پاکستان۔ باضابطہ رجسٹرڈ فلاحی این جی او (پنجاب چیریٹی کمیشن رجسٹریشن نمبر PB-LHR-2016-8921 / سوسائٹیز ایکٹ 1860)۔",
     motto: "یتیم بچوں کی باوقار پرورش، زکوٰۃ و صدقات کی امانت اور روشن مستقبل کے لیے پرعزم۔",

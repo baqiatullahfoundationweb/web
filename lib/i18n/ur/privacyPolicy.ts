@@ -107,7 +107,7 @@ export const urPrivacyPolicyPage: PrivacyPolicyPageData = {
     emailLabel: "سرکاری ای میل",
     email: "baqiatullahpak@gmail.com",
     phoneLabel: "ہیلپ لائن اور واٹس ایپ",
-    phone: "0300-6500512 / 0314-6500512",
+    phone: "+92 314 6500512",
     addressLabel: "مرکزی دفتر و اقامت گاہ",
     address: "مکان نمبر 123/اے بلاک، نواب ٹاؤن، لاہور، پاکستان",
     btnText: "انتظامیہ سے رابطہ کریں",

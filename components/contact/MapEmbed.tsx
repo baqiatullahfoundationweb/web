@@ -7,7 +7,7 @@ interface MapEmbedProps {
 export default function MapEmbed({ isUrdu = false }: MapEmbedProps) {
   const directionsUrl = "https://maps.app.goo.gl/u7u5iRnzp5VwSoJ18?g_st=iwb";
   const whatsappUrl = "https://wa.me/923146500512";
-  const callUrl = "tel:03006500512";
+  const callUrl = "tel:+923146500512";
 
   return (
     <div className="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 border border-primary/20 shadow-xl overflow-hidden flex flex-col gap-6">
