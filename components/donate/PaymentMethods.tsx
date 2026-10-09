@@ -62,7 +62,7 @@ export default function PaymentMethods({
 
   const impactTiers = [
     {
-      amount: 4000,
+      amount: 10000,
       label: isUrdu ? "ماہانہ غذائیت و دودھ" : "1 Month Nutrition & Milk",
       desc: isUrdu
         ? "ایک بچے کے لیے ایک ماہ کا مکمل حفظان صحت کھانا اور تازہ دودھ۔"
@@ -79,8 +79,8 @@ export default function PaymentMethods({
       badge: isUrdu ? "سب سے اہم ضرورت" : "Most Needed",
     },
     {
-      amount: 35000,
-      label: isUrdu ? "تعلیمی و آئی ٹی اسکالرشپ" : "Education & IT Scholarship",
+      amount: 12000,
+      label: isUrdu ? "تعلیمی و آئی ٹی اسکالرشپ" : "Education & Training",
       desc: isUrdu
         ? "ایک سمسٹر کی فیس، نصابی کتب اور کمپیوٹر لیب ورک اسٹیشن تربیت۔"
         : "Semester tuition, school supplies, and computer laboratory access.",
