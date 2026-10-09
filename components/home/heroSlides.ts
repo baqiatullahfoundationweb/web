@@ -12,7 +12,7 @@ export interface HeroSlide {
 
 export const DEFAULT_SLIDES: HeroSlide[] = [
   {
-    image: "/gallery/opt/49.webp",
+    image: "/gallery/opt/health.png",
     badge: "HEALTHCARE & ORPHAN CARE",
     title: "DONATE TO ORPHANAGE LAHORE —— WITH DIGNITY",
     subtitle: "Healthcare, safe residential shelter, and wholesome food for 250+ vulnerable orphans in Lahore, Pakistan.",

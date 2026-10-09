@@ -2,7 +2,7 @@ import { HeroSlide } from "./heroSlides";
 
 export const URDU_SLIDES: HeroSlide[] = [
   {
-    image: "/gallery/opt/49.webp",
+    image: "/gallery/opt/health.png",
     badge: "یتیم بچوں کی کفالت و صحت",
     title: "لاہور یتیم خانے میں عطیات —— عزت اور وقار کے ساتھ",
     subtitle: "250 سے زائد یتیم اور بے سہارا بچوں کے لیے مکمل طبی علاج، شفیق گھریلو رہائش اور روزانہ متوازن خوراک۔",
