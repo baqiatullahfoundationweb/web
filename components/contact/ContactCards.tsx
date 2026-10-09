@@ -22,7 +22,7 @@ export default function ContactCards({
   addressLabel = "Physical Address",
   address = "House No.123/A Block, Nawab Town, Lahore, Pakistan",
   phoneLabel = "Helpline & WhatsApp",
-  phone = "0300-6500512 / +92 314 6500512",
+  phone =  "+92 314 6500512",
   emailLabel = "Official Email",
   email = "baqiatullahpak@gmail.com",
   hoursLabel = "Visiting Hours",
@@ -39,7 +39,7 @@ export default function ContactCards({
       icon: Phone,
       label: phoneLabel,
       value: phone,
-      link: "tel:03006500512",
+      link: "tel:03146500512",
     },
     {
       icon: Mail,
