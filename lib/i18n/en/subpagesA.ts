@@ -5,7 +5,7 @@ export const enAboutPage: AboutPageData = {
     title: "Founded on Compassion,",
     highlight: "Driven by Hope",
     subtitle: "Transforming the landscape of orphan care in Pakistan since 2016 through unwavering family commitment.",
-    badge: "Over 8 years of nurturing orphan care in Lahore, Pakistan",
+    badge: "Over 10 years of nurturing orphan care in Lahore, Pakistan",
     heading: "From 12 Children to a Thriving Family Community of Over 250",
     p1: "Baqiatullah Foundation Pakistan was established in 2016 by a dedicated group of humanitarians who recognized a profound need: to provide a safe, family-like sanctuary for orphaned and vulnerable children who have lost parental care.",
     p2: "What began as an intimate initiative with 12 children in Lahore has blossomed into an accredited charitable foundation supporting more than 250 young souls. We do not operate as an impersonal institution—every child receives maternal care, medical protection, and individualized schooling.",
