@@ -79,7 +79,10 @@ export default async function LocalizedProjectsPage({ params }: PageProps) {
         fundedLabel={data.ongoing.fundedLabel}
         supportBtnText={data.ongoing.supportBtn}
         supportHref={donateHref}
-        items={data.ongoing.items}
+        items={data.ongoing.items.map((item) => ({
+          ...item,
+          detailHref: item.detailHref,
+        }))}
       />
       <CompletedProjects
         title={data.completed.title}

@@ -39,11 +39,36 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { name: "Facebook", href: "https://www.facebook.com/baqiatullahfoundationofficial" },
-    { name: "Instagram", href: "https://www.instagram.com/baqiatullahfoundation" },
-    { name: "LinkedIn", href: "https://www.linkedin.com/company/baqiatullahfoundation/?originalSubdomain=pk" },
-    { name: "YouTube", href: "https://youtube.com/@baqiatullahfoundation" },
-    { name: "TikTok", href: "https://www.tiktok.com/@baqiatullahfoundation" },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/baqiatullahfoundationofficial",
+      bg: "#1877F2",
+      hover: "#0C63D4",
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/baqiatullahfoundation",
+      bg: "#E1306C",
+      hover: "#C2185B",
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/company/baqiatullahfoundation/?originalSubdomain=pk",
+      bg: "#0A66C2",
+      hover: "#084F97",
+    },
+    {
+      name: "YouTube",
+      href: "https://youtube.com/@baqiatullahfoundation",
+      bg: "#FF0000",
+      hover: "#CC0000",
+    },
+    {
+      name: "TikTok",
+      href: "https://www.tiktok.com/@baqiatullahfoundation",
+      bg: "#010101",
+      hover: "#2C2C2C",
+    },
   ];
 
   return (
@@ -89,7 +114,10 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-xl bg-teal-900 border border-teal-950 text-white hover:bg-primary hover:scale-105 active:scale-95 transition-all duration-200 flex items-center justify-center shadow-xs"
+                  className="w-9 h-9 rounded-xl text-white hover:scale-110 active:scale-95 transition-all duration-200 flex items-center justify-center shadow-sm"
+                  style={{ backgroundColor: s.bg }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = s.hover; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = s.bg; }}
                   aria-label={s.name}
                   title={s.name}
                 >

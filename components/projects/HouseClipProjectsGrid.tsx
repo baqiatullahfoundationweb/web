@@ -35,14 +35,14 @@ export default function HouseClipProjectsGrid({
   const displayTitle =
     title ||
     (isUrdu
-      ? "بقیۃ اللہ فاؤنڈیشن کے 8 بنیادی فلاحی منصوبے"
+      ? "بقیۃ اللہ فاؤنڈیشن کے 7 بنیادی فلاحی منصوبے"
       : "Official Projects of Baqiatullah Foundation");
 
   const displaySubtitle =
     subtitle ||
     (isUrdu
-      ? "تعلیم، آئی ٹی، کفالت، خوراک، لباس، اقامت، ہنگامی ریلیف اور مفت علاج کے جامع فلاحی پروگرامز"
-      : "Comprehensive welfare initiatives covering Education, Digital Skills, Orphan Support, Food, Clothing, Care, Disaster Relief, and Healthcare");
+      ? "تعلیم، آئی ٹی، خوراک، لباس، یتیم نگہداشت، ہنگامی ریلیف اور مفت علاج کے جامع فلاحی پروگرامز"
+      : "Comprehensive welfare initiatives covering Education, Digital Skills, Food, Clothing, Orphan Care, Disaster Relief, and Healthcare");
 
   return (
     <section className={`w-full py-16 sm:py-20 ${className}`}>
@@ -50,7 +50,7 @@ export default function HouseClipProjectsGrid({
       <div className="text-center max-w-3xl mx-auto mb-12 px-4 sm:px-6">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-extrabold uppercase tracking-wider mb-4 shadow-2xs">
           <Award className="w-3.5 h-3.5" />
-          <span>{isUrdu ? "فلاحی منصوبے و خدمات" : "8 Flagship Welfare Initiatives"}</span>
+          <span>{isUrdu ? "فلاحی منصوبے و خدمات" : "7 Flagship Welfare Initiatives"}</span>
         </div>
         <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-gray-950 tracking-tight leading-tight">
           {displayTitle}
@@ -76,7 +76,7 @@ export default function HouseClipProjectsGrid({
                 hdImage={prog.hdImage}
                 color={prog.color}
                 badgeText={isUrdu ? prog.badgeUrdu : prog.badge}
-                href={isUrdu ? `/ur${prog.href}` : `/eng${prog.href}`}
+                href={isUrdu ? `/ur/projects/${prog.id}` : `/eng/projects/${prog.id}`}
                 showTitle={false}
                 className="w-full"
               />
@@ -89,7 +89,7 @@ export default function HouseClipProjectsGrid({
                 <div className="flex items-start justify-between gap-2 mb-3">
                   <div>
                     <Link
-                      href={isUrdu ? `/ur${prog.href}` : `/eng${prog.href}`}
+                      href={isUrdu ? `/ur/projects/${prog.id}` : `/eng/projects/${prog.id}`}
                       className="group-hover:text-primary transition-colors block"
                     >
                       <h3 className="text-lg sm:text-xl font-black text-gray-950 leading-tight">
@@ -151,7 +151,7 @@ export default function HouseClipProjectsGrid({
               {/* Action Link */}
               <div className="mt-3.5 pt-3 border-t border-gray-100 flex items-center justify-between">
                 <Link
-                  href={isUrdu ? `/ur${prog.href}` : `/eng${prog.href}`}
+                  href={isUrdu ? `/ur/projects/${prog.id}` : `/eng/projects/${prog.id}`}
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary-dark transition-colors"
                 >
                   <span>{isUrdu ? "تفصیلات اور تعاون" : "Support This Project"}</span>

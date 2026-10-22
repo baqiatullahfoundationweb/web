@@ -36,7 +36,15 @@ export interface ProjectsPageData {
     subtitle: string;
     fundedLabel: string;
     supportBtn: string;
-    items: Array<{ title: string; desc: string; image: string; progress: number; status: string }>;
+    items: Array<{
+      title: string;
+      desc: string;
+      image: string;
+      progress: number;
+      status: string;
+      /** Optional per-item link to the project detail page */
+      detailHref?: string;
+    }>;
   };
   completed: {
     title: string;

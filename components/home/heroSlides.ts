@@ -88,17 +88,7 @@ export const DEFAULT_SLIDES: HeroSlide[] = [
     ctaSecondaryHref: "/projects",
     altText: "Science and practical technology learning lab for orphan students at Baqiatullah Foundation Pakistan",
   },
-  {
-    image: "/gallery/opt/14.webp",
-    badge: "HIGHER EDUCATION",
-    title: "COLLEGE SCHOLARSHIP FUND —— BREAKING POVERTY",
-    subtitle: "Higher university degree scholarships and vocational diplomas ensuring graduates build independent careers.",
-    ctaPrimary: "Sponsor Scholarship",
-    ctaPrimaryHref: "/donate",
-    ctaSecondary: "Graduates Impact",
-    ctaSecondaryHref: "/about",
-    altText: "Higher education college and university scholarship recipients from Baqiatullah Foundation Pakistan",
-  },
+
   {
     image: "/gallery/opt/community.png",
     badge: "COMMUNITY SERVICES",

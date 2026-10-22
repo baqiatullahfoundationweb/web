@@ -78,17 +78,7 @@ export const URDU_SLIDES: HeroSlide[] = [
     ctaSecondaryHref: "/ur/projects",
     altText: "بقیۃ اللہ فاؤنڈیشن کے طالب علم سائنس اور کمپیوٹر لیب میں عملی تربیت حاصل کرتے ہوئے",
   },
-  {
-    image: "/gallery/opt/14.webp",
-    badge: "یونیورسٹی اسکالرشپس",
-    title: "کالج و یونیورسٹی کی فیسیں —— غربت کا مستقل خاتمہ",
-    subtitle: "ہونہار یتیم طلبہ و طالبات کے لیے پروفیشنل ڈگریوں اور ٹیکنیکل کورسز کی 100 فیصد مالی معاونت۔",
-    ctaPrimary: "اسکالرشپ فنڈ",
-    ctaPrimaryHref: "/ur/donate",
-    ctaSecondary: "کامیابیاں",
-    ctaSecondaryHref: "/ur/about",
-    altText: "بقیۃ اللہ فاؤنڈیشن کے زیر اہتمام یونیورسٹی اور کالج کے یتیم طلبہ کے لیے اعلیٰ تعلیمی اسکالرشپس",
-  },
+
   {
     image: "/gallery/opt/community.png",
     badge: "کمیونٹی سروسز",
