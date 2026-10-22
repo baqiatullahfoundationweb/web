@@ -1,3 +1,5 @@
+HI BELOW THE AGENT HOW IT WORKS
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
