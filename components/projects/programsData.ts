@@ -309,22 +309,22 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
         altUrdu: "بقیۃ اللہ فاؤنڈیشن کے کمپیوٹر لیب میں طلباء ڈیجیٹل مہارتیں سیکھ رہے ہیں",
       },
       {
-        src: "/projects/digital1.webp",
+        src: "/projects/digital2.webp",
         alt: "Young learners practising coding and web development at Baqiatullah Foundation",
         altUrdu: "بقیۃ اللہ فاؤنڈیشن میں نوجوان طلباء کوڈنگ اور ویب ڈویلپمنٹ پریکٹس کر رہے ہیں",
       },
       {
-        src: "/projects/digital1.webp",
+        src: "/projects/digital3.webp",
         alt: "Students engaged in graphic design training at the foundation's digital lab",
         altUrdu: "فاؤنڈیشن کی ڈیجیٹل لیب میں طلباء گرافک ڈیزائن کی تربیت میں مصروف ہیں",
       },
       {
-        src: "/projects/digital1.webp",
+        src: "/projects/digital4.webp",
         alt: "Hands-on technology training session for orphaned youth at Baqiatullah Foundation",
         altUrdu: "بقیۃ اللہ فاؤنڈیشن میں یتیم نوجوانوں کے لیے ہینڈز آن ٹیکنالوجی ٹریننگ سیشن",
       },
       {
-        src: "/projects/digital1.webp",
+        src: "/projects/digital5.webp",
         alt: "Dedicated mentorship and IT skills instruction at Baqiatullah Foundation digital program",
         altUrdu: "بقیۃ اللہ فاؤنڈیشن کے ڈیجیٹل پروگرام میں وقف سرپرستی اور آئی ٹی مہارتوں کی تعلیم",
       },
